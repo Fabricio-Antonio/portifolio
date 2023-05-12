@@ -1,10 +1,10 @@
-import { Menu } from "../components/Menu/style"
+import { Menu } from "../components/Menu/index"
 
 
 export default function Home() {
   return (
     <>
-      <Menu></Menu>
+      <Menu/>
     </>
   )
 }

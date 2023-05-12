@@ -1,11 +1,12 @@
-import { Menu }  from "./style"
+import  { React } from 'react';
+import { StyledMenu } from './style'
 
-export default function Menu() {
-    return (
-        <>
-        <Menu>
-            <Link>test</Link>
-        </Menu>
-        </>
-    )
-}
+export const Menu = () => (
+    <>
+        <StyledMenu>
+            test
+        </StyledMenu>
+    </>
+);
+
+export default Menu
