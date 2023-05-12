@@ -1,4 +1,4 @@
-import Menu from "@/components/Menu";
+import { Menu } from "../components/Menu";
 import Head from "next/head";
 
 export default function Projects() {
