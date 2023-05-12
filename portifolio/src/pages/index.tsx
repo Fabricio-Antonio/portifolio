@@ -11,6 +11,7 @@ export default function Home() {
       <meta name="description" content="Desenvolvedor front-end"></meta>
     </Head>
       <Menu/>
+      <h1>test</h1>
     </>
   )
 }
