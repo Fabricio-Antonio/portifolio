@@ -4,7 +4,7 @@ export const StyledMenu = styled.div`
     height: 10vh;
     width: 100vw;
     background-color: #181818;
-    margin-bottom: 50px;
+    padding-bottom: 100px;
 
     ul {
         display: flex;
