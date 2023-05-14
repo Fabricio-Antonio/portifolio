@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Menu } from "../components/Menu/index"
 import { StyledSection } from "@/components/Section/style"
-import Typical from 'react-typical';
+import Typical from "react-typical";
 
 export default function Home() {
   return (
@@ -13,17 +13,16 @@ export default function Home() {
     </Head>
       <Menu/>
       <StyledSection>
-        <h1>Eu sou Fabrício, {''}
+        <h1>Eu sou Fabrício</h1>
+        <p>test{''}
           <Typical
           loop={Infinity}
           steps={[
-            'dev Front-end React. ⚛️👨‍💻',
+            'dev Front-end React.',
             1000,
-            'amante de tecnologia',
+            'apaixonado por tecnologia',
             1000]}
-            />
-           dev Front-end React. ⚛️👨‍💻</h1>
-        <p>Eu sou Fabrício, jovem iniciante na área de 
+            /> 
           <br/>
           programação. Estou me graduando em Análise e
           <br/>
