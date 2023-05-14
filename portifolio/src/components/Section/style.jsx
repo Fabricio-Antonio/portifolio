@@ -5,15 +5,15 @@ export const StyledSection = styled.div`
     height: 100%;
     background-color: #16B8F3;
     padding-top: 2%;
-
+    
     & h1{
-    font-size: 34px;
-    font-weight: 700;
-    margin-left: 15.625vw;
-    padding-top: 120px;
-    color: #FFF;
+        font-size: 34px;
+        font-weight: 500;
+        margin-left: 15.625vw;
+        padding-top: 120px;
+        color: #FFF;
     }
-
+    
     & p{
     font-size: 21px;
     font-weight: 500;
