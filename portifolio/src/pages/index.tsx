@@ -3,6 +3,8 @@ import { Menu } from "../components/Menu/index"
 import { StyledSection } from "@/components/Section/style"
 import Typed from "react-typed";
 
+
+
 export default function Home() {
   return (
     <>
@@ -11,11 +13,12 @@ export default function Home() {
       <meta name='keywords' content="Desenvolvedor, front-end, Reactjs, Fabrício, Fabrício Santos"></meta>
       <meta name="description" content="Desenvolvedor front-end"></meta>
     </Head>
+
       <Menu/>
       <StyledSection>
-        <h1>Eu sou Fabrício <br/>
+        <h1>Eu sou Fabrício 🖖😁<br/>
         <Typed
-            strings={['Dev Front-End React ⚛️💻']}
+            strings={['Dev Front-End React.']}
             typeSpeed={90}
             backSpeed={50}
             loop

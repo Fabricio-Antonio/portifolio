@@ -1,8 +1,10 @@
-import { Paralax } from "./style";
+import { StyledParalax } from "./style";
 
-export const Section = () => (
+
+export const Paralax = () => (
     <>
-        <Paralax/>
+        <StyledParalax>
+        </StyledParalax>
     </>
 );
 
