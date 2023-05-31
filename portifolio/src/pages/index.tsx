@@ -3,7 +3,7 @@ import { Menu } from "../components/Menu/index"
 import { StyledSection } from "@/components/Section/style"
 import { StyledSection2 } from "@/components/Section2/style"
 import { TypeAnimation } from 'react-type-animation';
-import Typed from "react-typed"
+import Code from '../components/Code/style'
 import Image from "next/image";
 import eu from '../../public/img/eu.jpeg'
 import code from '../../public/img/code.png'
@@ -21,41 +21,34 @@ export default function Home() {
 
       <Menu/>
       <StyledSection>
-        <div>
+        <div className="font-mono">
         <h1>Eu sou Fabrício 🖖😁<br/>
-        <Typed
-      strings={[
-            "I'm a Full Stack Developer",
-            "I Love Software Development",
-            "I Love All My Subscribers",
-          ]}
-          typeSpeed={150}
-          backSpeed={100}
-          loop
-        />
+        <TypeAnimation
+      sequence={[
+        'Dev. Front-End', // Types 'One'
+        1000, // Waits 1s
+        'Dev. React ⚛️', // Deletes 'One' and types 'Two'
+        2000, // Waits 2s
+        () => {
+          console.log('Sequence completed'); // Place optional callbacks anywhere in the array
+        }
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      style
+      ={{ fontSize: '1em', display: 'inline-block' }}
+    />
         </h1>
-        <p>
-          Olá, seja bem-vido(a) ao meu site! 
-          <br />
-          <br/>
-          Sou estudante de programação. Estou me graduando em 
-          <br/>
-          Análise e Desenvolvimento de Sistemas, estou no 3º período,
-          <br/>
-          
-          com previsão de conclusão no 1º período de 2024. 👨‍🎓
-          <br />
-          <br />
-          Contudo não me restrinjo apenas
-          <br />
-          ao conhecimento adiquirido no âmbito académico,
-          <br />
-          sempre procuro me atualizar e me aprimorar
-          <br />
-          também por meio de videos, cursos, comunidades,
-          <br />
-          e sites. ✍️📚
-        </p>
+          <Code>
+             🧑‍🎓 Estou no 3º perído de Análise e Desenvolvimento de Sistemas. <br />
+             <br />
+             👨‍💻 Já tive contato com: Python, JavaScript, Java. <br />
+             <br />
+             🧠 Atualmente estou aprimorando meus conhecimentos em ReactJS. <br />
+             <br />
+             🎯 Em busca da minha primeira oportunidade profissional
+          </Code>
         </div>
         <div className="flex flex-wrap rounded-full">
         <Image src={eu} height={200}width={200} alt="..."/>

@@ -19,11 +19,6 @@ export const Menu = () => (
                         PROJETOS
                     </Link>
                 </li>
-                <li>
-                    <Link href='/about'>
-                        SOBRE
-                    </Link>              
-                </li>
             </ul>
         </StyledMenu>
     </>

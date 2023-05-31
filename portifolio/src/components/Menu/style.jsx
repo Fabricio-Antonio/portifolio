@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledMenu = styled.div`
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     background-color: #181818;
     padding-bottom: 100px;
 
