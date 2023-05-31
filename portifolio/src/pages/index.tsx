@@ -3,6 +3,7 @@ import { Menu } from "../components/Menu/index"
 import { StyledSection } from "@/components/Section/style"
 import { StyledSection2 } from "@/components/Section2/style"
 import { TypeAnimation } from 'react-type-animation';
+import Typed from "react-typed"
 import Image from "next/image";
 import eu from '../../public/img/eu.jpeg'
 import code from '../../public/img/code.png'
@@ -22,23 +23,16 @@ export default function Home() {
       <StyledSection>
         <div>
         <h1>Eu sou Fabrício 🖖😁<br/>
-        <TypeAnimation
-      sequence={[
-        'One', // Types 'One'
-        1000, // Waits 1s
-        'Two', // Deletes 'One' and types 'Two'
-        2000, // Waits 2s
-        'Two Three', // Types 'Three' without deleting 'Two'
-        () => {
-          console.log('Sequence completed'); // Place optional callbacks anywhere in the array
-        }
-      ]}
-      wrapper="span"
-      cursor={true}
-      repeat={Infinity}
-      style
-      ={{ fontSize: '2em', display: 'inline-block' }}
-    />
+        <Typed
+      strings={[
+            "I'm a Full Stack Developer",
+            "I Love Software Development",
+            "I Love All My Subscribers",
+          ]}
+          typeSpeed={150}
+          backSpeed={100}
+          loop
+        />
         </h1>
         <p>
           Olá, seja bem-vido(a) ao meu site! 
