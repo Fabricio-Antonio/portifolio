@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 export const StyledSection2 = styled.div`
     width: 100%;
-    height: 100%;
+    height: 800px;
     background-color: #f8f8f8;
     padding-top: 2%;
+    display: flex;
     
     & h1{
         font-size: 2.125rem;
@@ -21,8 +22,9 @@ export const StyledSection2 = styled.div`
     padding-bottom: 2%;
     }
 
-    Image {
-        width: 400px;
+    & img {
+        margin-left: 100px;
+        margin-top: 200px;
     }
 `
 export default StyledSection2;

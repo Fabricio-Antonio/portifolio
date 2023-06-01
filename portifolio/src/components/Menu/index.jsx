@@ -8,16 +8,20 @@ export const Menu = () => (
     <>
         <StyledMenu>
         <ul>
+        <li>
+                <Link href='/'>
                 <Image src= {logo} width={150} height={100} alt="..."/>
-                <li>
-                    <Link href='/'>
-                        INÍCIO
                     </Link>
                 </li>
                 <li>
-                    <Link href='/projects'>
+                    <Link href='#projects'>
                         PROJETOS
                     </Link>
+                </li>
+                <li>
+                    <Link href='#about'>
+                        SOBRE
+                    </Link>              
                 </li>
             </ul>
         </StyledMenu>

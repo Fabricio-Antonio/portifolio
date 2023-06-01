@@ -8,7 +8,7 @@ export default function Projects() {
             <title>Fabrício Santos | Projetos</title>
         </Head>
         <Menu/>
-        <h1>Projetos</h1>
+        <h1 id="projetos">Projetos</h1>
         </>
     )
 }
