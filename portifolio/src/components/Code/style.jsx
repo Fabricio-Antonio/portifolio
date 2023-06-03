@@ -11,7 +11,7 @@ export const Code = styled.div`
    padding-top: 10px;
    padding-left: 5px;
    margin-top: 3%;
-   margin-bottom: 3%;
+   margin-bottom: 1%;
 `;
 
 export default Code;

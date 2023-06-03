@@ -7,24 +7,32 @@ export const StyledSection2 = styled.div`
     padding-top: 2%;
     display: flex;
     
-    & h1{
+    & h2{
         font-size: 2.125rem;
-        font-weight: 500;
-        margin-left: 15.625vw;
-        padding-top: 7.5rem;
+        font-weight: 700;
+        margin-left: 30px;
+        margin-top: 15px;
     }
     
     & p{
-    font-size: 1.313rem;
+    margin-left: 30px;
+    font-size: 21px;
     font-weight: 500;
-    margin-left: 18.229166666666668vw;
-    margin-top: 2%;
-    padding-bottom: 2%;
+    margin-top: 15px;
     }
 
     & img {
         margin-left: 100px;
         margin-top: 200px;
+    }
+
+    & li {
+        list-style: none;
+        font-size: 40px;
+        align-items: left;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
     }
 `
 export default StyledSection2;

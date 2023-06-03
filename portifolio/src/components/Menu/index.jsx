@@ -19,6 +19,11 @@ export const Menu = () => (
                     </Link>
                 </li>
                 <li>
+                    <Link href='#habilit'>
+                        HABILIDADES
+                    </Link>              
+                </li>
+                <li>
                     <Link href='#about'>
                         SOBRE
                     </Link>              

@@ -5,6 +5,12 @@ import { StyledSection2 } from "@/components/Section2/style";
 import { TypeAnimation } from 'react-type-animation';
 import Code from '../components/Code/style';
 import Image from "next/image";
+import Links from '../components/Links/style'
+import { SiGithub } from "react-icons/si";
+import List from '../components/List/index'
+import { SiLinkedin } from "react-icons/si";
+import { SiWhatsapp } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
 import eu from '../../public/img/eu.jpeg';
 import code from '../../public/img/code.png';
 import Line from '../components/Line/style'
@@ -48,8 +54,14 @@ export default function Home() {
              <br />
              • 🧠 Atualmente focado em JavaScript e ReactJS. <br />
              <br />
-             • 🎯 Em busca da minha primeira oportunidade profissional
+             • 🎯 Em busca da minha primeira oportunidade profissional.
           </Code>
+          <Links>
+          <a href="https://github.com/Fabricio-Antonio" target="_blank" rel="noopener noreferrer"><SiGithub/></a>
+          <a href="https://www.linkedin.com/in/fabricio-ss/" target="_blank" rel="noopener noreferrer"><SiLinkedin/></a>
+          <a href="https://www.instagram.com/fabricio.ss.dev/" target="_blank" rel="noopener noreferrer"><SiInstagram/></a>
+          <a href="https://www.instagram.com/fabricio.ss.dev/" target="_blank" rel="noopener noreferrer"><SiWhatsapp/></a>
+          </Links>
         </div>
         <div className="flex flex-wrap rounded-full">
         <Image src={eu} height={200}width={200} alt="..."/>
@@ -59,7 +71,16 @@ export default function Home() {
         <div className="my-6">
         <Image src={code} width={500} height={500} alt="..." />
         </div>
+        <div>
         <Line/>
+        <h2 id="habilit">Caixa de ferramentas 🛠️</h2>
+        <p>
+          Me esforço para estar em constante <br />
+          desenvolvimento e alinhado ao máximo <br />
+          as necessidades do mercado.
+        </p>
+        <List />
+        </div>
       </StyledSection2>
       <br />
       <br />
