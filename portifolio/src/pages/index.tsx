@@ -5,9 +5,9 @@ import { StyledSection2 } from "@/components/Section2/style";
 import { TypeAnimation } from 'react-type-animation';
 import Code from '../components/Code/style';
 import Image from "next/image";
-import Links from '../components/Links/style'
+import Links from '../components/Links/style';
 import { SiGithub } from "react-icons/si";
-import List from '../components/List/index'
+import List from '../components/List/index';
 import { SiLinkedin } from "react-icons/si";
 import { SiWhatsapp } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
@@ -82,62 +82,9 @@ export default function Home() {
         <List />
         </div>
       </StyledSection2>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1 id="projects">Projetos</h1>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <StyledSection>
+      <h1 id="projects">Meus projetos 🏗️</h1>
+      </StyledSection>
     </>
   )
 }

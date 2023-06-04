@@ -9,10 +9,10 @@ export const StyledSection = styled.div`
     
     & h1{
         font-size: 2.125rem;
-        font-weight: 500;
+        font-weight: 700;
         margin-left: 15.625vw;
         padding-top: 7.5rem;
-        color: #FFF;
+        color: #f8f8f8;
     }
     
     & p{
@@ -21,14 +21,14 @@ export const StyledSection = styled.div`
     margin-left: 18.229166666666668vw;
     margin-top: 2%;
     padding-bottom: 2%;
-    color: #FFF;
+    color: #F8f8f8;
     }
 
     & img{
         margin-top: 140px;
         border-radius: 50%;
         margin-left: 150px;
-        border: 4px solid #FFF;
+        border: 4px solid #f8f8f8;
         display: flex;
         user-select: none;
     }
