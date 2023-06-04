@@ -16,6 +16,7 @@ import { SiHeroku } from "react-icons/si";
 import { SiGoogleanalytics } from "react-icons/si";
 import { SiSlack } from "react-icons/si";
 import { SiTrello } from "react-icons/si";
+import { SiStyledcomponents } from "react-icons/si";
 
 
 export const List = () => (
@@ -26,6 +27,7 @@ export const List = () => (
             <ul><SiJavascript/>JavaScript</ul>
             <ul><SiReact/>React</ul>
             <ul><SiBootstrap/>Bootstrap</ul>
+            <ul><SiStyledcomponents/>StyledComponents</ul>
             <ul><SiTailwindcss/>Tailwindcss</ul>
             <ul><SiGit/>Git</ul>
             <ul><SiGithub/>Github</ul>
