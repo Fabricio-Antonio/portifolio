@@ -17,6 +17,9 @@ import { SiGoogleanalytics } from "react-icons/si";
 import { SiSlack } from "react-icons/si";
 import { SiTrello } from "react-icons/si";
 import { SiStyledcomponents } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+
 
 
 export const List = () => (
@@ -27,18 +30,20 @@ export const List = () => (
             <ul><SiJavascript/>JavaScript</ul>
             <ul><SiReact/>React</ul>
             <ul><SiBootstrap/>Bootstrap</ul>
-            <ul><SiStyledcomponents/>StyledComponents</ul>
-            <ul><SiTailwindcss/>Tailwindcss</ul>
+            <ul><SiStyledcomponents/>Styled Components</ul>
+            <ul><SiTailwindcss/>Tailwind CSS</ul>
+            <ul><SiNextdotjs/>Next</ul>
             <ul><SiGit/>Git</ul>
             <ul><SiGithub/>Github</ul>
+            <ul><SiMysql/>MySQL</ul>
             <ul><SiLinux/>Linux</ul>
             <ul><SiFigma/>Figma</ul>
-            <ul><SiVercel/>Vercel</ul>
-            <ul><SiNetlify/>Netlify</ul>
-            <ul><SiHeroku/>Heroku</ul>
+            <ul><SiVercel/>Vercel Cloud</ul>
+            <ul><SiNetlify/>Netlify Cloud</ul>
             <ul><SiGoogleanalytics/>Google Analytics</ul>
             <ul><SiSlack/>Slack</ul>
             <ul><SiTrello/>Trello</ul>
+            
         </StyledList>
     </>
 );

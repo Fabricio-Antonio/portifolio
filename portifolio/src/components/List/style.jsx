@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StyledList = styled.div`
 
         margin-top: 8px;
+        font-weight: 500;
         list-style: none;
         font-size: 30px;
         align-items: left;

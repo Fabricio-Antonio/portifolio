@@ -9,6 +9,7 @@ import Links from '../components/Links/style';
 import { SiGithub } from "react-icons/si";
 import List from '../components/List/index';
 import { SiLinkedin } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
 import { SiWhatsapp } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
 import eu from '../../public/img/eu.jpeg';
