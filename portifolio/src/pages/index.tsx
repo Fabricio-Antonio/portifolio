@@ -6,15 +6,16 @@ import { TypeAnimation } from 'react-type-animation';
 import Code from '../components/Code/style';
 import Image from "next/image";
 import Links from '../components/Links/style';
+import { useState } from "react";
 import { SiGithub } from "react-icons/si";
 import List from '../components/List/index';
 import { SiLinkedin } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
 import { SiWhatsapp } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
 import eu from '../../public/img/eu.jpeg';
 import code from '../../public/img/code.png';
 import Line from '../components/Line/style'
+
 
 
 

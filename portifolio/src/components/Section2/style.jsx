@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const StyledSection2 = styled.div`
     width: 100%;
-    height: 850px;
+    height: 100%;
     background-color: #f8f8f8;
     padding-top: 2%;
     display: flex;
+    flex-wrap: wrap;
     
     & h2{
         font-size: 2.125rem;

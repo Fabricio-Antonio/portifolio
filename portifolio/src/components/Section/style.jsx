@@ -32,4 +32,31 @@ export const StyledSection = styled.div`
         display: flex;
         user-select: none;
     }
+
+    @media (max-width: 1024px) {
+        & img{
+        margin-left: 2em;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        & img{
+        margin-left: 1em;
+        height: 200px; 
+        width: 200px; 
+        justify-content: center;
+        margin-bottom: 2em;
+        }
+
+        & h1{
+        font-size: 2.125rem;
+        font-weight: 700;
+        margin-left: 3em;
+
+        }
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
 `

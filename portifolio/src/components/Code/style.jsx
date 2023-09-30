@@ -12,6 +12,13 @@ export const Code = styled.div`
    padding-left: 5px;
    margin-top: 3%;
    margin-bottom: 1%;
+
+   @media (max-width: 1024px) {
+      margin-left: 5em;
+}
+@media (max-width: 768px) {
+      margin-left: 2em;
+}
 `;
 
 export default Code;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledMenu = styled.div`
-    height: 10vh;
+    height: 2rem;
     width: 100%;
     background-color: #181818;
     padding-bottom: 100px;
@@ -11,7 +11,7 @@ export const StyledMenu = styled.div`
         background-color: #181818;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 6rem;
+        padding: 0.5rem 2rem;
         list-style: none;
 
     }
