@@ -12,7 +12,7 @@ export const StyledList = styled.div`
         padding-left: 20px;
         margin: 8px 16px 8px 8px;
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
 
         & svg {
             padding-right: 10px;
@@ -20,6 +20,8 @@ export const StyledList = styled.div`
         }
 
         @media (max-width: 425px) {
+            grid-template-columns: 1fr 1fr;
+
             & svg {
             font-size: 35px;
         }

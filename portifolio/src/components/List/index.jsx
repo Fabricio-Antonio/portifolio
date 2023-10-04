@@ -19,6 +19,9 @@ import { SiTrello } from "react-icons/si";
 import { SiStyledcomponents } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
+import { SiNpm } from "react-icons/si";
+import { SiGnubash } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
 
 
 
@@ -29,14 +32,17 @@ export const List = () => (
             <ul><SiCss3/>CSS3</ul>
             <ul><SiJavascript/>JavaScript</ul>
             <ul><SiReact/>React</ul>
-            <ul><SiBootstrap/>Bootstrap</ul>
+            <ul><SiNextdotjs/>Next</ul>
             <ul><SiStyledcomponents/>Styled Components</ul>
             <ul><SiTailwindcss/>Tailwind CSS</ul>
-            <ul><SiNextdotjs/>Next</ul>
+            <ul><SiBootstrap/>Bootstrap</ul>
             <ul><SiGit/>Git</ul>
             <ul><SiGithub/>Github</ul>
             <ul><SiMysql/>MySQL</ul>
+            <ul><SiMongodb/>MongoDB</ul>
             <ul><SiLinux/>Linux</ul>
+            <ul><SiNpm/>npm</ul>
+            <ul><SiGnubash/>Bash</ul>
             <ul><SiFigma/>Figma</ul>
             <ul><SiVercel/>Vercel Cloud</ul>
             <ul><SiNetlify/>Netlify Cloud</ul>
