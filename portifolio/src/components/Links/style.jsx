@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Links = styled.div`
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 10px;
+    margin-bottom: 20px;
     width: 300px;
     margin-left: 18.229166666666668vw;
     font-size: x-large;

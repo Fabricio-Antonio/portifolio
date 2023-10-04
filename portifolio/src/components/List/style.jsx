@@ -17,7 +17,13 @@ export const StyledList = styled.div`
         & svg {
             padding-right: 10px;
             font-size: 50px;
-        } 
+        }
+
+        @media (max-width: 425px) {
+            & svg {
+            font-size: 35px;
+        }
+        }
 `;
 
 export default StyledList;

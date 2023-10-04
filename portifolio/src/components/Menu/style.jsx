@@ -61,6 +61,10 @@ export const StyledMenu = styled.div`
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     }
+
+    @media (max-width: 425px) {
+        display: none;
+}
 `;
 
 export default StyledMenu;

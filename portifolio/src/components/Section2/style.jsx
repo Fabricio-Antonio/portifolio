@@ -18,7 +18,7 @@ export const StyledSection2 = styled.div`
     & p{
     margin-left: 30px;
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 15px;
     }
 
@@ -35,5 +35,48 @@ export const StyledSection2 = styled.div`
 
         grid-template-columns: 1fr 1fr;
     }
+
+@media (max-width: 768px) {
+    & li {
+        list-style: none;
+        font-size: 40px;
+        align-items: left;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+        justify-content: center;
+        
+        & h2{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-left: 1.563rem;
+        margin-top: 15px;
+        }
+
+        & p{
+        margin-left: 1.563rem;
+        font-size: 1.188rerm;
+        font-weight: 400;
+        margin-top: 15px;
+        }
+
+        & img {
+            margin-top: 50px;
+            margin-left: 0;
+            height: 200px; 
+            width: 200px;
+        }
+
+        & ul {
+        font-size: medium;
+        font-weight: 500;
+        
+        
+    }
+  }
 `
 export default StyledSection2;

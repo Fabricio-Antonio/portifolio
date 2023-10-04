@@ -59,4 +59,9 @@ export const StyledSection = styled.div`
         justify-content: center;
 
     }
+    @media (max-width: 425px) {
+        & h1 {
+            margin-left: 1em;
+        }
+    }
 `
