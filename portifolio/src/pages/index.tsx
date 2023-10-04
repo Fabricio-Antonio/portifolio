@@ -28,35 +28,35 @@ export default function Home() {
       <meta name="description" content="Desenvolvedor front-end"></meta>
     </Head>
 
-      <Menu/>
+    <Menu/>
       <StyledSection id="about">
         <div>
-        <h1>Eu sou Fabrício 🖖😁<br/>
-        <TypeAnimation
-      sequence={[
-        'Dev. Front-End', // Types 'One'
-        1000, // Waits 1s
-        'Dev. React ⚛️', // Deletes 'One' and types 'Two'
-        2000, // Waits 2s
-        () => {
-          console.log('Sequence completed'); // Place optional callbacks anywhere in the array
-        }
-      ]}
-      wrapper="span"
-      cursor={true}
-      repeat={Infinity}
-      style
-      ={{ fontSize: '1em', display: 'inline-block' }}
-    />
-        </h1>
+          <h1>Eu sou Fabrício Santos 🖖😁<br/>
+            <TypeAnimation
+              sequence={[
+                'Dev. Front-End', // Types 'One'
+                1000, // Waits 1s
+                'Dev. React ⚛️', // Deletes 'One' and types 'Two'
+                2000, // Waits 2s
+                () => {
+                  console.log('Sequence completed'); // Place optional callbacks anywhere in the array
+                }
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+              style
+              ={{ fontSize: '1em', display: 'inline-block' }}
+            />
+          </h1>
           <Code>
-          • 🧑‍🎓 Estou no 3º perído de Análise e Desenvolvimento de Sistemas. <br />
-             <br />
-             • 👨‍💻 Já tive contato com: Python, JavaScript, Java. <br />
-             <br />
-             • 🧠 Atualmente focado em JavaScript e ReactJS. <br />
-             <br />
-             • 🎯 Em busca da minha primeira oportunidade profissional.
+            • 🧑‍🎓 Estou no 3º perído de Análise e Desenvolvimento de Sistemas. <br />
+            <br />
+            • 👨‍💻 Já tive contato com: Python, JavaScript, Java. <br />
+            <br />
+            • 🧠 Atualmente focado em JavaScript e ReactJS. <br />
+            <br />
+            • 🎯 Em busca da minha primeira oportunidade profissional.
           </Code>
           <Links>
           <a href="https://github.com/Fabricio-Antonio" target="_blank" rel="noopener noreferrer"><SiGithub/></a>
@@ -66,27 +66,27 @@ export default function Home() {
           </Links>
         </div>
         <div className="flex flex-wrap rounded-full">
-        <Image src={eu} height={200}width={200} alt="..."/>
+          <Image src={eu} height={200}width={200} alt="..."/>
         </div>
       </StyledSection>
       <StyledSection2>
         <div className="my-6">
-        <Image src={code} width={500} height={500} alt="..." />
+          <Image src={code} width={500} height={500} alt="..." />
         </div>
         <div>
-        <Line/>
-        <h2 id="habilit">Caixa de ferramentas 🛠️</h2>
-        <p>
-          Me esforço para estar em constante <br />
-          desenvolvimento e alinhado ao máximo <br />
-          as necessidades do mercado.
-        </p>
-        <List />
+          <Line/>
+          <h2 id="habilit">Caixa de ferramentas 🛠️</h2>
+            <p>
+              Me esforço para estar em constante <br />
+              desenvolvimento e alinhado ao máximo <br />
+              as necessidades do mercado.
+            </p>
+          <List />
         </div>
       </StyledSection2>
       <StyledSection>
-      <h1 id="projects">Meus projetos 🏗️</h1>
+        <h1 id="projects">Meus projetos 🏗️</h1>
       </StyledSection>
-    </>
+  </>
   )
 }

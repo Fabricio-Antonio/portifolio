@@ -43,7 +43,6 @@ export const List = () => (
             <ul><SiGoogleanalytics/>Google Analytics</ul>
             <ul><SiSlack/>Slack</ul>
             <ul><SiTrello/>Trello</ul>
-            
         </StyledList>
     </>
 );
