@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
 export const StyledMenu = styled.div`
-    height: 2rem;
+    height: 10px;
     width: 100%;
     background-color: #181818;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 1;
 
     ul {
         display: flex;
         background-color: #181818;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 0.5rem 2rem;
         list-style: none;
@@ -21,8 +23,10 @@ export const StyledMenu = styled.div`
         text-decoration: none;
         font-family: montserrat;
         font-size: large;
-        margin: 10px;
+    }
 
+    & img{
+        margin-top: 1rem;
     }
 
     & a{

@@ -7,11 +7,9 @@ import logo from '../../../public/img/logo.png'
 export const Menu = () => (
     <>
         <StyledMenu>
-        <ul>
-        <li>
-                <Link href='/'>
-                <Image src= {logo} width={150} height={100} alt="..."/>
-                    </Link>
+            <ul>
+                <li>
+                    <Image src= {logo} width={60} height={40} alt="..."/>
                 </li>
                 <li>
                     <Link href='#projects'>
