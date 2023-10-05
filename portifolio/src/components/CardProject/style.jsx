@@ -7,6 +7,7 @@ export const StyledCardProject = styled.div`
 
         .Card {
                 margin-right: 1rem;
+                margin-bottom: 1rem;
         }
 
         .button{
@@ -34,8 +35,11 @@ export const StyledCardProject = styled.div`
                 display: block;
         }
 
-        .displayFlex {
-                display: flex;
+
+        @media (max-width: 768px) {
+                flex-wrap: wrap;
+                margin-left: 2rem;
+                
         }
 `
 

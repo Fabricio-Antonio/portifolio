@@ -87,7 +87,7 @@ export default function Home() {
       </StyledSection2>
       <StyledSection >
         <div className="displayBlock">
-        <h1 id="projects">Meus projetos 🏗️</h1>
+          <h1 id="projects">Meus projetos 🚀</h1>
           <CardProject/>
         </div>
       </StyledSection>
