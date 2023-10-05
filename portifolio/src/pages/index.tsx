@@ -15,6 +15,8 @@ import eu from '../../public/img/eu.jpeg';
 import code from '../../public/img/code.png';
 import Line from '../components/Line/style';
 import { CardProject } from "../components/CardProject/index"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'reactstrap';
 
 
 
@@ -64,7 +66,7 @@ export default function Home() {
           <a href="https://api.whatsapp.com/send?phone=5581983587510&text=Oi%2C%20Fabr%C3%ADcio.%20Eu%20vi%20seu%20portif%C3%B3lio%20e%20gostei%20muito%20do%20seu%20trabalho%2C%20gostaria%20de%20conversar%20contigo." target="_blank" rel="noopener noreferrer"><SiWhatsapp/></a>
           </Links>
         </div>
-        <div className="flex flex-wrap rounded-full">
+        <div className="eu">
           <Image src={eu} height={200}width={200} alt="..."/>
         </div>
       </StyledSection>
@@ -84,8 +86,10 @@ export default function Home() {
         </div>
       </StyledSection2>
       <StyledSection >
+        <div className="displayBlock">
         <h1 id="projects">Meus projetos 🏗️</h1>
-        <CardProject/>
+          <CardProject/>
+        </div>
       </StyledSection>
   </>
   )

@@ -30,6 +30,7 @@ export const StyledSection = styled.div`
         margin-left: 150px;
         border: 4px solid #f8f8f8;
         display: flex;
+        flex-wrap: wrap;
         user-select: none;
     }
 
