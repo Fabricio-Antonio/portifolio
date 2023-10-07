@@ -16,7 +16,7 @@ import code from '../../public/img/code.png';
 import Line from '../components/Line/style';
 import { CardProject } from "../components/CardProject/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap';
+import MenuMobile from '../components/MenuMobile/index';
 
 
 
@@ -30,6 +30,7 @@ export default function Home() {
     </Head>
 
     <Menu/>
+    <MenuMobile/>
       <StyledSection id="about">
         <div>
           <h1>Eu sou Fabrício Santos 🖖😁<br/>

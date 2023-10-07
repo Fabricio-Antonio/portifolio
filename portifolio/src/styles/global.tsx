@@ -19,7 +19,75 @@ const GlobalSyles = createGlobalStyle`
             border-radius: 10px;
             border: 2px solid #f8f8f8;
         }
+
     }
+
+    .nav {
+        position: fixed;
+    }
+
+    .Navbar {
+        background-color: #181818;
+    }
+
+    .test {
+        button {
+            background-color: #16B8F3;
+        }
+
+        ul {
+        background-color: #181818;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.5rem 2rem;
+        list-style: none;
+
+    }
+
+    li {
+        list-style-type: none;
+        text-decoration: none;
+        font-family: montserrat;
+        font-size: large;
+    }
+
+    & img{
+
+    }
+
+    & a{
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    & li a:hover{
+    color: #16B8F3;
+    transition: 0.4s;
+    }
+
+    & li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+    background-color: #16B8F3;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    }
+
+    & a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    }
+}
 `;
 
 export default GlobalSyles
