@@ -22,7 +22,7 @@ import { SiMysql } from "react-icons/si";
 import { SiNpm } from "react-icons/si";
 import { SiGnubash } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
-
+import { SiNotion } from "react-icons/si";
 
 
 export const List = () => (
@@ -49,6 +49,7 @@ export const List = () => (
             <ul><SiGoogleanalytics/>Google Analytics</ul>
             <ul><SiSlack/>Slack</ul>
             <ul><SiTrello/>Trello</ul>
+            <ul><SiNotion/>Notion</ul>
         </StyledList>
     </>
 );
