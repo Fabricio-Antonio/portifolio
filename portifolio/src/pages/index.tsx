@@ -73,7 +73,7 @@ export default function Home() {
       </StyledSection>
       <StyledSection2>
         <div className="my-6">
-          <Image src={code} width={500} height={500} alt="..." />
+          <Image src={code} width={300} height={300} alt="..." />
         </div>
         <div>
           <Line/>

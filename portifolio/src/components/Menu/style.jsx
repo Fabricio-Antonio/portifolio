@@ -62,7 +62,7 @@ export const StyledMenu = styled.div`
     transform: scaleX(1);
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 1024px) {
         display: none;
 }
 `;

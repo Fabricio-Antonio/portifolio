@@ -27,7 +27,7 @@ export const StyledSection = styled.div`
     & img{
         margin-top: 140px;
         border-radius: 50%;
-        margin-left: 150px;
+        margin-left: 6rem;
         border: 4px solid #f8f8f8;
         display: flex;
         flex-wrap: wrap;
@@ -40,7 +40,7 @@ export const StyledSection = styled.div`
         }
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 835px) {
         & img{
         margin-left: 1em;
         height: 200px; 
@@ -65,4 +65,6 @@ export const StyledSection = styled.div`
             margin-left: 1em;
         }
     }
+
+
 `

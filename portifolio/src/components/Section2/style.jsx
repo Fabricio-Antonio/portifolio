@@ -17,7 +17,7 @@ export const StyledSection2 = styled.div`
     
     & p{
     margin-left: 30px;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     margin-top: 15px;
     }
@@ -36,6 +36,29 @@ export const StyledSection2 = styled.div`
         grid-template-columns: 1fr 1fr;
     }
 
+    @media (max-width: 1024px) {
+        & h2{
+        font-size: 2.125rem;
+        font-weight: 700;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+
+    & img {
+        align-items: center;
+    }
+    
+    
+        & p{
+        margin-left: 30px;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 15px;
+        }
+
+        
+}
+
 @media (max-width: 768px) {
     & li {
         list-style: none;
@@ -47,7 +70,7 @@ export const StyledSection2 = styled.div`
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
         justify-content: center;
         
         & h2{
@@ -59,14 +82,13 @@ export const StyledSection2 = styled.div`
 
         & p{
         margin-left: 1.563rem;
-        font-size: 1.188rerm;
+        font-size: 1.188rem;
         font-weight: 400;
         margin-top: 15px;
         }
 
         & img {
-            margin-top: 50px;
-            margin-left: 0;
+    
             height: 200px; 
             width: 200px;
         }
@@ -77,6 +99,27 @@ export const StyledSection2 = styled.div`
         
         
     }
+}
+    @media (max-width: 769px) {
+            & img {
+        margin-left: 2rem;
+        height: 150px; 
+        width: 150px;
+    }
+
+        & h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left: 1.5rem;
+        margin-top: 15px;
+        }
+
+        & p{
+        margin-left: 1.563rem;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 15px;
+        }
   }
 `
 export default StyledSection2;

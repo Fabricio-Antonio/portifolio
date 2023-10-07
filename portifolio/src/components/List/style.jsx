@@ -5,7 +5,7 @@ export const StyledList = styled.div`
         margin-top: 8px;
         font-weight: 500;
         list-style: none;
-        font-size: 30px;
+        font-size: 20px;
         align-items: left;
         display: grid;
         margin-left: 16px;
@@ -16,8 +16,21 @@ export const StyledList = styled.div`
 
         & svg {
             padding-right: 10px;
-            font-size: 50px;
+            font-size: 35px;
         }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+}
+
+        @media (max-width: 769px) {
+            grid-template-columns: 1fr 1fr;
+            font-size: 15px;
+            & svg {
+            padding-right: 10px;
+            font-size: 30px;
+        }
+}
 
         @media (max-width: 425px) {
             grid-template-columns: 1fr 1fr;

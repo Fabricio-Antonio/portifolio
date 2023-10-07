@@ -19,11 +19,34 @@ export const Code = styled.div`
 @media (max-width: 768px) {
       margin-left: 2em;
 }
-@media (max-width: 425px) {
+
+@media (max-width: 688px) {
+      width: 600px;
+      height: 300px;
+      margin-left: 1rem;
+}
+
+@media (max-width: 426px) {
       width: 400px;
       height: 300px;
       margin-left: 1rem;
 }
+@media (max-width: 415px) {
+      width: 380px;
+      height: 300px;
+      margin-left: 1rem;
+}
+
+@media (max-width: 376px) {
+      width: 300px;
+      height: 300px;
+      margin-left: 1rem;
+}
+      @media (max-width: 361px) {
+            width: 300px;
+            height: 300px;
+            margin-left: 1rem;
+      }
 `;
 
 export default Code;

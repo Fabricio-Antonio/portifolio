@@ -37,7 +37,7 @@ const GlobalSyles = createGlobalStyle`
     .test {
         button {
             background-color:  #16B8F3;
-            color: #f8f8f8;
+            color: #181818;
             border: none;
         }
 
@@ -72,21 +72,6 @@ const GlobalSyles = createGlobalStyle`
     transition: 0.4s;
     }
 
-    & li a:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: 0;
-    top: 20px;
-    left: 0;
-    background-color: #16B8F3;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    }
 
     & a:hover:before {
     visibility: visible;
@@ -94,11 +79,7 @@ const GlobalSyles = createGlobalStyle`
     transform: scaleX(1);
     }
 
-    @media (min-width: 768px) {
-        .Navbar{
-            display: none;
-        }
-    }
+
 }
 `;
 
