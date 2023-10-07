@@ -28,19 +28,19 @@ function MenuMobile() {
             <NavItem>
             <ul>
                 <li>
-                    <Link href='#projects'>
+                    <NavLink href='#projects'>
                         PROJETOS
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link href='#habilit'>
+                    <NavLink href='#habilit'>
                         HABILIDADES
-                    </Link>              
+                    </NavLink>              
                 </li>
                 <li>
-                    <Link href='#about'>
+                    <NavLink href='#about'>
                         SOBRE
-                    </Link>              
+                    </NavLink>              
                 </li>
             </ul>
             </NavItem>

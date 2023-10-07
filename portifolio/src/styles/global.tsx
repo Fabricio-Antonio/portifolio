@@ -30,9 +30,15 @@ const GlobalSyles = createGlobalStyle`
         background-color: #181818;
     }
 
+    NavbarToggler{
+        position: fixed
+    }
+
     .test {
         button {
-            background-color: #16B8F3;
+            background-color:  #16B8F3;
+            color: #f8f8f8;
+            border: none;
         }
 
         ul {
@@ -86,6 +92,12 @@ const GlobalSyles = createGlobalStyle`
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+    }
+
+    @media (min-width: 768px) {
+        .Navbar{
+            display: none;
+        }
     }
 }
 `;
