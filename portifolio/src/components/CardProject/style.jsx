@@ -4,8 +4,13 @@ export const StyledCardProject = styled.div`
         margin-left: 100px;
         margin-top: 10px;
         display: flex;
+        
+        .CardText {
+                color: black;
+        }
 
         .Card {
+                color: black;
                 margin-right: 1rem;
                 margin-bottom: 1rem;
         }

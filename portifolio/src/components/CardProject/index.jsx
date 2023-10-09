@@ -26,9 +26,9 @@ export const CardProject = () => (
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        Descricao
+                        Tecnologias utilizadasnpm
                     </CardSubtitle>
-                    <CardText>
+                    <CardText className='CardText'>
                         test
                     </CardText>
                         <Button className='button'>
@@ -55,9 +55,9 @@ export const CardProject = () => (
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        Descricao
+                        Tecnologias utilizadas
                     </CardSubtitle>
-                    <CardText>
+                    <CardText className='CardText'>
                         test
                     </CardText>
                         <Button className='button'>
