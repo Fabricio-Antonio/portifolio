@@ -17,24 +17,24 @@ export const CardProject = () => (
                     width: '18rem'
                 }}
             >
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZaYvwn9nBD4?si=8xmBwaNs9khB-Y5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_riCOxe3XqU?si=Hup72wg0Ooxa0Pvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <CardBody className=''>
                     <CardTitle tag="h5">
-                        Título
+                    Pokédex
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        Tecnologias utilizadasnpm
+                        HTML, CSS, JavaScript, API
                     </CardSubtitle>
                     <CardText className='CardText'>
-                        test
+                    
                     </CardText>
-                        <Button className='button'>
+                        <Button href='https://pokedex-6kwr2bzxo-fabricio-antonio.vercel.app/' target="_blank" className='button'>
                             Visitar
                         </Button>
-                        <Button className='button'>
+                        <Button href='https://github.com/Fabricio-Antonio/Pokedex' target="_blank" className='button'>
                             Ver código
                         </Button >
                 </CardBody>
@@ -46,24 +46,24 @@ export const CardProject = () => (
                     marginright: '1rem'
                 }}
             >
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZaYvwn9nBD4?si=8xmBwaNs9khB-Y5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rywkB1tC0gw?si=z9JOJNk3C1Ayzz72" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <CardBody className=''>
                     <CardTitle tag="h5">
-                        Título
+                        Quiz pokémon
                     </CardTitle>
                     <CardSubtitle
                         className="mb-2 text-muted"
                         tag="h6"
                     >
-                        Tecnologias utilizadas
+                        HTML, CSS, JavaScript
                     </CardSubtitle>
                     <CardText className='CardText'>
-                        test
+        
                     </CardText>
-                        <Button className='button'>
+                        <Button href='https://quiz-pokemon-nine.vercel.app/' target="_blank" className='button'>
                             Visitar
                         </Button>
-                        <Button className='button'>
+                        <Button href='https://github.com/Fabricio-Antonio/Quiz-pokemon' target="_blank"className='button'>
                             Ver código
                         </Button >
                 </CardBody>
