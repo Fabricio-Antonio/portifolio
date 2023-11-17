@@ -90,7 +90,7 @@ export default function Home() {
         <div className="displayBlock">
           <h1 id="projects">Meus projetos 🚀</h1>
           <CardProject/>
-          <p>test</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendi laboriosam numquam unde omnis, cum a amet dolorum ex adipisci porro laudantium ipsum mollitia velit tempora? Inventore eius harum voluptas!</p>
         </div>
       </StyledSection>
   </>
