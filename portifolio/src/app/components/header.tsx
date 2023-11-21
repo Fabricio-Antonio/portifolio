@@ -23,7 +23,7 @@ export default function Header() {
                         </SheetHeader>
                         <div className="flex flex-col items-center font-extrabold">
                             <SheetClose asChild>
-                                <Link href="#" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
+                                <Link href="#inicio" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                     <Button>
                                         <Home className="mr-1" />
                                         Início
@@ -83,7 +83,7 @@ export default function Header() {
             </div>
                 <NavigationMenu>
                     <NavigationMenuList className=" flex gap-8">
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#inicio" legacyBehavior passHref>
                             <NavigationMenuItem className="bg-background cursor-pointer flex gap-1 p-2 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                 <Home />
                                 <NavigationMenuLink>
