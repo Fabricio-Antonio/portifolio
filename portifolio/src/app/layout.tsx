@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Karla } from 'next/font/google'
 import './globals.css'
+import Header from '../app/components//header'
 
 const karla = Karla({ subsets: ['latin'] })
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={karla.className}>{children}</body>
+      <body className={karla.className}>
+        <Header />
+        {children}
+        </body>
     </html>
   )
 }
