@@ -3,6 +3,8 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp } from "react-icons/si";
 import Link from "next/link";
+import { Separator } from "@radix-ui/react-separator";
+import List from "./components/list";
 
 export default function Home() {
   return (
@@ -12,7 +14,7 @@ export default function Home() {
           <div>
             <h1
               className="text-backgroundwhite font-semibold text-2xl mt-12 text-center lg:text-5xl lg:font-bold lg:mt-24"
-            >Eu sou Fabrício Santos <br className="lg:hidden"/> 🖖😁<br />
+            >Eu sou Fabrício Santos <br className="lg:hidden" /> 🖖😁<br />
               <TypeAnimation
                 sequence={[
                   'Dev. Front-End',
@@ -56,8 +58,33 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-backgroundwhite">
-        <p>test</p>
+      <section className="bg-backgroundwhite mt-10">
+        <div className="lg:flex">
+          <div className="hidden lg:flex justify-center">
+            <Image src="/code.png" width={250} height={250} alt="code" />
+          </div>
+          <div>
+            <div className="pt-10 flex justify-center">
+              <Separator className="bg-backgroundblack w-52 h-3 border-4 border-backgroundwhite rounded-xl mb-10" />
+            </div>
+            <h2 className="text-xl font-bold text-center -mt-5">Habilidades</h2>
+            <p className="px-5 text-center">
+              Me esforço para estar em constante
+              desenvolvimento e alinhado ao máximo
+              as necessidades do mercado e dos meus clientes,
+              sempre aprendendo novas tecnologias. <br />
+              Aqui estão algumas das minhas <i>hard skills</i>.</p>
+              <div className="w-full hidden lg:flex justify-center mt-5">
+                <List />
+              </div>
+          </div>
+          <div className="flex lg:hidden justify-center mt-5">
+            <List/>
+          </div>
+          <div className="flex lg:hidden justify-center">
+            <Image src="/code.png" width={250} height={250} alt="code" />
+          </div>
+        </div>
       </section>
     </main >
   )
