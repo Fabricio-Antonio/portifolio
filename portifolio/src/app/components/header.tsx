@@ -104,7 +104,6 @@ export default function Header() {
                         <Link href="/docs" legacyBehavior passHref>
                             <NavigationMenuItem className="bg-background cursor-pointer flex gap-1 p-2 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                 <FolderGit2 />
-
                                 <NavigationMenuLink>
                                     Projetos
                                 </NavigationMenuLink>
