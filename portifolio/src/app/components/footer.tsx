@@ -16,7 +16,7 @@ export default function Footer() {
                         </Avatar>
                         
                     </Link>
-                    <div className="flex flex-col gap-3 text-backgroundwhite">
+                    <div className="flex flex-col gap-3 text-backgroundwhite font-semibold">
                     <Link href="#habilidades">
                             <span className="hover:text-background">Habilidades</span>
                         </Link>
