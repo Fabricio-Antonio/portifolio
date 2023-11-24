@@ -62,7 +62,7 @@ export default function Home() {
       </section>
       <section className="bg-backgroundwhite mt-10 mb-5">
         <div className="lg:flex">
-          <div className="hidden lg:flex justify-center w-full">
+          <div className="hidden lg:flex justify-center w-full mb-10">
             <Image src="/code.png" width={580} height={250} alt="code" />
           </div>
           <div>
@@ -76,7 +76,7 @@ export default function Home() {
               as necessidades do mercado e dos meus clientes,
               sempre aprendendo novas tecnologias. <br />
               Aqui estão algumas das minhas <i>hard skills</i>.</p>
-            <div className="w-full hidden lg:flex justify-center mt-5">
+            <div className="w-full hidden lg:flex justify-center mt-5 mb-10">
               <List />
             </div>
           </div>
@@ -88,13 +88,25 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="">
         <div className="w-full text-center mt-10">
-        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl  mt-5 mb-2">Projetos de clientes 🚀</h2>
-        <SliderClients />
-        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl mt-5 mb-2">Projetos pessoais 💡</h2>
-        <SliderMyProjcts />
-        <p className="mt-5 lg:hidden">Arraste para o lado ➞</p>
+          <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl  mt-5 mb-2">Projetos de clientes 🚀</h2>
+          <SliderClients />
+          <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl mt-5 mb-2">Projetos pessoais 💡</h2>
+          <SliderMyProjcts />
+          <p className="mt-5 lg:hidden">Arraste para o lado ➞</p>
+        </div>
+      </section>
+      <section className="bg-backgroundwhite mt-10">
+        <div className="flex justify-center">
+          <Separator className="bg-backgroundblack w-52 h-3 border-4 border-backgroundwhite rounded-xl mb-5 mt-5 flex items-center" />
+        </div>
+        <div>
+          <h2 className="uppercase text-backgroundblack text-xl font-bold text-center">Sobre</h2>
+          <p className="m-5 text-center px-5 text-lg lg:text-xl lg:px-60">Eu sou Farício, um entusiasta que recentemente ingressou no campo do desenvolvimento. Meu primeiro contato com a Tecnologia da Informação ocorreu quando eu era criança, por volta dos 11 anos. Movido pela curiosidade, busquei compreender como os sites, jogos e todas as nuances da tecnologia eram criados. Embora sempre tenha apreciado o contato com a tecnologia, inicialmente não a via como uma meta de carreira, relegando-a a um hobby.<br />
+            Em 2019, no início do ensino médio, assim como muitos adolescentes, estava indeciso sobre qual carreira seguir. A possibilidade de me tornar um desenvolvedor começou a ganhar espaço em meus pensamentos. Busquei orientação junto a profissionais da área, os quais me incentivaram a seguir esse caminho. Em 2022, iniciei minha jornada acadêmica no curso de Análise e Desenvolvimento de Sistemas na faculdade, com previsão de conclusão no primeiro semestre de 2024. Paralelamente, iniciei estudos em plataformas online. <br />
+            Desde o início de 2022, tenho me dedicado quase que exclusivamente ao desenvolvimento web Front-End. Você pode acompanhar minha jornada no Instagram, onde mantenho um perfil dedicado ao compartilhamento do meu progresso e projetos, ou no Linkedin, onde compartilho meus projetos e evolução acadêmica. Meus trabalhos também estão disponíveis em meu repositório no GitHub. Além disso, estou sempre disponível para conversas no WhatsApp. <br />
+            Todos os meus projetos pessoais, acadêmicos e profissionais serão publicados aqui, nesta seção dedicada a projetos. Estou ansioso para compartilhar e aprender mais nesse emocionante caminho do desenvolvimento.</p>
         </div>
       </section>
     </main >
