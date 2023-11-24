@@ -36,7 +36,7 @@ export default function SliderClients() {
                                         <DialogDescription>
                                             <span className="uppercase font-semibold">tecnologias</span> <br />
                                             ReactJS, TypeScript, TailwindCSS <br /><br />
-                                            Esse projeto de um site portifólio onde o cliente pôde não só exibir uma coleção de trabalhos, mas também é um convite para explorar sua jornada profissional e criativa.
+                                            Esse projeto é um site portifólio onde o cliente pôde não só exibir uma coleção de trabalhos, mas também é um convite para explorar sua jornada profissional e criativa.
                                         </DialogDescription>
                                     </DialogHeader>
                                     <div className="grid gap-4 py-4">
