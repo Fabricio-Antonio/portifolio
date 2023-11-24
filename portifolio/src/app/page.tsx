@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 import List from "./components/list";
 import SliderMyProjcts from "./components/slidermyprojects";
+import SliderClients from "./components/sliderprojectclient";
 
 export default function Home() {
   return (
@@ -89,10 +90,11 @@ export default function Home() {
       </section>
       <section>
         <div className="w-full text-center mt-10">
-        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl">Projetos de clientes 🚀</h2>
-        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl">Projetos pessoais 💡</h2>
+        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl  mt-5 mb-2">Projetos de clientes 🚀</h2>
+        <SliderClients />
+        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl mt-5 mb-2">Projetos pessoais 💡</h2>
         <SliderMyProjcts />
-        <p className="mt-5">Arraste para o lado ➞</p>
+        <p className="mt-5 lg:hidden">Arraste para o lado ➞</p>
         </div>
       </section>
     </main >

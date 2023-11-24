@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
-export default function SliderM() {
+export default function SliderMyProjects() {
     const [sliderRef] = useKeenSlider({
         breakpoints: {
             "(min-width: 425px)": {
@@ -20,8 +20,8 @@ export default function SliderM() {
     })
     return (
         <>
-            <div ref={sliderRef} className="keen-slider flex overflow-auto object-cover overflow-y-hidden ">
-                <div className="keen-slider__slide h-[300px] rounded-xl bg-backgroundwhite">
+            <div ref={sliderRef} className="keen-slider flex overflow-auto object-cover overflow-y-hidden lg:justify-center">
+                <div className="keen-slider__slide h-[300px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
                     <Image src='/quiz.png' width={400} height={400} alt="projeto pokedex" />
                     <h3 className="text-backgroundblack font-semibold text-lg my-2">Quiz pokémon</h3>
                     <div className="flex justify-center gap-1 lg:gap-5">
@@ -71,7 +71,7 @@ export default function SliderM() {
                         </div>
                     </div>
                 </div>
-                <div className="keen-slider__slide h-[300px] rounded-xl bg-backgroundwhite">
+                <div className="keen-slider__slide h-[300px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
                     <Image src='/pokedex.png' width={400} height={400} alt="projeto pokedex" />
                     <h3 className="text-backgroundblack font-semibold text-lg my-2">Pokédex</h3>
                     <div className="flex justify-center gap-1 lg:gap-5">
@@ -121,7 +121,7 @@ export default function SliderM() {
                         </div>
                     </div>
                 </div>
-                <div className="keen-slider__slide h-[300px] rounded-xl bg-backgroundwhite">
+                <div className="keen-slider__slide h-[300px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
                     <Image src='/site.png' width={400} height={400} alt="projeto pokedex" />
                     <h3 className="text-backgroundblack font-semibold text-lg my-2">Meu site</h3>
                     <div className="flex justify-center gap-1 lg:gap-5">
