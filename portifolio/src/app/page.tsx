@@ -5,6 +5,7 @@ import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp } from "react-icons/si";
 import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 import List from "./components/list";
+import SliderMyProjcts from "./components/slidermyprojects";
 
 export default function Home() {
   return (
@@ -58,32 +59,40 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-backgroundwhite mt-10">
+      <section className="bg-backgroundwhite mt-10 mb-5">
         <div className="lg:flex">
-          <div className="hidden lg:flex justify-center">
-            <Image src="/code.png" width={250} height={250} alt="code" />
+          <div className="hidden lg:flex justify-center w-full">
+            <Image src="/code.png" width={580} height={250} alt="code" />
           </div>
           <div>
-            <div className="pt-10 flex justify-center">
+            <div className="pt-10 flex justify-center lg:justify-start">
               <Separator className="bg-backgroundblack w-52 h-3 border-4 border-backgroundwhite rounded-xl mb-10" />
             </div>
-            <h2 className="text-xl font-bold text-center -mt-5">Habilidades</h2>
-            <p className="px-5 text-center">
+            <h2 className="text-xl font-bold text-center -mt-5 lg:text-left lg:ml-1 lg:text-3xl uppercase">Habilidades</h2>
+            <p className="px-5 text-center lg:text-left lg:text-xl">
               Me esforço para estar em constante
               desenvolvimento e alinhado ao máximo
               as necessidades do mercado e dos meus clientes,
               sempre aprendendo novas tecnologias. <br />
               Aqui estão algumas das minhas <i>hard skills</i>.</p>
-              <div className="w-full hidden lg:flex justify-center mt-5">
-                <List />
-              </div>
+            <div className="w-full hidden lg:flex justify-center mt-5">
+              <List />
+            </div>
           </div>
           <div className="flex lg:hidden justify-center mt-5">
-            <List/>
+            <List />
           </div>
           <div className="flex lg:hidden justify-center">
             <Image src="/code.png" width={250} height={250} alt="code" />
           </div>
+        </div>
+      </section>
+      <section>
+        <div className="w-full text-center mt-10">
+        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl">Projetos de clientes 🚀</h2>
+        <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl">Projetos pessoais 💡</h2>
+        <SliderMyProjcts />
+        <p className="mt-5">Arraste para o lado ➞</p>
         </div>
       </section>
     </main >

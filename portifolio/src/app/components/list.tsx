@@ -25,30 +25,30 @@ import { SiNotion } from "react-icons/si";
 export default function List() {
     return (
         <>
-            <div className="grid grid-cols-2 lg:grid-cols-3 text-xl">
-                <ul className="inline-flex gap-1 my-1"><SiHtml5 className="mt-1"/>HTML5</ul>
-                <ul className="inline-flex gap-1 my-1"><SiCss3 className="mt-1" />CSS3</ul>
-                <ul className="inline-flex gap-1 my-1"><SiJavascript className="mt-1" />JavaScript</ul>
-                <ul className="inline-flex gap-1 my-1"><SiTypescript className="mt-1" />TypeScript</ul>
-                <ul className="inline-flex gap-1 my-1"><SiReact className="mt-1" />React</ul>
-                <ul className="inline-flex gap-1 my-1"><SiNextdotjs className="mt-1" />Next</ul>
-                <ul className="inline-flex gap-1 my-1"><SiTailwindcss className="mt-1" />Tailwind CSS</ul>
-                <ul className="inline-flex gap-1 my-1"><SiStyledcomponents className="mt-1" />Styled Components</ul>
-                <ul className="inline-flex gap-1 my-1"><SiBootstrap className="mt-1" />Bootstrap</ul>
-                <ul className="inline-flex gap-1 my-1"><SiGit className="mt-1" />Git</ul>
-                <ul className="inline-flex gap-1 my-1"><SiGithub className="mt-1" />Github</ul>
-                <ul className="inline-flex gap-1 my-1"><SiMysql className="mt-1" />MySQL</ul>
-                <ul className="inline-flex gap-1 my-1"><SiMongodb className="mt-1" />MongoDB</ul>
-                <ul className="inline-flex gap-1 my-1"><SiLinux className="mt-1" />Linux</ul>
-                <ul className="inline-flex gap-1 my-1"><SiNpm className="mt-1" />npm</ul>
-                <ul className="inline-flex gap-1 my-1"><SiGnubash className="mt-1" />Bash</ul>
-                <ul className="inline-flex gap-1 my-1"><SiFigma className="mt-1" />Figma</ul>
-                <ul className="inline-flex gap-1 my-1"><SiVercel className="mt-1" />Vercel Cloud</ul>
-                <ul className="inline-flex gap-1 my-1"><SiNetlify className="mt-1" />Netlify Cloud</ul>
-                <ul className="inline-flex gap-1 my-1"><SiGoogleanalytics className="mt-1" />Google Analytics</ul>
-                <ul className="inline-flex gap-1 my-1"><SiSlack className="mt-1" />Slack</ul>
-                <ul className="inline-flex gap-1 my-1"><SiTrello className="mt-1" />Trello</ul>
-                <ul className="inline-flex gap-1 my-1"><SiNotion className="mt-1" />Notion</ul>
+            <div className="grid grid-cols-2 ml-7 font-semibold px-4 text-xl lg:grid-cols-3 lg:ml-0">
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiHtml5 className="mt-1 lg:text-3xl lg:mt-0"/>HTML5</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiCss3 className="mt-1 lg:text-3xl lg:mt-0" />CSS3</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiJavascript className="mt-1 lg:text-3xl lg:mt-0" />JavaScript</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiTypescript className="mt-1 lg:text-3xl lg:mt-0" />TypeScript</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiReact className="mt-1 lg:text-3xl lg:mt-0" />React</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiNextdotjs className="mt-1 lg:text-3xl lg:mt-0" />Next</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiTailwindcss className="mt-1 lg:text-3xl lg:mt-0" />Tailwind CSS</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiStyledcomponents className="mt-1 lg:text-3xl lg:mt-0" />Styled Components</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiBootstrap className="mt-1 lg:text-3xl lg:mt-0" />Bootstrap</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiGit className="mt-1 lg:text-3xl lg:mt-0" />Git</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiGithub className="mt-1 lg:text-3xl lg:mt-0" />Github</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiMysql className="mt-1 lg:text-3xl lg:mt-0" />MySQL</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiMongodb className="mt-1 lg:text-3xl lg:mt-0" />MongoDB</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiLinux className="mt-1 lg:text-3xl lg:mt-0" />Linux</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiNpm className="mt-1 lg:text-3xl lg:mt-0" />npm</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiGnubash className="mt-1 lg:text-3xl lg:mt-0" />Bash</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiFigma className="mt-1 lg:text-3xl lg:mt-0" />Figma</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiVercel className="mt-1 lg:text-3xl lg:mt-0" />Vercel Cloud</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiNetlify className="mt-1 lg:text-3xl lg:mt-0" />Netlify Cloud</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiGoogleanalytics className="mt-1 lg:text-3xl lg:mt-0" />Google Analytics</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiSlack className="mt-1 lg:text-3xl lg:mt-0" />Slack</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiTrello className="mt-1 lg:text-3xl lg:mt-0" />Trello</ul>
+                <ul className="inline-flex gap-1 my-1 lg:my-3"><SiNotion className="mt-1 lg:text-3xl lg:mt-0" />Notion</ul>
             </div>
         </>
     )
