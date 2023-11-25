@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
 import { Home, MenuIcon, FolderGit2, Code2, User2, LibraryBig } from "lucide-react";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Header() {
     return (
         <>
-            <div className="bg-backgroundblack w-full flex justify-between lg:hidden">
+            <div className="bg-backgroundblack w-full flex justify-between lg:hidden fixed -mt-32 z-10">
                 <Sheet>
                     <SheetTrigger className="py-3 px-3 ">
                         <MenuIcon className="text-backgroundwhite" />
@@ -23,7 +23,7 @@ export default function Header() {
                         </SheetHeader>
                         <div className="flex flex-col items-center font-extrabold">
                             <SheetClose asChild>
-                                <Link href="#inicio" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
+                                <Link href="#" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                     <Button>
                                         <Home className="mr-1" />
                                         Início
@@ -31,7 +31,7 @@ export default function Header() {
                                 </Link>
                             </SheetClose>
                             <SheetClose asChild>
-                                <Link href="#" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
+                                <Link href="#habilidades" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                     <Button>
 
                                         <Code2 className="mr-1" />
@@ -40,7 +40,7 @@ export default function Header() {
                                 </Link>
                             </SheetClose>
                             <SheetClose asChild>
-                                <Link href="#" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
+                                <Link href="#projetos" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                     <Button>
                                         <FolderGit2 className="mr-1" />
                                         Projetos
@@ -48,7 +48,7 @@ export default function Header() {
                                 </Link>
                             </SheetClose>
                             <SheetClose asChild>
-                                <Link href="#" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
+                                <Link href="#sobre" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                     <Button>
                                         <User2 className="mr-1" />
                                         Sobre
@@ -56,7 +56,7 @@ export default function Header() {
                                 </Link>
                             </SheetClose>
                             <SheetClose asChild>
-                                <Link href="#" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
+                                <Link href="#certificados" className="w-full bg-background text-center mt-3 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                     <Button>
                                         <LibraryBig className="" />
                                         Certificados
@@ -91,7 +91,7 @@ export default function Header() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </Link>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#habilidades" legacyBehavior passHref>
                             <NavigationMenuItem className="bg-background cursor-pointer flex gap-1 p-2 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                 <Code2 />
 
@@ -101,7 +101,7 @@ export default function Header() {
 
                             </NavigationMenuItem>
                         </Link>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#projetos" legacyBehavior passHref>
                             <NavigationMenuItem className="bg-background cursor-pointer flex gap-1 p-2 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                 <FolderGit2 />
                                 <NavigationMenuLink>
@@ -109,7 +109,7 @@ export default function Header() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </Link>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#sobre" legacyBehavior passHref>
                             <NavigationMenuItem className="bg-background cursor-pointer flex gap-1 p-2 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                 <User2 />
 
@@ -118,7 +118,7 @@ export default function Header() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </Link>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#certificados" legacyBehavior passHref>
                             <NavigationMenuItem className="bg-background cursor-pointer flex gap-1 p-2 rounded-xl hover:bg-backgroundwhite hover:text-background">
                                 <LibraryBig />
                                 <NavigationMenuLink>

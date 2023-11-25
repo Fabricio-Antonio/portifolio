@@ -16,7 +16,7 @@ export default function Home() {
         <div className="lg:flex lg:justify-center">
           <div>
             <h1
-              className="text-backgroundwhite font-semibold text-2xl mt-12 text-center lg:text-5xl lg:font-bold lg:mt-24"
+              className="text-backgroundwhite font-semibold text-2xl mt-32 text-center lg:text-5xl lg:font-bold lg:mt-24"
             >Eu sou Fabrício Santos <br className="lg:hidden" /> 🖖😁<br />
               <TypeAnimation
                 sequence={[
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-backgroundwhite mt-10 mb-5">
-        <div className="lg:flex">
+        <div id="habilidades" className="lg:flex">
           <div className="hidden lg:flex justify-center w-full mb-10">
             <Image src="/code.png" width={580} height={250} alt="code" />
           </div>
@@ -89,8 +89,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="">
-        <div className="w-full text-center mt-10">
+      <section>
+        <div id="projetos" className="w-full text-center mt-10">
           <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl  mt-5 mb-2">Projetos de clientes 🚀</h2>
           <SliderClients />
           <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl mt-5 mb-2">Projetos pessoais 💡</h2>
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-backgroundwhite mt-10">
-        <div className="flex justify-center">
+        <div id="sobre" className="flex justify-center">
           <Separator className="bg-backgroundblack w-52 h-3 border-4 border-backgroundwhite rounded-xl mb-5 mt-5 flex items-center" />
         </div>
         <div>
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div>
+        <div id="certificados">
           <h2 className="uppercase text-backgroundwhite text-xl font-bold text-center lg:text-3xl mb-5">certificados</h2>
         </div>
         <SliderCertificates />
