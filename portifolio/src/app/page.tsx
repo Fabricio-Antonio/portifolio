@@ -7,6 +7,7 @@ import { Separator } from "@radix-ui/react-separator";
 import List from "./components/list";
 import SliderMyProjcts from "./components/slidermyprojects";
 import SliderClients from "./components/sliderprojectclient";
+import SliderCertificates from "./components/slidercertificates";
 
 export default function Home() {
   return (
@@ -102,12 +103,18 @@ export default function Home() {
           <Separator className="bg-backgroundblack w-52 h-3 border-4 border-backgroundwhite rounded-xl mb-5 mt-5 flex items-center" />
         </div>
         <div>
-          <h2 className="uppercase text-backgroundblack text-xl font-bold text-center">Sobre</h2>
-          <p className="m-5 text-center px-5 text-lg lg:text-xl lg:px-60">Eu sou Farício, um entusiasta que recentemente ingressou no campo do desenvolvimento. Meu primeiro contato com a Tecnologia da Informação ocorreu quando eu era criança, por volta dos 11 anos. Movido pela curiosidade, busquei compreender como os sites, jogos e todas as nuances da tecnologia eram criados. Embora sempre tenha apreciado o contato com a tecnologia, inicialmente não a via como uma meta de carreira, relegando-a a um hobby.<br />
-            Em 2019, no início do ensino médio, assim como muitos adolescentes, estava indeciso sobre qual carreira seguir. A possibilidade de me tornar um desenvolvedor começou a ganhar espaço em meus pensamentos. Busquei orientação junto a profissionais da área, os quais me incentivaram a seguir esse caminho. Em 2022, iniciei minha jornada acadêmica no curso de Análise e Desenvolvimento de Sistemas na faculdade, com previsão de conclusão no primeiro semestre de 2024. Paralelamente, iniciei estudos em plataformas online. <br />
-            Desde o início de 2022, tenho me dedicado quase que exclusivamente ao desenvolvimento web Front-End. Você pode acompanhar minha jornada no Instagram, onde mantenho um perfil dedicado ao compartilhamento do meu progresso e projetos, ou no Linkedin, onde compartilho meus projetos e evolução acadêmica. Meus trabalhos também estão disponíveis em meu repositório no GitHub. Além disso, estou sempre disponível para conversas no WhatsApp. <br />
+          <h2 className="uppercase text-backgroundblack text-xl font-bold text-center lg:text-3xl">Sobre</h2>
+          <p className="m-5 pb-10 text-center px-5 text-lg lg:text-xl lg:px-60">Eu sou Fabrício, um entusiasta que recentemente ingressou no campo do desenvolvimento. Meu primeiro contato com a Tecnologia da Informação ocorreu quando eu era criança, por volta dos 11 anos. Movido pela curiosidade, busquei compreender como os sites, jogos e todas as nuances da tecnologia eram criados. Embora sempre tenha apreciado o contato com a tecnologia, inicialmente não a via como uma meta de carreira, relegando-a a um hobby.<br /> <br />
+            Em 2019, no início do ensino médio, assim como muitos adolescentes, estava indeciso sobre qual carreira seguir. A possibilidade de me tornar um desenvolvedor começou a ganhar espaço em meus pensamentos. Busquei orientação junto a profissionais da área, os quais me incentivaram a seguir esse caminho. Em 2022, iniciei minha jornada acadêmica no curso de Análise e Desenvolvimento de Sistemas na faculdade, com previsão de conclusão no primeiro semestre de 2024. Paralelamente, iniciei estudos em plataformas online. <br /> <br />
+            Desde o início de 2022, tenho me dedicado quase que exclusivamente ao desenvolvimento web Front-End. Você pode acompanhar minha jornada no Instagram, onde mantenho um perfil dedicado ao compartilhamento do meu progresso e projetos, ou no Linkedin, onde compartilho meus projetos e evolução acadêmica. Meus trabalhos também estão disponíveis em meu repositório no GitHub. Além disso, estou sempre disponível para conversas no WhatsApp. <br /> <br />
             Todos os meus projetos pessoais, acadêmicos e profissionais serão publicados aqui, nesta seção dedicada a projetos. Estou ansioso para compartilhar e aprender mais nesse emocionante caminho do desenvolvimento.</p>
         </div>
+      </section>
+      <section>
+        <div>
+          <h2 className="uppercase text-backgroundwhite text-xl font-bold text-center lg:text-3xl mb-5">certificados</h2>
+        </div>
+        <SliderCertificates />
       </section>
     </main >
   )
