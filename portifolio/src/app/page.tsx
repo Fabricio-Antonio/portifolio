@@ -111,10 +111,11 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div id="certificados">
+        <div id="certificados" className="w-full text-center mt-10">
           <h2 className="uppercase text-backgroundwhite text-xl font-bold text-center lg:text-3xl mb-5">certificados</h2>
+          <SliderCertificates />
+          <p className="mt-5">Arraste para o lado ➞</p>
         </div>
-        <SliderCertificates />
       </section>
     </main >
   )
