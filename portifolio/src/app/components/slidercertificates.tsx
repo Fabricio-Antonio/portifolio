@@ -20,7 +20,11 @@ export default function SliderCertificates() {
     })
     return (
         <>
+        
             <div ref={sliderRef} className="keen-slider flex overflow-auto object-cover overflow-y-hidden">
+            <div className="keen-slider__slide  h-[257px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
+                    <Image src='/certificado 8.png' width={400} height={400} alt="projeto pokedex" />
+                </div>
                 <div className="keen-slider__slide  h-[257px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
                     <Image src='/certificado 1.png' width={400} height={400} alt="projeto pokedex" />
                 </div>
