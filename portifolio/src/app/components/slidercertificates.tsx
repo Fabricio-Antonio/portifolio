@@ -28,7 +28,7 @@ export default function SliderCertificates() {
                 <div className="keen-slider__slide  h-[257px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
                     <Image src='/certificado 1.png' width={400} height={400} alt="projeto pokedex" />
                 </div>
-                <div className="keen-slider__slide h-[257px] rounded-xl bg-backgroundblack border-2 border-backgroundblack">
+                <div className="keen-slider__slide h-[257px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
                     <Image src='/certificado 2.png' width={400} height={400} alt="projeto pokedex" />
                 </div>
                 <div className="keen-slider__slide h-[257px] rounded-xl bg-backgroundwhite border-2 border-backgroundblack">
