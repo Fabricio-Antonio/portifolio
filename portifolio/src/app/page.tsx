@@ -42,7 +42,7 @@ export default function Home() {
                     <br />
                     • 🧠 Atualmente focado em TypeScript e ReactJS. <br />
                     <br />
-                    • 💼 Atualmente atuando como freelancer.
+                    • 💼 Atualmente trabalhando como freelancer.
                   </p>
                 </code>
               </div>
