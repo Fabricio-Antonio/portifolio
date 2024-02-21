@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp } from "react-icons/si";
+import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp, SiYoutube } from "react-icons/si";
 import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 import List from "./components/list";
@@ -51,13 +51,12 @@ export default function Home() {
               <Link href="https://github.com/Fabricio-Antonio" target="_blank" rel="noopener noreferrer"><SiGithub /></Link>
               <Link href="https://www.linkedin.com/in/fabricio-ss/" target="_blank" rel="noopener noreferrer"><SiLinkedin /></Link>
               <Link href="https://www.instagram.com/fabricio.ss.dev/" target="_blank" rel="noopener noreferrer"><SiInstagram /></Link>
+              <Link href="https://www.youtube.com/channel/UCrqkKAG7n5sroV_39erEZyw" target="_blank" rel="noopener noreferrer"><SiYoutube /></Link>
               <Link href="https://api.whatsapp.com/send?phone=5581983587510&text=Oi%2C%20Fabr%C3%ADcio.%20Eu%20vi%20seu%20portif%C3%B3lio%20e%20gostei%20muito%20do%20seu%20trabalho%2C%20gostaria%20de%20conversar%20contigo." target="_blank" rel="noopener noreferrer"><SiWhatsapp /></Link>
             </div>
           </div>
           <div className="w-full flex justify-center lg:w-[300px] lg:h-[200px] lg:justify-center lg:mt-44">
-            <Image src='/eu.jpeg' width={200} height={200} alt="Fabrício Santos"
-              className="rounded-full border-4 border-backgroundwhite"
-            />
+          <iframe src="https://giphy.com/embed/MT5UUV1d4CXE2A37Dg" width="250" height="250" frameBorder="0" className="giphy-embed rounded-full border-4 border-backgroundblack cursor-not-allowed" allowFullScreen></iframe>
           </div>
         </div>
       </section>
@@ -104,11 +103,12 @@ export default function Home() {
         </div>
         <div>
           <h2 className="uppercase text-backgroundblack text-xl font-bold text-center lg:text-3xl">Sobre</h2>
-          <p className="m-5 pb-10 text-center px-5 text-lg lg:text-xl lg:px-60">Eu sou Fabrício, um entusiasta que recentemente ingressou no campo do desenvolvimento. Meu primeiro contato com a Tecnologia da Informação ocorreu quando eu era criança, por volta dos 11 anos. Movido pela curiosidade, busquei compreender como os sites, jogos e todas as nuances da tecnologia eram criados. Embora sempre tenha apreciado o contato com a tecnologia, inicialmente não a via como uma meta de carreira, relegando-a a um hobby.<br /> <br />
-            Em 2019, no início do ensino médio, assim como muitos adolescentes, estava indeciso sobre qual carreira seguir. A possibilidade de me tornar um desenvolvedor começou a ganhar espaço em meus pensamentos. Busquei orientação junto a profissionais da área, os quais me incentivaram a seguir esse caminho. Em 2022, iniciei minha jornada acadêmica no curso de Análise e Desenvolvimento de Sistemas na faculdade, com previsão de conclusão no primeiro semestre de 2024. Paralelamente, iniciei estudos em plataformas online. <br /> <br />
-            Desde o início de 2022, tenho me dedicado quase que exclusivamente ao desenvolvimento web Front-End. Você pode acompanhar minha jornada no Instagram, onde mantenho um perfil dedicado ao compartilhamento do meu progresso e projetos, ou no Linkedin, onde compartilho meus projetos e evolução acadêmica. Meus trabalhos também estão disponíveis em meu repositório no GitHub. Além disso, estou sempre disponível para conversas no WhatsApp. <br /> <br />
-            Todos os meus projetos pessoais, acadêmicos e profissionais serão publicados aqui, nesta seção dedicada a projetos. Estou ansioso para compartilhar e aprender mais nesse emocionante caminho do desenvolvimento.</p>
-        </div>
+          <p className="m-5 pb-10 text-center px-5 text-lg lg:text-xl lg:px-60">Ainda criança movido pela curiosidade, busquei compreender como os sites, jogos e todas as nuances da tecnologia eram criados. Ao final do ensino médio ingressei em Análise e Desenvolvimento de Sistemas (ADS), e desde o início de 2022, tenho me dedicado quase que exclusivamente ao desenvolvimento web Front-End.
+
+Estou documentando minha evolução e compartilhando meus conhecimentos no YouTube e no Instagram.
+
+Para além do código eu gosto de: ler, estudar filosofia e ciências no geral, e jogar xadrez (não quer dizer que sou bom 😂).</p>
+        </div>ull
       </section>
       <section>
         <div id="certificados" className="w-full text-center mt-10">
