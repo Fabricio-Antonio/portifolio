@@ -20,9 +20,11 @@ export default function Home() {
             >Eu sou Fabrício Santos <br className="lg:hidden" /> 🖖😁<br />
               <TypeAnimation
                 sequence={[
-                  'Dev. Front-End',
+                  'Dev. Full-Stack',
                   1000,
-                  'Dev. React ⚛️',
+                  'Dev. React JS',
+                  2000,
+                  'Dev. Nest JS',
                   2000,
                 ]}
                 wrapper="span"
@@ -36,13 +38,15 @@ export default function Home() {
               <div className="bg-backgroundwhite rounded-xl w-full justify-center">
                 <code>
                   <p className="px-3 py-5">
-                    • 🧑‍🎓 Estou no 4º perído de Análise e Desenvolvimento de Sistemas. <br />
+                    • 🧑‍🎓 Graduado em Análise e Desenvolvimento de Sistema. <br />
                     <br />
-                    • 👨‍💻 Já tive contato com: Python, JavaScript, TypeScript, e Java. <br />
+                    • 💼 + 1 ano e meio de experiência como freelancer. <br />
                     <br />
-                    • 🧠 Atualmente focado em TypeScript e ReactJS. <br />
+                    • 🏁 Competidor em hackathons. <br />
                     <br />
-                    • 💼 Atualmente trabalhando como freelancer.
+                    • 🚀 Co-fundador <a href="http://rotas4me.com/" target="_blank" rel="noopener noreferrer" className="text-[#ed3270] font-bold">Rotas4Me</a>. <br />
+                    <br />
+                    • 👨‍💻 Atuo com todo ecossistema JS/TS. <br />
                   </p>
                 </code>
               </div>
@@ -56,7 +60,13 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full flex justify-center lg:w-[300px] lg:h-[200px] lg:justify-center lg:mt-44">
-          <iframe src="https://giphy.com/embed/MT5UUV1d4CXE2A37Dg" width="250" height="250" frameBorder="0" className="giphy-embed rounded-full border-4 border-backgroundblack cursor-not-allowed" allowFullScreen></iframe>
+            <Image
+              src="https://avatars.githubusercontent.com/u/90152237?v=4"
+              width={200}
+              height={200}
+              alt="Foto de perfil Fabrício Santos"
+              className="rounded-full border-4 border-backgroundblack cursor-not-allowed"
+            />
           </div>
         </div>
       </section>
@@ -71,11 +81,8 @@ export default function Home() {
             </div>
             <h2 className="text-xl font-bold text-center -mt-5 lg:text-left lg:ml-1 lg:text-3xl uppercase">Habilidades</h2>
             <p className="px-5 text-center lg:text-left lg:text-xl">
-              Me esforço para estar em constante
-              desenvolvimento e alinhado ao máximo
-              as necessidades do mercado e dos meus clientes,
-              sempre aprendendo novas tecnologias. <br />
-              Aqui estão algumas das minhas <i>hard skills</i>.</p>
+              Evolução constante, foco no mercado e nas necessidades reais dos clientes. Sempre aprendendo, sempre entregando.
+              </p>
             <div className="w-full hidden lg:flex justify-center mt-5 mb-10">
               <List />
             </div>
