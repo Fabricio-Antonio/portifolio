@@ -1,12 +1,12 @@
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { Instagram, SeparatorVertical, Youtube } from "lucide-react";
 import Link from "next/link";
 import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp } from "react-icons/si";
 
 export default function Footer() {
-    return (
+    const currentYear = new Date().getFullYear();
 
+    return (
         <div className="w-full bg-backgroundblack">
             <div className="flex flex-col items-center w-full h-auto mt-6">
                 <div className=" flex justify-around w-full mt-6 mb-6 ">
@@ -40,14 +40,13 @@ export default function Footer() {
                     <Link href="https://api.whatsapp.com/send?phone=5581983587510&text=Oi%2C%20Fabr%C3%ADcio.%20Eu%20vi%20seu%20portif%C3%B3lio%20e%20gostei%20muito%20do%20seu%20trabalho%2C%20gostaria%20de%20conversar%20contigo." target="_blank" rel="noopener noreferrer"><SiWhatsapp /></Link>
                 </div>
 
-                <div className="text-white px-8 py-4 text-[0.625rem]">
-                    © 2023 Copyright{" "}
+                <div className="text-white px-8 py-4 text-sm">
+                    © {currentYear} Copyright{" "}
                     <span className="font-semibold text-background pl-1">
                         Fabrício Santos
                     </span>
                 </div>
             </div>
         </div>
-
     )
 }
