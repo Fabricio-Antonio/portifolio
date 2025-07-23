@@ -5,7 +5,6 @@ import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp, SiYoutube } from "react-
 import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 import List from "./components/list";
-import SliderMyProjcts from "./components/slidermyprojects";
 import SliderClients from "./components/sliderprojectclient";
 import SliderCertificates from "./components/slidercertificates";
 
@@ -97,11 +96,8 @@ export default function Home() {
       </section>
       <section>
         <div id="projetos" className="w-full text-center mt-10">
-          <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl  mt-5 mb-2">Projetos de clientes 🚀</h2>
+          <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl  mt-5 mb-2">Experiências 🚀</h2>
           <SliderClients />
-          <h2 className="text-backgroundwhite text-xl font-semibold uppercase lg:text-3xl mt-5 mb-2">Projetos pessoais 💡</h2>
-          <SliderMyProjcts />
-          <p className="mt-5 lg:hidden">Arraste para o lado ➞</p>
         </div>
       </section>
       <section className="bg-backgroundwhite mt-10">
@@ -110,12 +106,10 @@ export default function Home() {
         </div>
         <div>
           <h2 className="uppercase text-backgroundblack text-xl font-bold text-center lg:text-3xl">Sobre</h2>
-          <p className="m-5 pb-10 text-center px-5 text-lg lg:text-xl lg:px-60">Ainda criança movido pela curiosidade, busquei compreender como os sites, jogos e todas as nuances da tecnologia eram criados. Ao final do ensino médio ingressei em Análise e Desenvolvimento de Sistemas (ADS), e desde o início de 2022, tenho me dedicado quase que exclusivamente ao desenvolvimento web Front-End.
-
-Estou documentando minha evolução e compartilhando meus conhecimentos no YouTube e no Instagram.
-
-Para além do código eu gosto de: ler, estudar filosofia e ciências no geral, e jogar xadrez (não quer dizer que sou bom 😂).</p>
-        </div>ull
+          <p className="m-5 pb-10 text-center px-5 text-lg lg:text-xl lg:px-60">
+            Com mais de <strong>1 ano e meio de experiência</strong> como freelancer, atuei em todas as etapas do ciclo de desenvolvimento — do planejamento à manutenção de software. Já entreguei soluções para diversos setores, <strong>desde landing pages de alta conversão até sistemas administrativos para órgãos públicos</strong>. Atualmente, estou iniciando minha própria startup, <a href="http://rotas4me.com/" target="_blank" rel="noopener noreferrer" className="text-[#ed3270] font-bold">Rotas4Me</a>, colocando em prática tudo o que aprendi para construir algo inovador do zero.
+          </p>
+        </div>
       </section>
       <section>
         <div id="certificados" className="w-full text-center mt-10">
