@@ -28,7 +28,7 @@ const projects = [
   {
     id: "filmmaker" as const,
     title: "Site Filmmaker",
-    tags: ["React", "Next.js", "Tailwind CSS", "Design"],
+    tags: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Design"],
     href: "https://site-junior-ribeiro.vercel.app/",
     image: "/site-filmmeker.png",
   },
@@ -38,6 +38,13 @@ const projects = [
     tags: ["Electron", "TypeScript", "Sentry", "Desktop", "Cross-platform"],
     href: "https://github.com/Fabricio-Antonio/TrayOpen",
     image: "/trayopen.png",
+  },
+  {
+    id: "gerdbot" as const,
+    title: "GerdBot",
+    tags: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "EmailJS", "Design"],
+    href: "https://gerdbot.com.br/",
+    image: "/gerdbot.png",
   },
 ];
 

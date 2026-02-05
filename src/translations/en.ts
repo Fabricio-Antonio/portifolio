@@ -79,6 +79,10 @@ export const en = {
         description:
           "A minimalist desktop application that runs in the system tray and provides quick access to your recent projects. With a single click, the selected project is automatically opened in Visual Studio Code. Ideal for developers who seek speed and efficiency in their daily routine.",
       },
+      gerdbot: {
+        description:
+          "Institutional website for an engineering company with email integration. Showcases the company's services and allows direct contact through a form integrated with email sending.",
+      },
     },
   },
   experience: {
@@ -113,7 +117,7 @@ export const en = {
         role: "Front-End Developer",
         company: "Freelancer",
         description:
-          "Development of an institutional electronic panel system for displaying legislative information in real time, including voting results, daily agendas, and internal communication, used in official City Council sessions. End-to-end work with requirements gathering, interface definition, development and REST API integration, testing, and technical documentation. Solution adopted in a government environment with 95% user approval.",
+          "Worked on web interface development projects as a freelancer. Responsible for creating responsive and accessible interfaces, implementing layouts from prototypes, and integrating with APIs for data consumption. Focus on user experience, performance, and code best practices.",
       },
     },
   },

@@ -79,6 +79,10 @@ export const pt = {
         description:
           "A minimalist desktop application that runs in the system tray and provides quick access to your recent projects. With a single click, the selected project is automatically opened in Visual Studio Code. Ideal for developers who seek speed and efficiency in their daily routine.",
       },
+      gerdbot: {
+        description:
+          "Site institucional para empresa de engenharia com integração com e-mail. Apresenta os serviços da empresa e permite contato direto através de formulário integrado ao envio de e-mails.",
+      },
     },
   },
   experience: {
@@ -113,7 +117,7 @@ export const pt = {
         role: "Desenvolvedor Front-End",
         company: "Freelancer",
         description:
-          "Desenvolvimento de sistema institucional de painel eletrônico para exibição de informações legislativas em tempo real, incluindo resultados de votações, pautas do dia e comunicação interna, utilizado em sessões oficiais da Câmara Municipal. Atuação end-to-end com levantamento de requisitos, definição de interfaces, desenvolvimento e integração com APIs REST, testes e documentação técnica. Solução adotada em ambiente governamental com 95% de aprovação dos usuários.",
+          "Atuação em projetos de desenvolvimento de interfaces web como freelancer. Responsável pela criação de interfaces responsivas e acessíveis, implementação de layouts a partir de protótipos e integração com APIs para consumo de dados. Foco em experiência do usuário, performance e boas práticas de código.",
       },
     },
   },

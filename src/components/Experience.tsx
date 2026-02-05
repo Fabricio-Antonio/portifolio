@@ -32,7 +32,9 @@ export function Experience() {
                     ? ["TypeScript", "Python", "React Native", "NestJS", "PyTorch", "MongoDB", "Computer Vision", "IA"]
                     : key === "rotas4me"
                       ? ["TypeScript", "React", "Next.js", "React Native", "Node.js", "NestJS", "MongoDB", "Tailwind CSS"]
-                      : ["React.js", "Next.js", "Tailwind CSS", "Node.js", "PostgreSQL", "API REST"]
+                      : key === "freelancer"
+                        ? ["React.js", "Next.js", "Tailwind CSS", "HTML", "CSS", "JavaScript", "TypeScript", "Figama"]
+                        : ["React.js", "Next.js", "Tailwind CSS", "Node.js", "PostgreSQL", "API REST"]
                   ).map((tag) => (
                     <span
                       key={tag}
