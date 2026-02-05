@@ -7,7 +7,7 @@ export const siteConfig = {
   title: "Fabrício Santos | Desenvolvedor Full-Stack",
   description:
     "Desenvolvedor full-stack e pesquisador em Health Tech com Computer Vision e IA aplicada. Mais de 2 anos desenvolvendo aplicações web e mobile. Especialista em React, NestJS e React Native. Recife, PE.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://fabriciosantos.dev",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://fabriciosantos.dev.br",
   locale: "pt_BR",
   keywords: [
     "desenvolvedor full-stack",
