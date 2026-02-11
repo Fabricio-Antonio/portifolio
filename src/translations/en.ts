@@ -20,6 +20,7 @@ export const en = {
     viewProjects: "View Projects",
     contact: "Get in Touch",
     blog: "Blog",
+    available: "available for projects",
   },
   about: {
     title: "About",

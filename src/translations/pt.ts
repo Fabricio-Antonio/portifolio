@@ -20,6 +20,7 @@ export const pt = {
     viewProjects: "Ver Projetos",
     contact: "Entrar em Contato",
     blog: "Blog",
+    available: "disponível para projetos",
   },
   about: {
     title: "Sobre",
