@@ -31,10 +31,10 @@ export function Header() {
         isScrolled ? "bg-background/95 backdrop-blur-md border-b border-card-border" : ""
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
         <Link
           href="#inicio"
-          className="text-xl font-bold tracking-tight text-foreground hover:text-accent transition-colors"
+          className="min-w-0 shrink text-lg sm:text-xl font-bold tracking-tight text-foreground hover:text-accent transition-colors"
         >
           Fabrício<span className="text-accent"> Santos</span>
         </Link>
@@ -89,14 +89,14 @@ export function Header() {
       </nav>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-card-border bg-background/98 backdrop-blur-md">
-          <ul className="flex flex-col px-6 py-4 gap-4">
+        <div className="md:hidden border-t border-card-border bg-background/98 backdrop-blur-md max-h-[min(70vh,calc(100dvh-5rem))] overflow-y-auto overscroll-contain">
+          <ul className="flex flex-col px-4 sm:px-6 py-4 gap-1">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-2 text-muted hover:text-foreground transition-colors"
+                  className="flex items-center min-h-[44px] py-3 text-base text-muted hover:text-foreground transition-colors"
                 >
                   {link.label}
                 </Link>

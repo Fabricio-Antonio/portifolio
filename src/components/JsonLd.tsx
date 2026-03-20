@@ -15,6 +15,7 @@ export function JsonLd() {
     sameAs: [
       "https://www.linkedin.com/in/fabricio-ss/",
       "https://github.com/Fabricio-Antonio",
+      "https://x.com/Fabricio_ss_",
       "https://www.instagram.com/fabriciosantos.dev/",
       "https://www.meus10centavos.com.br",
       "https://www.instagram.com/fabricio.ss/",

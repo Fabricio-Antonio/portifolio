@@ -46,23 +46,23 @@ export function Skills() {
   ];
 
   return (
-    <section id="habilidades" className="py-24 border-t border-card-border">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl font-bold mb-4">
+    <section id="habilidades" className="py-16 sm:py-20 md:py-24 border-t border-card-border">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
           {t.skills.title} <span className="text-accent">{t.skills.highlight}</span>
         </h2>
-        <p className="text-muted mb-12 max-w-2xl">{t.skills.subtitle}</p>
-        <div className="space-y-10">
+        <p className="text-muted text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl">{t.skills.subtitle}</p>
+        <div className="space-y-8 sm:space-y-10">
           {categories.map(({ key, title }) => (
             <div key={key}>
               <h3 className="text-sm font-semibold text-accent uppercase tracking-wider mb-4">
                 {title}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {skillKeys[key].map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 rounded-full bg-card border border-card-border text-sm text-foreground hover:border-accent hover:bg-accent/5 transition-colors"
+                    className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-card border border-card-border text-xs sm:text-sm text-foreground hover:border-accent hover:bg-accent/5 transition-colors"
                   >
                     {skill}
                   </span>

@@ -280,6 +280,6 @@ export const siteConfig = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@fabriciosantos",
+    creator: "@Fabricio_ss_",
   },
 } as const;

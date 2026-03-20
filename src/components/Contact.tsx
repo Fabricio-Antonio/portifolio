@@ -23,6 +23,15 @@ const contactLinks = [
     ),
   },
   {
+    href: "https://x.com/Fabricio_ss_",
+    label: "X",
+    icon: (
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
+  },
+  {
     href: "https://www.meus10centavos.com.br",
     label: "Blog",
     icon: (
@@ -55,20 +64,20 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id="contato" className="py-24 border-t border-card-border">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl font-bold mb-4">
+    <section id="contato" className="py-16 sm:py-20 md:py-24 border-t border-card-border pb-[max(1.5rem,env(safe-area-inset-bottom))]">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
           {t.contact.title} <span className="text-accent">{t.contact.highlight}</span>
         </h2>
-        <p className="text-muted mb-12 max-w-2xl">{t.contact.subtitle}</p>
-        <div className="flex flex-wrap gap-6">
+        <p className="text-muted text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl">{t.contact.subtitle}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
           {contactLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-4 rounded-xl bg-card border border-card-border hover:border-accent/50 text-foreground hover:text-accent transition-all"
+              className="flex items-center gap-3 min-h-[52px] px-4 sm:px-6 py-3 sm:py-4 rounded-xl bg-card border border-card-border hover:border-accent/50 text-foreground hover:text-accent transition-all min-w-0"
             >
               {link.icon}
               <span className="font-medium">{link.label}</span>

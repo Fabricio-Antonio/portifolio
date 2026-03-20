@@ -16,7 +16,7 @@ export const pt = {
     description2:
       "desenvolvendo aplicações web e mobile.",
     description3:
-      "Especialista em JavaScript/TypeScript (React, NestJS) e desenvolvimento mobile com React Native.",
+      "Especialista em JavaScript/TypeScript (React, NestJS), desenvolvimento mobile com React Native e contribuidor open-source.",
     viewProjects: "Ver Projetos",
     contact: "Entrar em Contato",
     blog: "Blog",
@@ -59,6 +59,8 @@ export const pt = {
     highlight: "em destaque",
     subtitle:
       "Alguns dos projetos que desenvolvi ou participei. Cada um representa um desafio único e uma oportunidade de aprendizado.",
+    visit: "Visitar",
+    closeModal: "Fechar",
     items: {
       rotas4me: {
         description:
@@ -79,6 +81,10 @@ export const pt = {
       trayopen: {
         description:
           "A minimalist desktop application that runs in the system tray and provides quick access to your recent projects. With a single click, the selected project is automatically opened in Visual Studio Code. Ideal for developers who seek speed and efficiency in their daily routine.",
+      },
+      slynx: {
+        description:
+          "Linguagem de UI open-source, orientada a dados e escrita em Rust, criada para desenvolver interfaces multiplataforma a partir de uma base de código única. O projeto prioriza sintaxe legível, alta performance e segurança com comportamento determinístico.",
       },
       gerdbot: {
         description:
@@ -127,6 +133,9 @@ export const pt = {
     highlight: "contato",
     subtitle:
       "Tem um projeto em mente ou quer conversar? Me encontre nas redes abaixo.",
+    whatsappLabel: "WhatsApp",
+    whatsappMessage:
+      "Olá, Fabrício! Vi seu site e tenho interesse em desenvolver um projeto. Você está disponível para conversar sobre orçamento e prazos?",
   },
   footer: {
     rights: "Todos os direitos reservados.",

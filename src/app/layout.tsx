@@ -86,7 +86,7 @@ export default function RootLayout({
         <LanguageProvider>
           <JsonLd />
           <Header />
-          <main>{children}</main>
+          <main className="min-w-0">{children}</main>
           <Footer />
         </LanguageProvider>
       </body>
