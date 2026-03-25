@@ -2,38 +2,136 @@ export const pt = {
   nav: {
     home: "Início",
     about: "Sobre",
-    skills: "Habilidades",
+    services: "Serviços",
+    results: "Resultados",
+    skills: "Stack",
     projects: "Projetos",
     experience: "Experiência",
     contact: "Contato",
   },
+  cta: {
+    requestQuote: "Solicitar orçamento",
+    discussProject: "Falar sobre seu projeto",
+    seeCases: "Ver cases de projetos",
+    floatingWhatsappAria: "Abrir WhatsApp para solicitar orçamento",
+    headerQuote: "Orçamento",
+  },
   hero: {
     greeting: "Olá, eu sou",
     title: "Desenvolvedor Full-Stack",
+    valueLine:
+      "Ajudo empresas e órgãos públicos a transformar problemas reais em produtos digitais escaláveis — com foco em resultado, não só em código.",
     description:
-      "Pesquisador e desenvolvedor em Health Tech com Computer Vision e IA aplicada. Mais de",
-    years: "2 anos",
+      "Desenvolvedor full-stack e pesquisador em Health Tech com computer vision e IA aplicada, com",
+    years: "+ 2 anos",
     description2:
-      "desenvolvendo aplicações web e mobile.",
+      "de experiência no desenvolvimento de aplicações web e mobile, incluindo sistemas para órgãos públicos.",
     description3:
-      "Especialista em JavaScript/TypeScript (React, NestJS), desenvolvimento mobile com React Native e contribuidor open-source.",
-    viewProjects: "Ver Projetos",
-    contact: "Entrar em Contato",
+      "Co-fundador da Rotas4Me, contribuidor open-source (Slynx) e experiência com ambiente governamental. Stack principal: React, Next.js, NestJS e React Native.",
+    viewProjects: "Ver cases",
+    contact: "Falar no WhatsApp",
     blog: "Blog",
-    available: "disponível para projetos",
+    available: "disponível para projetos e consultoria",
+  },
+  services: {
+    title: "Como posso",
+    highlight: "ajudar",
+    subtitle:
+      "Serviços pensados para quem precisa de entrega técnica com visão de negócio.",
+    items: {
+      itConsulting: {
+        title: "Consultoria de TI",
+        description:
+          "Diagnóstico técnico, definição de arquitetura e apoio estratégico para decisões de tecnologia.",
+      },
+      itGovernance: {
+        title: "Governança de TI",
+        description:
+          "Estruturação de processos, políticas e boas práticas para garantir eficiência, segurança e conformidade.",
+      },
+      mobileAppDev: {
+        title: "Desenvolvimento de aplicativos móveis",
+        description:
+          "Aplicativos Android e iOS com foco em performance, usabilidade e integração com APIs.",
+      },
+      saasDev: {
+        title: "Desenvolvimento de SaaS",
+        description:
+          "Criação de produtos SaaS escaláveis, com autenticação, painéis, cobrança e métricas.",
+      },
+      databaseDev: {
+        title: "Desenvolvimento de banco de dados",
+        description:
+          "Modelagem, otimização e manutenção de bancos de dados para garantir desempenho e consistência.",
+      },
+      ecommerceCreation: {
+        title: "Criação de e-commerce",
+        description:
+          "Desenvolvimento de lojas virtuais com foco em conversão, gestão de catálogo, pagamentos e performance.",
+      },
+      uxDesign: {
+        title: "Design de experiência do usuário (UX)",
+        description:
+          "Estruturação de fluxos e interfaces centradas no usuário para aumentar conversão e clareza.",
+      },
+      customSoftwareDev: {
+        title: "Desenvolvimento de software personalizado",
+        description:
+          "Soluções sob medida para processos específicos, com arquitetura adaptada ao seu negócio.",
+      },
+      appDevelopment: {
+        title: "Desenvolvimento de aplicativos",
+        description:
+          "Construção de aplicações completas, do planejamento à entrega, com foco em valor de negócio.",
+      },
+      webDevelopment: {
+        title: "Desenvolvimento web",
+        description:
+          "Sites, plataformas e sistemas web modernos, rápidos e preparados para evoluir.",
+      },
+    },
+  },
+  results: {
+    title: "Resultados e",
+    highlight: "tração",
+    stats: {
+      projects: {
+        value: "+11",
+        label: "projetos entregues entre web, mobile e sistemas",
+      },
+      public: { value: "1", label: "sistema para órgão público" },
+      years: { value: "2+", label: "anos construindo software profissionalmente" },
+    },
+    bullets: {
+      b1: "Experiência end-to-end: requisitos, desenvolvimento, deploy e documentação.",
+      b2: "Projetos com impacto social (segurança urbana) e saúde (IA + visão computacional).",
+      b3: "Código open-source e comunidade (ex.: contribuição em linguagem Slynx).",
+    },
+  },
+  leadMagnet: {
+    title: "Quer um",
+    highlight: "olhar técnico gratuito?",
+    subtitle:
+      "Posso dar um feedback inicial sobre seu site, arquitetura ou ideia de produto — sem compromisso. Ideal para alinhar próximos passos antes de fechar escopo.",
+    cta: "Pedir análise gratuita no WhatsApp",
+    whatsappMessage:
+      "Olá, Fabrício! Vi no seu site a possibilidade de uma análise técnica gratuita. Pode me ajudar a avaliar meu projeto ou site?",
   },
   about: {
     title: "Sobre",
     highlight: "mim",
+    diffTitle: "O que me diferencia",
+    diffText:
+      "Combino visão de produto com execução full-stack: já liderei stack e time em pesquisa (UFAL), entreguei sistema crítico em ambiente público e estou construindo startup. Não sou só mais um dev na lista.",
     paragraph1:
-      "Desenvolvedor full-stack e pesquisador em Health Tech com Computer Vision e I.A. aplicada. Com mais de",
+      "Desenvolvedor full-stack com forte atuação em Health Tech, Computer Vision e IA aplicada. Com mais de",
     experience: "2 anos de experiência",
     paragraph1b:
-      "no desenvolvimento de aplicações web e mobile, incluindo sistemas administrativos para órgãos públicos.",
+      "entregando aplicações web e mobile e sistemas para órgãos públicos.",
     paragraph2:
-      "Especialista no ecossistema JavaScript e TypeScript (React, NestJS), com atuação recente em desenvolvimento mobile com React Native. Graduado em Análise e Desenvolvimento de Sistemas.",
+      "Domínio profundo em JavaScript/TypeScript (React, Next.js, NestJS) e mobile com React Native. Graduação em Análise e Desenvolvimento de Sistemas.",
     paragraph3:
-      "Autodidata, proativo e com forte capacidade de trabalho em equipe e comunicação.",
+      "Autodidata, comunicação clara com stakeholders e foco em entregas mensuráveis.",
     education: "Formação",
     educationDetail: "Graduação em Análise e Desenvolvimento de Sistemas — 2024",
     educationSchool: "Centro Universitário Maurício de Nassau (UNINASSAU)",
@@ -42,53 +140,113 @@ export const pt = {
       "Inglês — intermediário (B2). Leitura fluente de documentação técnica, escrita eficiente para comunicação profissional e conversação intermediária em reuniões e apresentações.",
   },
   skills: {
-    title: "Habilidades",
-    highlight: "técnicas",
+    title: "Stack",
+    highlight: "principal",
     subtitle:
-      "Tecnologias e ferramentas que utilizo no dia a dia para construir projetos de qualidade.",
+      "O essencial que uso para entregar rápido e com qualidade. O resto entra sob demanda do projeto.",
     categories: {
-      languages: "Linguagens",
-      frameworks: "Frameworks e Bibliotecas",
-      database: "Banco de Dados",
-      tools: "Ferramentas",
-      methodologies: "Metodologias",
+      frontend: "Frontend & experiência",
+      backend: "Backend & dados",
+      devOps: "DevOps & qualidade",
     },
   },
   projects: {
-    title: "Projetos",
-    highlight: "em destaque",
+    title: "Cases de",
+    highlight: "projetos",
     subtitle:
-      "Alguns dos projetos que desenvolvi ou participei. Cada um representa um desafio único e uma oportunidade de aprendizado.",
-    visit: "Visitar",
+      "Cada item abaixo é um problema de negócio (ou de produto) traduzido em software — com contexto, resultado e meu papel.",
+    visit: "Visitar projeto",
     closeModal: "Fechar",
+    labels: {
+      problem: "Problema",
+      result: "Resultado",
+      role: "Meu papel",
+      stack: "Stack principal",
+    },
     items: {
       rotas4me: {
+        highlight:
+          "Plataforma mobile validada em desafio de inovação com foco em segurança urbana e impacto social.",
         description:
-          "Plataforma mobile voltada à identificação, avaliação e compartilhamento de rotas mais seguras em ambientes urbanos. Usuários podem reportar incidentes, avaliar rotas e compartilhar informações em tempo real. Solução validada em desafio de inovação com foco em segurança pública e impacto social.",
+          "Produto para identificar, avaliar e compartilhar rotas mais seguras na cidade, com informação em tempo real.",
+        problem:
+          "Falta de dados confiáveis e colaborativos sobre segurança em deslocamentos urbanos dificultava decisões e conscientização.",
+        result:
+          "App com fluxos de reporte, avaliação e compartilhamento de rotas; solução validada em contexto de inovação voltada a segurança pública.",
+        role: "Co-founder e responsável técnico full-stack (web, mobile e backend).",
+        stackSummary: "TypeScript, React, React Native, Next.js, NestJS, MongoDB, Tailwind CSS.",
       },
       wounds: {
+        highlight:
+          "App de apoio clínico com IA e visão computacional para feridas — pesquisa aplicada em saúde.",
         description:
-          "Aplicativo mobile para apoio à identificação, classificação e acompanhamento clínico de feridas vasculares e diabéticas. Integra Computer Vision e IA para segmentação automática de feridas a partir de imagens clínicas. Projeto de pesquisa da UFAL.",
+          "Mobile para identificação, classificação e acompanhamento de feridas vasculares e diabéticas com segmentação assistida por IA.",
+        problem:
+          "Acompanhamento e registro clínico de feridas complexas exigem tempo e padronização; erros ou atrasos afetam o tratamento.",
+        result:
+          "Protótipo/produto de pesquisa com pipeline de imagem e IA para apoiar decisão clínica; integração com equipe multidisciplinar.",
+        role: "Desenvolvedor principal de software e referência técnica no projeto (UFAL).",
+        stackSummary: "TypeScript, Python, React Native, NestJS, PyTorch, MongoDB.",
       },
       panel: {
+        highlight:
+          "Painel legislativo em tempo real com adoção forte no órgão (95% de aprovação declarada pelos usuários).",
         description:
-          "Sistema institucional de painel eletrônico para exibição de informações legislativas em tempo real na Câmara Municipal de Chã de Alegria - PE. Inclui resultados de votações, pautas do dia e comunicação interna. 95% de aprovação dos usuários.",
+          "Sistema para exibir votações, pautas e comunicação interna durante sessões oficiais da Câmara Municipal.",
+        problem:
+          "Informações legislativas dispersas ou manuais geravam atraso e falta de clareza durante sessões plenárias.",
+        result:
+          "Painel confiável em tempo real, adotado em ambiente governamental, com feedback muito positivo da equipe e usuários.",
+        role: "Desenvolvimento end-to-end: requisitos, UI, APIs, testes e documentação.",
+        stackSummary: "React, Next.js, Node.js, PostgreSQL, Tailwind CSS, API REST.",
       },
       filmmaker: {
+        highlight:
+          "Site portfólio cinematográfico para conversão de orçamentos e apresentação premium do trabalho.",
         description:
-          "Site portfólio para profissional de produção de vídeo. Design cinematográfico com tema escuro, destaque visual e seções para sobre, portfólio e orçamento. Focado em apresentar trabalhos audiovisuais de forma impactante.",
+          "Landing/portfólio com identidade visual forte para produtor audiovisual.",
+        problem:
+          "Profissional precisava de presença digital que transmitisse autoridade e convertesse visitantes em orçamentos.",
+        result:
+          "Experiência visual coesa (dark, tipografia e seções claras) focada em portfólio e CTA de contato.",
+        role: "Desenvolvimento front-end completo e implementação do design.",
+        stackSummary: "React, Next.js, TypeScript, Tailwind CSS.",
       },
       trayopen: {
+        highlight:
+          "Ferramenta desktop open-source que reduz atrito no dia a dia de quem codifica.",
         description:
-          "A minimalist desktop application that runs in the system tray and provides quick access to your recent projects. With a single click, the selected project is automatically opened in Visual Studio Code. Ideal for developers who seek speed and efficiency in their daily routine.",
+          "App na bandeja do sistema para abrir projetos recentes direto no VS Code com um clique.",
+        problem:
+          "Alternar entre muitos repositórios no dia a dia é lento e repetitivo para desenvolvedores.",
+        result:
+          "Fluxo minimalista na bandeja; projeto open-source com foco em produtividade.",
+        role: "Criador e mantenedor do projeto.",
+        stackSummary: "Electron, TypeScript, Sentry.",
       },
       slynx: {
+        highlight:
+          "Contribuição em linguagem de UI open-source (Rust) para interfaces multiplataforma.",
         description:
-          "Linguagem de UI open-source, orientada a dados e escrita em Rust, criada para desenvolver interfaces multiplataforma a partir de uma base de código única. O projeto prioriza sintaxe legível, alta performance e segurança com comportamento determinístico.",
+          "Ecossistema Slynx: linguagem orientada a dados para UI com foco em legibilidade e performance.",
+        problem:
+          "Times precisam de abstrações de UI que escalem sem travar em uma única plataforma ou sintaxe ilegível.",
+        result:
+          "Participação em projeto open-source brasileiro com visão de compilador multi-target e comunidade ativa.",
+        role: "Contribuidor open-source no ecossistema Slynx-Language.",
+        stackSummary: "Rust, conceitos de compilador/UI; ecossistema web adjacente.",
       },
       gerdbot: {
+        highlight:
+          "Site institucional com funil de contato integrado a e-mail para empresa de engenharia.",
         description:
-          "Site institucional para empresa de engenharia com integração com e-mail. Apresenta os serviços da empresa e permite contato direto através de formulário integrado ao envio de e-mails.",
+          "Presença digital profissional com formulário e envio de leads por e-mail.",
+        problem:
+          "Empresa B2B precisava de vitrine clara de serviços e canal de contato confiável sem fricção.",
+        result:
+          "Páginas institucionais + formulário integrado (EmailJS) para captar solicitações rapidamente.",
+        role: "Desenvolvimento full-stack e integração de contato.",
+        stackSummary: "React, Next.js, TypeScript, Tailwind CSS, EmailJS.",
       },
     },
   },
@@ -132,10 +290,12 @@ export const pt = {
     title: "Entre em",
     highlight: "contato",
     subtitle:
-      "Tem um projeto em mente ou quer conversar? Me encontre nas redes abaixo.",
+      "Prefere redes ou WhatsApp? Escolha o canal — respondo o quanto antes para alinharmos escopo, prazo e investimento.",
     whatsappLabel: "WhatsApp",
     whatsappMessage:
       "Olá, Fabrício! Vi seu site e tenho interesse em desenvolver um projeto. Você está disponível para conversar sobre orçamento e prazos?",
+    whatsappQuoteMessage:
+      "Olá, Fabrício! Gostaria de solicitar um orçamento / conversar sobre um projeto. Você tem disponibilidade?",
   },
   footer: {
     rights: "Todos os direitos reservados.",

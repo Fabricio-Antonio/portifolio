@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { siteConfig } from "@/lib/seo";
 
 const outfit = Outfit({
@@ -88,6 +89,7 @@ export default function RootLayout({
           <Header />
           <main className="min-w-0">{children}</main>
           <Footer />
+          <FloatingWhatsApp />
         </LanguageProvider>
       </body>
     </html>
