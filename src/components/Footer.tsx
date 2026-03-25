@@ -12,7 +12,7 @@ export function Footer() {
     { href: "https://www.linkedin.com/in/fabricio-ss/", label: "LinkedIn" },
     { href: "https://github.com/Fabricio-Antonio", label: "GitHub" },
     { href: "https://x.com/Fabricio_ss_", label: "X" },
-    { href: getWhatsAppChatUrl(t.contact.whatsappMessage), label: t.contact.whatsappLabel },
+    { href: getWhatsAppChatUrl(t.contact.whatsappQuoteMessage), label: t.contact.whatsappLabel },
     { href: "https://www.meus10centavos.com.br", label: "Blog" },
     { href: "https://www.instagram.com/fabriciosantos.dev/", label: "Instagram" },
     { href: "https://discord.com/users/donald_duck.dev", label: "Discord" },
