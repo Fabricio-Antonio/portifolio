@@ -1,20 +1,64 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
+import * as SimpleIcons from "simple-icons";
 
-const skillKeys = {
-  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "React Native"],
-  backend: ["Node.js", "NestJS", "REST APIs", "PostgreSQL", "MongoDB"],
-  devOps: ["Git", "Docker", "GitHub Actions", "Linux", "Testing & quality"],
-} as const;
+type Tech = {
+  name: string;
+  iconKey?: string; // simple-icons export key (e.g. "siHtml5")
+};
 
 export function Skills() {
   const { t } = useLanguage();
-  const categories = [
-    { key: "frontend" as const, title: t.skills.categories.frontend },
-    { key: "backend" as const, title: t.skills.categories.backend },
-    { key: "devOps" as const, title: t.skills.categories.devOps },
+
+  const technologies: Tech[] = [
+    { name: "HTML5", iconKey: "siHtml5" },
+    { name: "CSS3", iconKey: "siCss3" },
+    { name: "JavaScript", iconKey: "siJavascript" },
+    { name: "TypeScript", iconKey: "siTypescript" },
+    { name: "Python", iconKey: "siPython" },
+    { name: "Rust", iconKey: "siRust" },
+    { name: "Figma", iconKey: "siFigma" },
+    { name: "React", iconKey: "siReact" },
+    // React Native is not guaranteed in simple-icons -> fallback to text when missing.
+    { name: "React Native" },
+    { name: "Next.js", iconKey: "siNextdotjs" },
+    { name: "TailwindCSS", iconKey: "siTailwindcss" },
+    { name: "Bootstrap", iconKey: "siBootstrap" },
+    { name: "Electron", iconKey: "siElectron" },
+    { name: "Node", iconKey: "siNodedotjs" },
+    { name: "Express", iconKey: "siExpress" },
+    { name: "NestJS", iconKey: "siNestjs" },
+    { name: "PyTorch", iconKey: "siPytorch" },
+    { name: "PostgreSQL", iconKey: "siPostgresql" },
+    { name: "MongoDB", iconKey: "siMongodb" },
+    { name: "Mongoose", iconKey: "siMongoose" },
+    { name: "MySQL", iconKey: "siMysql" },
+    { name: "Redis", iconKey: "siRedis" },
+    { name: "Prisma", iconKey: "siPrisma" },
+    { name: "DBeaver", iconKey: "siDbeaver" },
+    { name: "Cypress", iconKey: "siCypress" },
+    { name: "Jest", iconKey: "siJest" },
+    { name: "Postman", iconKey: "siPostman" },
+    { name: "Swagger", iconKey: "siSwagger" },
+    { name: "Railway", iconKey: "siRailway" },
+    { name: "GCP", iconKey: "siGooglecloud" },
+    { name: "Docker", iconKey: "siDocker" },
+    { name: "Sentry", iconKey: "siSentry" },
+    { name: "Git", iconKey: "siGit" },
+    { name: "GitHub Actions", iconKey: "siGithubactions" },
+    { name: "Arch Linux", iconKey: "siArchlinux" },
   ];
+
+  const getIconSvg = (iconKey?: string) => {
+    if (!iconKey) return null;
+    const icon = (SimpleIcons as any)[iconKey] as { svg?: string } | undefined;
+    if (!icon?.svg) return null;
+    // Ensure logos follow theme color.
+    return icon.svg.replace("<svg", '<svg fill="currentColor"');
+  };
+
+  const marqueeItems = [...technologies, ...technologies];
 
   return (
     <section id="habilidades" className="py-16 sm:py-20 md:py-24 border-t border-card-border">
@@ -25,24 +69,60 @@ export function Skills() {
         <p className="text-muted text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl leading-relaxed">
           {t.skills.subtitle}
         </p>
-        <div className="grid md:grid-cols-3 gap-8 sm:gap-10">
-          {categories.map(({ key, title }) => (
-            <div key={key} className="min-w-0">
-              <h3 className="text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-                {title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skillKeys[key].map((skill) => (
+
+        <div className="rounded-2xl border border-card-border bg-card/30 p-4 sm:p-6">
+          <div className="overflow-hidden">
+            <div className="flex flex-nowrap w-max tech-marquee">
+              {marqueeItems.map((tech, idx) => {
+                const svg = getIconSvg(tech.iconKey);
+                return (
                   <span
-                    key={skill}
-                    className="px-3 py-1.5 rounded-full bg-card border border-card-border text-xs sm:text-sm text-foreground hover:border-accent hover:bg-accent/5 transition-colors"
+                    key={`${tech.name}-${idx}`}
+                    role="img"
+                    aria-label={tech.name}
+                    className="group inline-flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-card/60 border border-card-border text-muted hover:border-accent hover:bg-accent/5 transition-colors flex-none mx-1"
                   >
-                    {skill}
+                    {svg ? (
+                      <span
+                        className="text-muted group-hover:text-foreground"
+                        // simple-icons SVGs have paths without explicit fill.
+                        // We force `fill="currentColor"` at runtime so they inherit the theme.
+                        dangerouslySetInnerHTML={{ __html: svg }}
+                      />
+                    ) : (
+                      <span className="px-2 text-[10px] leading-tight text-center font-semibold">
+                        {tech.name}
+                      </span>
+                    )}
                   </span>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          ))}
+          </div>
+          <style jsx global>{`
+            @keyframes tech-marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+
+            .tech-marquee {
+              animation: tech-marquee 28s linear infinite;
+            }
+
+            .tech-marquee:hover {
+              animation-play-state: paused;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .tech-marquee {
+                animation: none;
+              }
+            }
+          `}</style>
         </div>
       </div>
     </section>
