@@ -56,10 +56,14 @@ export function Skills() {
     if (!icon?.svg) return null;
     // Apply brand color from simple-icons so logos are "colored".
     const fill = icon.hex ? `#${icon.hex}` : "currentColor";
-    return icon.svg.replace(
+    const svgWithFill = icon.svg.replace(
       "<svg",
       `<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="${fill}"`
     );
+
+    // simple-icons renders icons mostly with a single <path> and no fill attributes.
+    // Some icons may not inherit fill from <svg> reliably, so we also inject fill into paths.
+    return svgWithFill.replace(/<path\b/g, `<path fill="${fill}"`);
   };
 
   const marqueeItems = [...technologies, ...technologies];
