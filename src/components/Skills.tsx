@@ -21,8 +21,6 @@ export function Skills() {
     { name: "Rust", iconKey: "siRust" },
     { name: "Figma", iconKey: "siFigma" },
     { name: "React", iconKey: "siReact" },
-    // Render a custom icon when it's not present in simple-icons.
-    { name: "React Native", iconKey: "custom-react-native" },
     { name: "Next.js", iconKey: "siNextdotjs" },
     { name: "TailwindCSS", iconKey: "siTailwindcss" },
     { name: "Bootstrap", iconKey: "siBootstrap" },
@@ -35,7 +33,6 @@ export function Skills() {
     { name: "MongoDB", iconKey: "siMongodb" },
     { name: "Mongoose", iconKey: "siMongoose" },
     { name: "MySQL", iconKey: "siMysql" },
-    { name: "Redis", iconKey: "siRedis" },
     { name: "Prisma", iconKey: "siPrisma" },
     { name: "DBeaver", iconKey: "siDbeaver" },
     { name: "Cypress", iconKey: "siCypress" },
@@ -53,16 +50,6 @@ export function Skills() {
 
   const getIconSvg = (iconKey?: string) => {
     if (!iconKey) return null;
-    if (iconKey === "custom-react-native") {
-      const fill = "#61dafb"; // brand-like React Native blue
-      return `
-        <svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" fill="${fill}">
-          <circle cx="12" cy="12" r="10" fill="${fill}" fill-opacity="0.15" />
-          <path d="M7 16V8h2l3 5 3-5h2v8h-2v-4l-2.4 4H11.4L9 12v4H7z" fill="${fill}"/>
-          <text x="12" y="19" text-anchor="middle" font-size="6.5" font-weight="800" fill="${fill}" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">RN</text>
-        </svg>
-      `.trim();
-    }
     const icon = (SimpleIcons as any)[iconKey] as
       | { svg?: string; hex?: string }
       | undefined;
