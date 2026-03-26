@@ -57,7 +57,7 @@ export function Skills() {
       | undefined;
     if (!icon?.svg) return null;
     // Apply brand color from simple-icons so logos are "colored".
-    const fill = icon.hex ?? "currentColor";
+    const fill = icon.hex ? `#${icon.hex}` : "currentColor";
     return icon.svg.replace(
       "<svg",
       `<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="${fill}"`
