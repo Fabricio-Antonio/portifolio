@@ -52,13 +52,15 @@ export function Skills() {
 
   const getIconSvg = (iconKey?: string) => {
     if (!iconKey) return null;
-    const icon = (SimpleIcons as any)[iconKey] as { svg?: string } | undefined;
+    const icon = (SimpleIcons as any)[iconKey] as
+      | { svg?: string; hex?: string }
+      | undefined;
     if (!icon?.svg) return null;
-    // Ensure logos follow theme color.
-    // Also force sizing so the icon fits inside the fixed wrapper.
+    // Apply brand color from simple-icons so logos are "colored".
+    const fill = icon.hex ?? "currentColor";
     return icon.svg.replace(
       "<svg",
-      '<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="currentColor"'
+      `<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="${fill}"`
     );
   };
 
@@ -88,9 +90,8 @@ export function Skills() {
                   >
                     {svg ? (
                       <span
-                        className="text-muted group-hover:text-foreground"
+                        className="group-hover:opacity-95 transition-opacity"
                         // simple-icons SVGs have paths without explicit fill.
-                        // We force `fill="currentColor"` at runtime so they inherit the theme.
                         dangerouslySetInnerHTML={{ __html: svg }}
                       />
                     ) : (
