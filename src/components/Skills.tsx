@@ -84,7 +84,7 @@ export function Skills() {
                     key={`${tech.name}-${idx}`}
                     role="img"
                     aria-label={tech.name}
-                    className="group inline-flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-card/60 border border-card-border text-muted hover:border-accent hover:bg-accent/5 transition-colors flex-none mx-1"
+                    className="group inline-flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-transparent border border-transparent text-muted hover:border-accent hover:bg-transparent transition-colors flex-none mx-1"
                   >
                     {svg ? (
                       <span
