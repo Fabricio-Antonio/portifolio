@@ -18,7 +18,7 @@ export function Skills() {
     { name: "JavaScript", iconKey: "siJavascript" },
     { name: "TypeScript", iconKey: "siTypescript" },
     { name: "Python", iconKey: "siPython" },
-    { name: "Rust", iconKey: "siRust" },
+    { name: "Rust", iconKey: "custom-rust-crab" },
     { name: "Figma", iconKey: "siFigma" },
     { name: "React", iconKey: "siReact" },
     { name: "Next.js", iconKey: "siNextdotjs" },
@@ -38,6 +38,7 @@ export function Skills() {
     { name: "Cypress", iconKey: "siCypress" },
     { name: "Jest", iconKey: "siJest" },
     { name: "Postman", iconKey: "siPostman" },
+    { name: "Insomnia", iconKey: "siInsomnia" },
     { name: "Swagger", iconKey: "siSwagger" },
     { name: "Railway", iconKey: "siRailway" },
     { name: "GCP", iconKey: "siGooglecloud" },
@@ -50,12 +51,46 @@ export function Skills() {
 
   const getIconSvg = (iconKey?: string) => {
     if (!iconKey) return null;
+    if (iconKey === "custom-rust-crab") {
+      const fill = "#f74c00";
+      const stroke = "#b93800";
+      return `
+        <svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="${stroke}" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+            <!-- body -->
+            <path d="M7.2 13.2c0-2.5 2.2-4.6 4.8-4.6s4.8 2.1 4.8 4.6c0 2.9-2.2 4.9-4.8 4.9s-4.8-2-4.8-4.9z" fill="${fill}" />
+            <!-- eyes -->
+            <circle cx="10.2" cy="10.1" r="0.65" fill="#ffffff" />
+            <circle cx="13.8" cy="10.1" r="0.65" fill="#ffffff" />
+            <circle cx="10.2" cy="10.1" r="0.25" fill="#111827" stroke="none" />
+            <circle cx="13.8" cy="10.1" r="0.25" fill="#111827" stroke="none" />
+            <!-- smile -->
+            <path d="M10.6 14.4c.5.5 1.3.5 1.8 0" />
+            <!-- left claw -->
+            <path d="M6.6 12.2c-1.1-.3-2.2.3-2.7 1.1" />
+            <path d="M4.3 13.3c-.7.9-.7 2.2.1 3" />
+            <path d="M6.6 14.2c-1.1.1-2.1-.3-2.2-1" />
+            <!-- right claw -->
+            <path d="M17.4 12.2c1.1-.3 2.2.3 2.7 1.1" />
+            <path d="M19.7 13.3c.7.9.7 2.2-.1 3" />
+            <path d="M17.4 14.2c1.1.1 2.1-.3 2.2-1" />
+            <!-- legs -->
+            <path d="M8.1 16.6l-1.7 1.2" />
+            <path d="M9.6 17.7l-1.3 1.6" />
+            <path d="M15.9 16.6l1.7 1.2" />
+            <path d="M14.4 17.7l1.3 1.6" />
+          </g>
+        </svg>
+      `.trim();
+    }
     const icon = (SimpleIcons as any)[iconKey] as
       | { svg?: string; hex?: string }
       | undefined;
     if (!icon?.svg) return null;
     // Apply brand color from simple-icons so logos are "colored".
-    const fill = icon.hex ? `#${icon.hex}` : "currentColor";
+    // Special case: Railway should always render in white to match the dark background.
+    const fill =
+      iconKey === "siRailway" ? "#ffffff" : icon.hex ? `#${icon.hex}` : "currentColor";
     const svgWithFill = icon.svg.replace(
       "<svg",
       `<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="${fill}"`
@@ -88,7 +123,7 @@ export function Skills() {
                     key={`${tech.name}-${idx}`}
                     role="img"
                     aria-label={tech.name}
-                    className="group inline-flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-transparent border border-transparent text-muted hover:border-accent hover:bg-transparent transition-colors flex-none mx-1"
+                    className="group inline-flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-xl bg-transparent border border-transparent text-muted transition-colors flex-none mx-2"
                   >
                     {svg ? (
                       <span
