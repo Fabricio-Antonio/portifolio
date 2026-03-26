@@ -55,7 +55,11 @@ export function Skills() {
     const icon = (SimpleIcons as any)[iconKey] as { svg?: string } | undefined;
     if (!icon?.svg) return null;
     // Ensure logos follow theme color.
-    return icon.svg.replace("<svg", '<svg fill="currentColor"');
+    // Also force sizing so the icon fits inside the fixed wrapper.
+    return icon.svg.replace(
+      "<svg",
+      '<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="currentColor"'
+    );
   };
 
   const marqueeItems = [...technologies, ...technologies];
@@ -111,6 +115,12 @@ export function Skills() {
 
             .tech-marquee {
               animation: tech-marquee 28s linear infinite;
+            }
+
+            .tech-marquee svg {
+              display: block;
+              width: 100%;
+              height: 100%;
             }
 
             .tech-marquee:hover {
