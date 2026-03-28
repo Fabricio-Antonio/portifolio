@@ -3,16 +3,12 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const serviceKeys = [
-  "itConsulting",
-  "itGovernance",
-  "mobileAppDev",
-  "saasDev",
-  "databaseDev",
-  "ecommerceCreation",
-  "uxDesign",
-  "customSoftwareDev",
-  "appDevelopment",
-  "webDevelopment",
+  "webAndSystems",
+  "mobileApps",
+  "saasAndPlatforms",
+  "consultingArchitecture",
+  "uxUiWebDesign",
+  "automation",
 ] as const;
 
 export function Services() {

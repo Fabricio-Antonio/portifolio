@@ -39,55 +39,35 @@ export const pt = {
     subtitle:
       "Serviços pensados para quem precisa de entrega técnica com visão de negócio.",
     items: {
-      itConsulting: {
-        title: "Consultoria de TI",
+      webAndSystems: {
+        title: "Desenvolvimento de Sites & Sistemas",
         description:
-          "Diagnóstico técnico, definição de arquitetura e apoio estratégico para decisões de tecnologia.",
+          "Sites institucionais, landing pages e sistemas web sob medida — do front ao back, com foco em performance e manutenção.",
       },
-      itGovernance: {
-        title: "Governança de TI",
+      mobileApps: {
+        title: "Criação de Aplicativos Mobile",
         description:
-          "Estruturação de processos, políticas e boas práticas para garantir eficiência, segurança e conformidade.",
+          "Apps Android e iOS com boa experiência de uso, integração com APIs e preparação para escalar.",
       },
-      mobileAppDev: {
-        title: "Desenvolvimento de aplicativos móveis",
+      saasAndPlatforms: {
+        title: "SaaS & Plataformas",
         description:
-          "Aplicativos Android e iOS com foco em performance, usabilidade e integração com APIs.",
+          "Produtos digitais com autenticação, painéis, permissões e base técnica para crescer com segurança.",
       },
-      saasDev: {
-        title: "Desenvolvimento de SaaS",
+      consultingArchitecture: {
+        title: "Consultoria e Arquitetura de TI",
         description:
-          "Criação de produtos SaaS escaláveis, com autenticação, painéis, cobrança e métricas.",
+          "Diagnóstico técnico, definição de stack, desenho de arquitetura e apoio a decisões de tecnologia.",
       },
-      databaseDev: {
-        title: "Desenvolvimento de banco de dados",
+      uxUiWebDesign: {
+        title: "UX/UI & Web Design",
         description:
-          "Modelagem, otimização e manutenção de bancos de dados para garantir desempenho e consistência.",
+          "Fluxos, wireframes e interfaces claras para converter melhor e reduzir atrito na experiência.",
       },
-      ecommerceCreation: {
-        title: "Criação de e-commerce",
+      automation: {
+        title: "Automação",
         description:
-          "Desenvolvimento de lojas virtuais com foco em conversão, gestão de catálogo, pagamentos e performance.",
-      },
-      uxDesign: {
-        title: "Design de experiência do usuário (UX)",
-        description:
-          "Estruturação de fluxos e interfaces centradas no usuário para aumentar conversão e clareza.",
-      },
-      customSoftwareDev: {
-        title: "Desenvolvimento de software personalizado",
-        description:
-          "Soluções sob medida para processos específicos, com arquitetura adaptada ao seu negócio.",
-      },
-      appDevelopment: {
-        title: "Desenvolvimento de aplicativos",
-        description:
-          "Construção de aplicações completas, do planejamento à entrega, com foco em valor de negócio.",
-      },
-      webDevelopment: {
-        title: "Desenvolvimento web",
-        description:
-          "Sites, plataformas e sistemas web modernos, rápidos e preparados para evoluir.",
+          "Integrações, rotinas e fluxos que reduzem trabalho manual e aceleram entregas repetitivas.",
       },
     },
   },

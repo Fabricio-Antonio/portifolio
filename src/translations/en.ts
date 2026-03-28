@@ -39,55 +39,35 @@ export const en = {
     subtitle:
       "Services for teams that need solid engineering with a business lens.",
     items: {
-      itConsulting: {
-        title: "IT Consulting",
+      webAndSystems: {
+        title: "Websites & Systems Development",
         description:
-          "Technical assessment, architecture guidance, and strategic support for technology decisions.",
+          "Corporate sites, landing pages, and custom web systems — front to back, with performance and maintainability in mind.",
       },
-      itGovernance: {
-        title: "IT Governance",
-        description:
-          "Process, policy, and best-practice structuring to ensure efficiency, security, and compliance.",
-      },
-      mobileAppDev: {
+      mobileApps: {
         title: "Mobile App Development",
         description:
-          "Android and iOS apps focused on performance, usability, and API integration.",
+          "Android and iOS apps with solid UX, API integration, and a foundation built to scale.",
       },
-      saasDev: {
-        title: "SaaS Development",
+      saasAndPlatforms: {
+        title: "SaaS & Platforms",
         description:
-          "Scalable SaaS products with authentication, dashboards, billing, and analytics.",
+          "Digital products with authentication, dashboards, roles, and a technical base that grows safely.",
       },
-      databaseDev: {
-        title: "Database Development",
+      consultingArchitecture: {
+        title: "IT Consulting & Architecture",
         description:
-          "Database modeling, optimization, and maintenance for performance and reliability.",
+          "Technical assessment, stack choices, architecture design, and support for technology decisions.",
       },
-      ecommerceCreation: {
-        title: "E-commerce Development",
+      uxUiWebDesign: {
+        title: "UX/UI & Web Design",
         description:
-          "Online store development focused on conversion, catalog management, payments, and performance.",
+          "Flows, wireframes, and clear interfaces to improve conversion and reduce friction.",
       },
-      uxDesign: {
-        title: "User Experience (UX) Design",
+      automation: {
+        title: "Automation",
         description:
-          "User-centered flows and interfaces that improve conversion and clarity.",
-      },
-      customSoftwareDev: {
-        title: "Custom Software Development",
-        description:
-          "Tailor-made solutions for specific workflows, with architecture adapted to your business.",
-      },
-      appDevelopment: {
-        title: "Application Development",
-        description:
-          "End-to-end application development, from planning to delivery, focused on business value.",
-      },
-      webDevelopment: {
-        title: "Web Development",
-        description:
-          "Modern websites, platforms, and web systems built for speed and long-term growth.",
+          "Integrations, routines, and workflows that cut manual work and speed up repetitive delivery.",
       },
     },
   },
