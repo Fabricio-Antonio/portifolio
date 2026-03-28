@@ -7,7 +7,6 @@ import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 
 export function Hero() {
   const { t } = useLanguage();
-  const whatsappQuoteHref = getWhatsAppChatUrl(t.contact.whatsappQuoteMessage);
   const whatsappGeneralHref = getWhatsAppChatUrl(t.contact.whatsappMessage);
 
   return (
@@ -51,12 +50,10 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 justify-center md:justify-start w-full sm:w-auto">
             <Link
-              href={whatsappQuoteHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#servicos"
               className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 sm:px-8 py-3 rounded-lg bg-accent text-background font-semibold hover:bg-accent-muted transition-colors w-full sm:w-auto shadow-lg shadow-accent/20"
             >
-              {t.cta.requestQuote}
+              {t.nav.services}
             </Link>
             <Link
               href={whatsappGeneralHref}
