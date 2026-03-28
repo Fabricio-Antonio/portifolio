@@ -43,31 +43,43 @@ export const pt = {
         title: "Desenvolvimento de Sites & Sistemas",
         description:
           "Sites institucionais, landing pages e sistemas web sob medida — do front ao back, com foco em performance e manutenção.",
+        whatsappMessage:
+          "Olá, Fabrício! Vi no seu site o serviço de Desenvolvimento de Sites & Sistemas e gostaria de agendar uma reunião para conversar sobre isso.",
       },
       mobileApps: {
         title: "Criação de Aplicativos Mobile",
         description:
           "Apps Android e iOS com boa experiência de uso, integração com APIs e preparação para escalar.",
+        whatsappMessage:
+          "Olá, Fabrício! Vi no seu site o serviço de Criação de Aplicativos Mobile e gostaria de agendar uma reunião para conversar sobre isso.",
       },
       saasAndPlatforms: {
         title: "SaaS & Plataformas",
         description:
           "Produtos digitais com autenticação, painéis, permissões e base técnica para crescer com segurança.",
+        whatsappMessage:
+          "Olá, Fabrício! Vi no seu site o serviço de SaaS & Plataformas e gostaria de agendar uma reunião para conversar sobre isso.",
       },
       consultingArchitecture: {
         title: "Consultoria e Arquitetura de TI",
         description:
           "Diagnóstico técnico, definição de stack, desenho de arquitetura e apoio a decisões de tecnologia.",
+        whatsappMessage:
+          "Olá, Fabrício! Vi no seu site o serviço de Consultoria e Arquitetura de TI e gostaria de agendar uma reunião para conversar sobre isso.",
       },
       uxUiWebDesign: {
         title: "UX/UI & Web Design",
         description:
           "Fluxos, wireframes e interfaces claras para converter melhor e reduzir atrito na experiência.",
+        whatsappMessage:
+          "Olá, Fabrício! Vi no seu site o serviço de UX/UI & Web Design e gostaria de agendar uma reunião para conversar sobre isso.",
       },
       automation: {
         title: "Automação",
         description:
           "Integrações, rotinas e fluxos que reduzem trabalho manual e aceleram entregas repetitivas.",
+        whatsappMessage:
+          "Olá, Fabrício! Vi no seu site o serviço de Automação e gostaria de agendar uma reunião para conversar sobre isso.",
       },
     },
   },

@@ -43,31 +43,43 @@ export const en = {
         title: "Websites & Systems Development",
         description:
           "Corporate sites, landing pages, and custom web systems — front to back, with performance and maintainability in mind.",
+        whatsappMessage:
+          "Hi, Fabrício! I saw on your site the Websites & Systems Development service and would like to schedule a meeting to discuss it.",
       },
       mobileApps: {
         title: "Mobile App Development",
         description:
           "Android and iOS apps with solid UX, API integration, and a foundation built to scale.",
+        whatsappMessage:
+          "Hi, Fabrício! I saw on your site the Mobile App Development service and would like to schedule a meeting to discuss it.",
       },
       saasAndPlatforms: {
         title: "SaaS & Platforms",
         description:
           "Digital products with authentication, dashboards, roles, and a technical base that grows safely.",
+        whatsappMessage:
+          "Hi, Fabrício! I saw on your site the SaaS & Platforms service and would like to schedule a meeting to discuss it.",
       },
       consultingArchitecture: {
         title: "IT Consulting & Architecture",
         description:
           "Technical assessment, stack choices, architecture design, and support for technology decisions.",
+        whatsappMessage:
+          "Hi, Fabrício! I saw on your site the IT Consulting & Architecture service and would like to schedule a meeting to discuss it.",
       },
       uxUiWebDesign: {
         title: "UX/UI & Web Design",
         description:
           "Flows, wireframes, and clear interfaces to improve conversion and reduce friction.",
+        whatsappMessage:
+          "Hi, Fabrício! I saw on your site the UX/UI & Web Design service and would like to schedule a meeting to discuss it.",
       },
       automation: {
         title: "Automation",
         description:
           "Integrations, routines, and workflows that cut manual work and speed up repetitive delivery.",
+        whatsappMessage:
+          "Hi, Fabrício! I saw on your site the Automation service and would like to schedule a meeting to discuss it.",
       },
     },
   },

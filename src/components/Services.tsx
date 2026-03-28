@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 
 const serviceKeys = [
   "webAndSystems",
@@ -27,14 +29,19 @@ export function Services() {
         <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
           {serviceKeys.map((key) => {
             const item = t.services.items[key];
+            const href = getWhatsAppChatUrl(item.whatsappMessage);
             return (
-              <div
+              <Link
                 key={key}
-                className="rounded-xl border border-card-border bg-card p-5 sm:p-6 hover:border-accent/40 transition-colors"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-xl border border-card-border bg-card p-5 sm:p-6 hover:border-accent/40 transition-colors cursor-pointer text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                aria-label={`${item.title} — WhatsApp`}
               >
                 <h3 className="font-semibold text-lg text-foreground mb-2">{item.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{item.description}</p>
-              </div>
+              </Link>
             );
           })}
         </div>
