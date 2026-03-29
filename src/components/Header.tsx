@@ -27,11 +27,16 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-card-border" : ""
-      }`}
+      className={[
+        "fixed z-50 transition-all duration-300",
+        "top-0 left-0 right-0 max-lg:w-full",
+        "lg:top-5 lg:left-1/2 lg:right-auto lg:w-[min(72rem,calc(100%-2rem))] lg:-translate-x-1/2",
+        isScrolled
+          ? "max-lg:bg-background/95 max-lg:backdrop-blur-md max-lg:border-b max-lg:border-card-border lg:rounded-2xl lg:border lg:border-card-border lg:bg-background/90 lg:backdrop-blur-xl lg:shadow-xl lg:shadow-black/20"
+          : "lg:rounded-2xl lg:border lg:border-card-border/60 lg:bg-background/80 lg:backdrop-blur-xl lg:shadow-lg lg:shadow-black/12",
+      ].join(" ")}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6 sm:py-4">
+      <nav className="mx-auto flex w-full max-w-6xl lg:max-w-none items-center justify-between gap-2 px-4 py-3 sm:px-6 sm:py-4 lg:px-5 lg:py-2.5">
         <Link
           href="#inicio"
           className="min-w-0 shrink text-lg sm:text-xl font-bold tracking-tight text-foreground hover:text-accent transition-colors"

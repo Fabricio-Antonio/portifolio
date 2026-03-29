@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100dvh] min-h-screen flex items-center justify-center overflow-x-hidden pt-[calc(4.5rem+env(safe-area-inset-top))] pb-10 sm:pb-12 md:pt-20"
+      className="relative min-h-[100dvh] min-h-screen flex items-center justify-center overflow-x-hidden scroll-mt-24 lg:scroll-mt-28 pt-[calc(4.5rem+env(safe-area-inset-top))] pb-10 sm:pb-12 md:pt-20 lg:pt-24"
     >
       <div className="absolute inset-0 from-accent/5 via-transparent to-transparent" />
       <div className="pointer-events-none absolute top-[12%] left-1/2 -translate-x-1/2 w-[min(100vw,20rem)] h-[min(100vw,20rem)] sm:w-72 sm:h-72 md:top-1/4 md:left-1/4 md:translate-x-0 md:w-96 md:h-96 bg-accent/10 rounded-full blur-3xl" />

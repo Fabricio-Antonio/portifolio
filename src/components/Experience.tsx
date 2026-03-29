@@ -8,7 +8,10 @@ export function Experience() {
   const { t } = useLanguage();
 
   return (
-    <section id="experiencia" className="py-16 sm:py-20 md:py-24 border-t border-card-border">
+    <section
+      id="experiencia"
+      className="scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 md:py-24 border-t border-card-border"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">
           {t.experience.title} <span className="text-accent">{t.experience.highlight}</span>

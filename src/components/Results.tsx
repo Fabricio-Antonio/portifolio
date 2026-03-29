@@ -9,7 +9,10 @@ export function Results() {
   const { t } = useLanguage();
 
   return (
-    <section id="resultados" className="py-16 sm:py-20 md:py-24 border-t border-card-border bg-card/30">
+    <section
+      id="resultados"
+      className="scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 md:py-24 border-t border-card-border bg-card/30"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold mb-10">
           {t.results.title} <span className="text-accent">{t.results.highlight}</span>

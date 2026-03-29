@@ -64,7 +64,10 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id="contato" className="py-16 sm:py-20 md:py-24 border-t border-card-border pb-[max(1.5rem,env(safe-area-inset-bottom))]">
+    <section
+      id="contato"
+      className="scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 md:py-24 border-t border-card-border pb-[max(1.5rem,env(safe-area-inset-bottom))]"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">
           {t.contact.title} <span className="text-accent">{t.contact.highlight}</span>
