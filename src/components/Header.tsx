@@ -6,23 +6,59 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageToggle } from "./LanguageToggle";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 
+const NAV_SECTION_IDS = ["inicio", "servicos", "sobre", "contato"] as const;
+type NavSectionId = (typeof NAV_SECTION_IDS)[number];
+
+function getActiveNavSection(): NavSectionId {
+  if (typeof document === "undefined") return "inicio";
+  const offset =
+    typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches
+      ? 140
+      : 96;
+  const trigger = window.scrollY + offset;
+  for (let i = NAV_SECTION_IDS.length - 1; i >= 0; i--) {
+    const id = NAV_SECTION_IDS[i];
+    const el = document.getElementById(id);
+    if (!el) continue;
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    if (trigger >= top - 2) return id;
+  }
+  return "inicio";
+}
+
 export function Header() {
   const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<NavSectionId>("inicio");
   const quoteHref = getWhatsAppChatUrl(t.contact.whatsappQuoteMessage);
 
-  const navLinks = [
-    { href: "#inicio", label: t.nav.home },
-    { href: "#servicos", label: t.nav.services },
-    { href: "#sobre", label: t.nav.about },
-    { href: "#contato", label: t.nav.contact },
+  const navLinks: { id: NavSectionId; href: string; label: string }[] = [
+    { id: "inicio", href: "#inicio", label: t.nav.home },
+    { id: "servicos", href: "#servicos", label: t.nav.services },
+    { id: "sobre", href: "#sobre", label: t.nav.about },
+    { id: "contato", href: "#contato", label: t.nav.contact },
   ];
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const sync = () => {
+      setIsScrolled((prev) => {
+        const next = window.scrollY > 20;
+        return prev === next ? prev : next;
+      });
+      const nextSection = getActiveNavSection();
+      setActiveSection((prev) => (prev === nextSection ? prev : nextSection));
+    };
+    sync();
+    requestAnimationFrame(sync);
+    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+    window.addEventListener("hashchange", sync);
+    return () => {
+      window.removeEventListener("scroll", sync);
+      window.removeEventListener("resize", sync);
+      window.removeEventListener("hashchange", sync);
+    };
   }, []);
 
   return (
@@ -46,16 +82,25 @@ export function Header() {
 
         <div className="hidden lg:flex items-center gap-3 xl:gap-5 flex-1 justify-end min-w-0">
           <ul className="flex items-center gap-3 xl:gap-4 flex-wrap justify-end">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-xs xl:text-sm font-medium text-muted hover:text-foreground transition-colors whitespace-nowrap"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.id;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "true" : undefined}
+                    className={[
+                      "text-xs xl:text-sm font-medium transition-colors whitespace-nowrap",
+                      isActive
+                        ? "text-accent font-semibold"
+                        : "text-muted hover:text-foreground",
+                    ].join(" ")}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <LanguageToggle />
           <Link
@@ -104,17 +149,26 @@ export function Header() {
         <div className="lg:hidden border-t border-card-border bg-background/98 backdrop-blur-md max-h-[min(70vh,calc(100dvh-5rem))] overflow-y-auto overscroll-contain">
           <div className="px-4 sm:px-6 py-4 flex flex-col gap-4">
             <ul className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center min-h-[44px] py-3 text-base text-muted hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.id;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      aria-current={isActive ? "true" : undefined}
+                      className={[
+                        "flex items-center min-h-[44px] py-3 text-base transition-colors",
+                        isActive
+                          ? "text-accent font-semibold"
+                          : "text-muted hover:text-foreground",
+                      ].join(" ")}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <Link
               href={quoteHref}
