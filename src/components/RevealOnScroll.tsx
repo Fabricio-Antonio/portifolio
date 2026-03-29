@@ -1,11 +1,10 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  type ReactNode,
-} from "react";
+import { useLayoutEffect, useRef, type ReactNode } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type RevealOnScrollProps = {
   children: ReactNode;
@@ -14,55 +13,56 @@ type RevealOnScrollProps = {
   initialVisible?: boolean;
 };
 
+const DURATION = 2.85;
+/** Próximo de cubic-bezier(0.22, 0.61, 0.36, 1) sem CustomEase */
+const EASE = "power2.out";
+
+function initialYOffsetPx(): number {
+  if (typeof window === "undefined") return 56;
+  return window.matchMedia("(min-width: 640px)").matches ? 64 : 56;
+}
+
 export function RevealOnScroll({
   children,
   className = "",
   initialVisible = false,
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(initialVisible);
 
-  useEffect(() => {
-    if (initialVisible) return;
-
+  useLayoutEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el) return undefined;
 
-    if (typeof window !== "undefined") {
-      const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-      if (mq.matches) {
-        setVisible(true);
-        return;
-      }
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (initialVisible || reduced.matches) {
+      gsap.set(el, { opacity: 1, y: 0 });
+      return undefined;
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      // Dispara mais cedo (ainda abaixo da área visível) para dar tempo de ver a animação ao rolar.
-      { rootMargin: "0px 0px 35% 0px", threshold: 0 }
-    );
+    const ctx = gsap.context(() => {
+      gsap.set(el, { opacity: 0, y: initialYOffsetPx() });
 
-    observer.observe(el);
-    return () => observer.disconnect();
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: DURATION,
+        ease: EASE,
+        scrollTrigger: {
+          trigger: el,
+          // Equivale ao rootMargin inferior ~35% do IntersectionObserver anterior
+          start: "top bottom+=35%",
+          once: true,
+        },
+      });
+    }, el);
+
+    return () => ctx.revert();
   }, [initialVisible]);
 
   return (
     <div
       ref={ref}
-      className={[
-        visible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-14 sm:translate-y-16",
-        !initialVisible &&
-          "transition-[opacity,transform] duration-[2.85s] ease-[cubic-bezier(0.22,0.61,0.36,1)]",
-        "motion-reduce:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none",
-        className,
-      ]
+      className={["motion-reduce:opacity-100", className]
         .filter(Boolean)
         .join(" ")}
     >
