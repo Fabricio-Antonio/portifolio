@@ -13,8 +13,8 @@ type RevealOnScrollProps = {
   initialVisible?: boolean;
 };
 
-const DURATION = 1.05;
-const STAGGER = 0.13;
+const DURATION = 1.5;
+const STAGGER = 0.75;
 const EASE = "power2.out";
 
 function initialYOffsetPx(): number {
