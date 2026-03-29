@@ -43,7 +43,8 @@ export function RevealOnScroll({
           observer.unobserve(entry.target);
         }
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.06 }
+      // Dispara mais cedo (ainda abaixo da área visível) para dar tempo de ver a animação ao rolar.
+      { rootMargin: "0px 0px 22% 0px", threshold: 0 }
     );
 
     observer.observe(el);
@@ -56,9 +57,9 @@ export function RevealOnScroll({
       className={[
         visible
           ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-10 sm:translate-y-12",
+          : "opacity-0 translate-y-14 sm:translate-y-16",
         !initialVisible &&
-          "transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          "transition-[opacity,transform] duration-[1.45s] ease-[cubic-bezier(0.16,1,0.3,1)]",
         "motion-reduce:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none",
         className,
       ]
