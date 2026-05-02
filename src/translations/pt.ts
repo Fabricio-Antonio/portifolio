@@ -247,6 +247,8 @@ export const pt = {
     highlight: "profissional",
     subtitle:
       "Minha trajetória profissional e os desafios que enfrentei ao longo do caminho.",
+    cvButton: "CV",
+    cvAriaLabel: "Baixar currículo em PDF",
     items: {
       ufal: {
         period: "Agosto/2025 - Atualmente",

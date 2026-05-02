@@ -247,6 +247,8 @@ export const en = {
     highlight: "experience",
     subtitle:
       "My professional journey and the challenges I've faced along the way.",
+    cvButton: "CV",
+    cvAriaLabel: "Download resume PDF",
     items: {
       ufal: {
         period: "Aug/2025 - Present",
