@@ -3,10 +3,13 @@ export const pt = {
     home: "Início",
     about: "Sobre",
     services: "Serviços",
+    methodology: "Metodologia",
+    whyMe: "Diferenciais",
     results: "Resultados",
     skills: "Stack",
-    projects: "Projetos",
+    projects: "Cases",
     experience: "Experiência",
+    faq: "FAQ",
     contact: "Contato",
   },
   cta: {
@@ -18,96 +21,95 @@ export const pt = {
   },
   hero: {
     greeting: "Olá, eu sou",
-    title: "Desenvolvedor Full-Stack",
+    title: "Desenvolvedor Full-Stack & Pesquisador em IA",
     valueLine:
-      "Ajudo empresas e órgãos públicos a transformar problemas reais em produtos digitais escaláveis — com foco em resultado, não só em código.",
+      "Construo sistemas web, aplicativos e integrações com foco em estabilidade, performance e código limpo. Atualmente na UFAL (IA em saúde) e cofundador da Rotas4Me.",
     description:
-      "Desenvolvedor full-stack e pesquisador em Health Tech com computer vision e IA aplicada, com",
-    years: "+ 2 anos",
-    description2:
-      "de experiência no desenvolvimento de aplicações web e mobile, incluindo sistemas para órgãos públicos.",
+      "Mais de 2 anos entregando software profissional — de protótipos rápidos a sistemas críticos em produção para o setor público.",
+    years: "2+ anos",
+    description2: "de experiência no desenvolvimento de aplicações web e mobile.",
     description3:
-      "Co-fundador da Rotas4Me, contribuidor open-source (Slynx) e experiência com ambiente governamental. Stack principal: React, Next.js, NestJS e React Native.",
-    viewProjects: "Ver cases",
-    contact: "Falar no WhatsApp",
+      "Stack principal: React, Next.js, TypeScript, NestJS, Python e React Native.",
+    viewProjects: "Ver projetos",
+    contact: "Conversar no WhatsApp",
     blog: "Blog",
-    available: "disponível para projetos e consultoria",
+    available: "Disponível para projetos e consultoria",
   },
   services: {
-    title: "Como posso",
-    highlight: "ajudar",
+    title: "O que posso",
+    highlight: "construir",
     subtitle:
-      "Serviços pensados para quem precisa de entrega técnica com visão de negócio.",
+      "Serviços focados em resolver problemas reais com engenharia de software sólida.",
     items: {
       webAndSystems: {
-        title: "Desenvolvimento de Sites & Sistemas",
+        title: "Sistemas Web & Plataformas",
         description:
-          "Sites institucionais, landing pages e sistemas web sob medida — do front ao back, com foco em performance e manutenção.",
+          "Sistemas administrativos, dashboards, portais e ferramentas internas sob medida em Next.js e TypeScript.",
         whatsappMessage:
-          "Olá, Fabrício! Vi no seu site o serviço de Desenvolvimento de Sites & Sistemas e gostaria de agendar uma reunião para conversar sobre isso.",
+          "Olá, Fabrício! Gostaria de conversar sobre o desenvolvimento de um sistema web / plataforma.",
       },
       mobileApps: {
-        title: "Criação de Aplicativos Mobile",
+        title: "Aplicativos Mobile (iOS & Android)",
         description:
-          "Apps Android e iOS com boa experiência de uso, integração com APIs e preparação para escalar.",
+          "Desenvolvimento com React Native: interfaces fluidas, integração com APIs, modo offline e suporte multiplataforma.",
         whatsappMessage:
-          "Olá, Fabrício! Vi no seu site o serviço de Criação de Aplicativos Mobile e gostaria de agendar uma reunião para conversar sobre isso.",
+          "Olá, Fabrício! Gostaria de conversar sobre a criação de um aplicativo mobile.",
       },
       saasAndPlatforms: {
-        title: "SaaS & Plataformas",
+        title: "Produtos Digitais & SaaS",
         description:
-          "Produtos digitais com autenticação, painéis, permissões e base técnica para crescer com segurança.",
+          "Do zero ao MVP: autenticação, banco de dados, painéis de gestão, permissões e infraestrutura pronta para crescer.",
         whatsappMessage:
-          "Olá, Fabrício! Vi no seu site o serviço de SaaS & Plataformas e gostaria de agendar uma reunião para conversar sobre isso.",
+          "Olá, Fabrício! Gostaria de conversar sobre o desenvolvimento de um produto digital / SaaS.",
       },
       consultingArchitecture: {
-        title: "Consultoria e Arquitetura de TI",
+        title: "Consultoria & Arquitetura de Software",
         description:
-          "Diagnóstico técnico, definição de stack, desenho de arquitetura e apoio a decisões de tecnologia.",
+          "Diagnóstico de sistemas existentes, escolha de stack, modelagem de banco e planejamento técnico para evitar retrabalho.",
         whatsappMessage:
-          "Olá, Fabrício! Vi no seu site o serviço de Consultoria e Arquitetura de TI e gostaria de agendar uma reunião para conversar sobre isso.",
+          "Olá, Fabrício! Gostaria de uma consultoria técnica / avaliação de arquitetura.",
       },
       uxUiWebDesign: {
-        title: "UX/UI & Web Design",
+        title: "Interfaces & Experiência (UX/UI)",
         description:
-          "Fluxos, wireframes e interfaces claras para converter melhor e reduzir atrito na experiência.",
+          "Prototipação no Figma e desenvolvimento front-end com foco em clareza, facilidade de uso e conversão.",
         whatsappMessage:
-          "Olá, Fabrício! Vi no seu site o serviço de UX/UI & Web Design e gostaria de agendar uma reunião para conversar sobre isso.",
+          "Olá, Fabrício! Gostaria de conversar sobre design de interface e front-end.",
       },
       automation: {
-        title: "Automação",
+        title: "APIs, Automações & Integrações",
         description:
-          "Integrações, rotinas e fluxos que reduzem trabalho manual e aceleram entregas repetitivas.",
+          "Integrações entre serviços, webhooks, processamento em segundo plano e automações para eliminar trabalho repetitivo.",
         whatsappMessage:
-          "Olá, Fabrício! Vi no seu site o serviço de Automação e gostaria de agendar uma reunião para conversar sobre isso.",
+          "Olá, Fabrício! Gostaria de conversar sobre integrações e automações.",
       },
     },
   },
   results: {
-    title: "Resultados e",
-    highlight: "tração",
+    title: "Histórico e",
+    highlight: "entregas",
     stats: {
       projects: {
         value: "+11",
-        label: "projetos entregues entre web, mobile e sistemas",
+        label: "projetos desenvolvidos e entregues",
       },
-      public: { value: "1", label: "sistema para órgão público" },
+      public: { value: "1", label: "sistema em uso no setor público" },
       years: { value: "2+", label: "anos construindo software profissionalmente" },
     },
     bullets: {
-      b1: "Experiência end-to-end: requisitos, desenvolvimento, deploy e documentação.",
-      b2: "Projetos com impacto social (segurança urbana) e saúde (IA + visão computacional).",
-      b3: "Código open-source e comunidade (ex.: contribuição em linguagem Slynx).",
+      b1: "Atuação ponta a ponta: requisitos, desenvolvimento, testes e deploy.",
+      b2: "Projetos em saúde (IA e visão computacional na UFAL) e segurança urbana (Rotas4Me).",
+      b3: "Código limpo, documentado e com repositório transferido 100% para você.",
     },
   },
   leadMagnet: {
-    title: "Quer um",
-    highlight: "olhar técnico gratuito?",
+    title: "Quer uma segunda",
+    highlight: "opinião técnica?",
     subtitle:
-      "Posso dar um feedback inicial sobre seu site, arquitetura ou ideia de produto — sem compromisso. Ideal para alinhar próximos passos antes de fechar escopo.",
-    cta: "Pedir análise gratuita no WhatsApp",
+      "Se você tem uma ideia de produto, quer avaliar um código existente ou precisa de orientação sobre arquitetura, podemos conversar 30 minutos sem custo e sem compromisso.",
+    cta: "Conversar no WhatsApp",
     whatsappMessage:
-      "Olá, Fabrício! Vi no seu site a possibilidade de uma análise técnica gratuita. Pode me ajudar a avaliar meu projeto ou site?",
+      "Olá, Fabrício! Vi seu portfólio e gostaria de agendar uma conversa técnica inicial sobre o meu projeto.",
   },
   about: {
     title: "Sobre",
@@ -156,6 +158,18 @@ export const pt = {
       stack: "Stack principal",
     },
     items: {
+      nordon: {
+        highlight:
+          "Website corporativo e plataforma digital para empresa de energia solar com foco em geração de leads.",
+        description:
+          "Presença digital moderna de alta performance com design responsivo, apresentação de portfólio de usinas e conversão comercial.",
+        problem:
+          "Empresa precisava de um posicionamento institucional de autoridade para fechar projetos de energia solar de médio e grande porte.",
+        result:
+          "Plataforma rápida, moderna e otimizada para SEO, aumentando a taxa de conversão de visitantes em reuniões comerciais.",
+        role: "Desenvolvimento full-stack completo, otimização de performance e SEO.",
+        stackSummary: "Next.js, TypeScript, Tailwind CSS, Vercel.",
+      },
       rotas4me: {
         highlight:
           "Plataforma mobile validada em desafio de inovação com foco em segurança urbana e impacto social.",
@@ -291,7 +305,174 @@ export const pt = {
     whatsappQuoteMessage:
       "Olá, Fabrício! Gostaria de solicitar um orçamento / conversar sobre um projeto. Você tem disponibilidade?",
   },
+  marquee: [
+    "Sistemas Web Sob Medida",
+    "Aplicativos Mobile iOS & Android",
+    "Inteligência Artificial & Computer Vision",
+    "Arquitetura Cloud & DevOps",
+    "APIs REST & GraphQL de Alta Performance",
+    "Next.js & React",
+    "NestJS & Node.js",
+    "Python & PyTorch",
+    "UX/UI de Alta Conversão",
+    "Bancos de Dados SQL & NoSQL",
+    "SaaS Escalável & Painéis Corporativos",
+  ],
+  painPoints: {
+    badge: "Diagnóstico de Gargalos",
+    title: "Você já investiu em tecnologia e se deparou com estes",
+    highlight: "gargalos?",
+    subtitle:
+      "Sistemas lentos, bugs recorrentes e prazos estourados não acontecem por acaso. São resultado de arquiteturas frágeis e falta de engenharia de software estruturada.",
+    pains: [
+      {
+        title: "Sistemas lentos que travam no pico de tráfego",
+        desc: "Aplicações sem otimização de banco de dados, sem cache e que caem justo quando mais usuários chegam.",
+      },
+      {
+        title: "Aplicativos instáveis que afastam usuários",
+        desc: "Bugs recorrentes, interfaces confusas e falta de suporte em diferentes aparelhos que queimam a reputação da sua marca.",
+      },
+      {
+        title: "Código espaguete que ninguém consegue manter",
+        desc: "Desenvolvimento sem documentação nem testes, onde qualquer nova funcionalidade quebra três antigas e custa o dobro.",
+      },
+      {
+        title: "Prazos estourados e falta de transparência",
+        desc: "Semanas sem novidades do desenvolvedor, promessas não cumpridas e custos que aumentam sem entrega palpável.",
+      },
+    ],
+    solutionBadge: "O Padrão da Minha Entrega",
+    solutionTitle: "Como elimino esses riscos no seu projeto:",
+    solutionSubtitle:
+      "Trabalho com processos claros de engenharia para que você tenha total previsibilidade e tranquilidade:",
+    solutions: [
+      {
+        title: "Arquitetura Escalável & Código Limpo",
+        desc: "Sistemas construídos com TypeScript, boas práticas (SOLID/Clean Code) e testes contínuos para durar e evoluir.",
+      },
+      {
+        title: "Visibilidade Semanal & Sprints Transparentes",
+        desc: "Demonstrações funcionais a cada etapa para você validar o avanço antes do deploy final.",
+      },
+      {
+        title: "Propriedade Intelectual & Documentação Total",
+        desc: "Código 100% seu, repositório organizado, documentação de APIs e infraestrutura configurada.",
+      },
+      {
+        title: "Comunicação Direta com Quem Executa",
+        desc: "Sem intermediários ou telefone sem fio. Suporte técnico ágil e alinhado com o seu modelo de negócio.",
+      },
+    ],
+    cta: "Quero uma avaliação técnica gratuita",
+  },
+  methodology: {
+    badge: "Processo Transparente",
+    title: "Como funciona a",
+    highlight: "metodologia",
+    subtitle:
+      "Do primeiro alinhamento até o deploy e escala: cada fase é pensada para reduzir riscos, garantir previsibilidade e acelerar a entrega.",
+    steps: [
+      {
+        number: "01",
+        title: "Diagnóstico & Arquitetura",
+        period: "Semana 1",
+        desc: "Mapeamento minucioso dos requisitos, regras de negócio e definição da melhor arquitetura técnica e de dados. Sem escopo nebuloso.",
+      },
+      {
+        number: "02",
+        title: "Desenvolvimento & Sprints",
+        period: "Semanas 2 a 4+",
+        desc: "Construção iterativa com código limpo, testes contínuos e prévias funcionais semanais. Você acompanha e valida cada avanço.",
+      },
+      {
+        number: "03",
+        title: "Deploy, Garantia & Escala",
+        period: "Lançamento & Suporte",
+        desc: "Publicação em ambiente cloud de alta disponibilidade (AWS/Vercel), monitoramento de estabilidade e suporte técnico com garantia.",
+      },
+    ],
+    cta: "Iniciar diagnóstico do meu projeto",
+  },
+  whyMe: {
+    badge: "Por Que Me Escolher",
+    title: "Engenharia de software com",
+    highlight: "foco em resultado",
+    subtitle:
+      "Não entrego apenas telas bonitas — construo ferramentas sólidas que reduzem custos, automatizam processos e geram receita.",
+    cards: [
+      {
+        tag: "Comunicação Ágil",
+        title: "Você fala direto com quem programa",
+        desc: "Sem gerentes de conta ou intermediários que atrasam respostas. Decisões técnicas e operacionais rápidas e assertivas.",
+      },
+      {
+        tag: "Padrão de Qualidade",
+        title: "Engenharia de Software de Verdade",
+        desc: "Tipagem estrita, testes automatizados, CI/CD e segurança em primeiro lugar. Software feito para suportar crescimento sem quebrar.",
+      },
+      {
+        tag: "Experiência Comprovada",
+        title: "Histórico em Setor Público, Saúde e Startups",
+        desc: "Desde sistemas oficiais para câmaras municipais com 95% de aprovação até pesquisa com IA/Visão Computacional na UFAL.",
+      },
+      {
+        tag: "Stack Moderna",
+        title: "Tecnologia de Ponta sem Débito Técnico",
+        desc: "Next.js 14/15, React Native, NestJS, Python e Cloud AWS. Escolhas tecnológicas sustentáveis para os próximos anos.",
+      },
+    ],
+  },
+  faq: {
+    badge: "Tire Suas Dúvidas",
+    title: "Perguntas",
+    highlight: "frequentes",
+    subtitle:
+      "Tudo o que você precisa saber antes de iniciarmos o desenvolvimento do seu sistema ou produto.",
+    items: [
+      {
+        question: "Como funciona a contratação e as formas de pagamento?",
+        answer:
+          "Trabalhamos com contrato formal de prestação de serviços com escopo, cronograma e entregáveis bem definidos. O pagamento geralmente é dividido por marcos de entrega (ex.: entrada + entregas intermediárias + deploy final) ou modelo mensal para produtos contínuos.",
+      },
+      {
+        question: "Qual o prazo médio para o desenvolvimento de um projeto?",
+        answer:
+          "Landing pages e sites institucionais levam de 7 a 15 dias. Sistemas web, plataformas SaaS e aplicativos mobile variam entre 3 e 8 semanas dependendo da complexidade das regras de negócio. No diagnóstico inicial você recebe um cronograma detalhado.",
+      },
+      {
+        question: "O código-fonte e o sistema pertencerão a mim?",
+        answer:
+          "Sim, 100%. Após a quitação do projeto, todos os direitos de propriedade intelectual, repositórios de código, acessos a servidores e documentação são integralmente transferidos para você ou sua empresa.",
+      },
+      {
+        question: "Como funciona o suporte e manutenção após a entrega?",
+        answer:
+          "Todos os projetos contam com garantia pós-lançamento de 30 dias para correção de eventuais ajustes sem custo. Além disso, oferecemos planos de evolução contínua, monitoramento cloud e novas features sob demanda.",
+      },
+      {
+        question: "Vocês atendem empresas de fora da sua cidade ou do exterior?",
+        answer:
+          "Sim! Atendo clientes em todo o Brasil e no exterior. Toda a gestão é realizada com reuniões por vídeo (Google Meet), comunicação ágil por WhatsApp/Slack e acompanhamento transparente em tempo real.",
+      },
+      {
+        question: "Como posso solicitar um orçamento ou tirar dúvidas?",
+        answer:
+          "Basta clicar no botão de WhatsApp ou preencher o canal de contato. Respondo em poucas horas e podemos agendar uma conversa técnica gratuita de 30 minutos.",
+      },
+    ],
+  },
+  githubActivity: {
+    badge: "Atividade no GitHub",
+    title: "Código aberto & constância técnica",
+    subtitle:
+      "Compromisso comprovado com código limpo, boas práticas e contribuições ativas para o ecossistema de desenvolvimento.",
+  },
   footer: {
     rights: "Todos os direitos reservados.",
+    tagline: "Engenharia de Software e Produtos Digitais de Alta Performance.",
+    availability: "Disponível para novos projetos e consultorias.",
+    quickLinks: "Navegação",
+    legal: "Desenvolvido com Next.js, TypeScript e Tailwind CSS.",
   },
 } as const;

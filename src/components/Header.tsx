@@ -6,7 +6,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageToggle } from "./LanguageToggle";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 
-const NAV_SECTION_IDS = ["inicio", "servicos", "sobre", "contato"] as const;
+const NAV_SECTION_IDS = [
+  "inicio",
+  "stack",
+  "servicos",
+  "resultados",
+  "sobre",
+  "projetos",
+  "experiencia",
+  "contato",
+] as const;
 type NavSectionId = (typeof NAV_SECTION_IDS)[number];
 
 function getActiveNavSection(): NavSectionId {
@@ -35,8 +44,12 @@ export function Header() {
 
   const navLinks: { id: NavSectionId; href: string; label: string }[] = [
     { id: "inicio", href: "#inicio", label: t.nav.home },
+    { id: "stack", href: "#stack", label: t.nav.skills },
     { id: "servicos", href: "#servicos", label: t.nav.services },
+    { id: "resultados", href: "#resultados", label: t.nav.results },
     { id: "sobre", href: "#sobre", label: t.nav.about },
+    { id: "projetos", href: "#projetos", label: t.nav.projects },
+    { id: "experiencia", href: "#experiencia", label: t.nav.experience },
     { id: "contato", href: "#contato", label: t.nav.contact },
   ];
 
@@ -75,9 +88,12 @@ export function Header() {
       <nav className="mx-auto flex w-full max-w-6xl lg:max-w-none items-center justify-between gap-2 px-4 py-3 sm:px-6 sm:py-4 lg:px-5 lg:py-2.5">
         <Link
           href="#inicio"
-          className="min-w-0 shrink text-lg sm:text-xl font-bold tracking-tight text-foreground hover:text-accent transition-colors"
+          className="min-w-0 shrink flex items-center gap-2.5 text-base sm:text-lg font-bold tracking-tight text-foreground hover:text-accent transition-colors"
         >
-          Fabrício<span className="text-accent"> Santos</span>
+          <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse shrink-0" />
+          <span>
+            Fabrício<span className="text-accent font-extrabold">.dev</span>
+          </span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-3 xl:gap-5 flex-1 justify-end min-w-0">
