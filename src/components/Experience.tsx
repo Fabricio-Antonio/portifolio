@@ -12,9 +12,9 @@ export function Experience() {
   return (
     <section
       id="experiencia"
-      className="scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 md:py-24 border-t border-card-border"
+      className="scroll-mt-24 py-16 sm:py-20 border-b border-card-border"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between mb-8 sm:mb-12">
           <div className="max-w-2xl">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">

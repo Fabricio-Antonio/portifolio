@@ -36,6 +36,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
     if (stored && (stored === "pt" || stored === "en")) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocaleState(stored);
     }
     setMounted(true);

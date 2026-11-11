@@ -2,10 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState, useCallback, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const projects = [
+  {
+    id: "nordon" as const,
+    title: "NordOn",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    href: "https://nordon.com.br",
+    image: "/nordon.png",
+  },
   {
     id: "rotas4me" as const,
     title: "Rotas4Me",
@@ -61,87 +68,247 @@ type Project = (typeof projects)[number];
 
 export function Projects() {
   const { t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [openProject, setOpenProject] = useState<Project | null>(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const titleId = useId();
+  const total = projects.length;
+  const containerRef = useRef<HTMLDivElement>(null);
 
+  const prevProject = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + total) % total);
+  }, [total]);
+
+  const nextProject = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % total);
+  }, [total]);
+
+  // Keyboard navigation
   useEffect(() => {
-    if (!openProject) return;
-
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpenProject(null);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (openProject) {
+        if (e.key === "Escape") setOpenProject(null);
+        return;
+      }
+      if (e.key === "ArrowLeft") prevProject();
+      if (e.key === "ArrowRight") nextProject();
     };
 
-    document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [openProject, prevProject, nextProject]);
+
+  // Modal overflow lock
+  useEffect(() => {
+    if (!openProject) return;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = prevOverflow;
     };
   }, [openProject]);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+    setTouchEnd(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    if (distance > 45) {
+      nextProject();
+    } else if (distance < -45) {
+      prevProject();
+    }
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
 
   const modalItem =
     openProject !== null
       ? t.projects.items[openProject.id as keyof typeof t.projects.items]
       : null;
 
+  // Deck of exactly 3 cards: Left (-1), Center (0), Right (1)
+  const visiblePositions = [-1, 0, 1] as const;
+
   return (
     <section
       id="projetos"
-      className="scroll-mt-24 lg:scroll-mt-28 py-16 sm:py-20 md:py-24 border-t border-card-border"
+      className="scroll-mt-24 py-16 sm:py-20 border-b border-card-border overflow-hidden"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-          {t.projects.title} <span className="text-accent">{t.projects.highlight}</span>
-        </h2>
-        <p className="text-muted text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl leading-relaxed">
-          {t.projects.subtitle}
-        </p>
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-          {projects.map((project) => {
-            const copy = t.projects.items[project.id as keyof typeof t.projects.items];
-            return (
-              <button
-                key={project.id}
-                type="button"
-                onClick={() => setOpenProject(project)}
-                className="group text-left block w-full min-w-0 overflow-hidden rounded-xl bg-card border border-card-border hover:border-accent/50 transition-all duration-300 cursor-pointer touch-manipulation"
-              >
-                <div className="relative h-40 sm:h-48 overflow-hidden bg-card-border/50">
-                  <Image
-                    src={project.image}
-                    alt=""
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-4 sm:p-6">
-                  <h3 className="font-semibold text-base sm:text-lg mb-2 group-hover:text-accent transition-colors break-words">
-                    {project.title}
-                  </h3>
-                  <p className="text-accent/90 text-xs sm:text-sm font-medium mb-2 line-clamp-2 leading-snug">
-                    {copy.highlight}
-                  </p>
-                  <p className="text-muted text-sm mb-4 line-clamp-2">{copy.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 rounded text-xs bg-accent/10 text-accent"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+            {t.projects.title} <span className="text-accent">{t.projects.highlight}</span>
+          </h2>
+          <p className="text-muted text-sm sm:text-base mt-2 max-w-xl leading-relaxed">
+            {t.projects.subtitle}
+          </p>
+        </div>
+
+        {/* Card Deck Area - with Left and Right Navigation Arrows */}
+        <div className="relative flex items-center justify-center">
+          
+          {/* Left Arrow Button (Beside the Cards) */}
+          <button
+            type="button"
+            onClick={prevProject}
+            className="absolute left-0 sm:left-1 md:left-3 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-card-border bg-card/90 backdrop-blur-md text-foreground hover:text-accent hover:border-accent flex items-center justify-center transition-all duration-200 shadow-xl cursor-pointer select-none active:scale-95 group"
+            aria-label="Projeto anterior"
+          >
+            <svg
+              className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Cards Container */}
+          <div
+            ref={containerRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className="relative w-full h-[480px] sm:h-[520px] flex items-center justify-center select-none"
+            style={{ perspective: "1200px" }}
+          >
+            {visiblePositions.map((pos) => {
+              const projectIndex = (currentIndex + pos + total) % total;
+              const project = projects[projectIndex];
+              const copy = t.projects.items[project.id as keyof typeof t.projects.items];
+              const isCenter = pos === 0;
+              const isLeft = pos === -1;
+              const isRight = pos === 1;
+
+              let cardStyles = "";
+              if (isCenter) {
+                cardStyles =
+                  "translate-x-0 -translate-y-4 rotate-0 scale-100 z-30 opacity-100 border-accent/60 shadow-2xl shadow-accent/15 cursor-pointer";
+              } else if (isLeft) {
+                cardStyles =
+                  "-translate-x-[42%] sm:-translate-x-[58%] md:-translate-x-[68%] translate-y-4 -rotate-6 sm:-rotate-7 scale-90 sm:scale-95 z-10 opacity-55 hover:opacity-85 border-card-border cursor-pointer";
+              } else if (isRight) {
+                cardStyles =
+                  "translate-x-[42%] sm:translate-x-[58%] md:translate-x-[68%] translate-y-4 rotate-6 sm:rotate-7 scale-90 sm:scale-95 z-10 opacity-55 hover:opacity-85 border-card-border cursor-pointer";
+              }
+
+              const handleClick = () => {
+                if (isCenter) {
+                  setOpenProject(project);
+                } else if (isLeft) {
+                  prevProject();
+                } else if (isRight) {
+                  nextProject();
+                }
+              };
+
+              return (
+                <div
+                  key={`${project.id}-${pos}`}
+                  onClick={handleClick}
+                  className={[
+                    "absolute top-4 w-[280px] sm:w-[340px] md:w-[380px] rounded-2xl bg-[#12141c] border overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] origin-bottom flex flex-col justify-between",
+                    cardStyles,
+                  ].join(" ")}
+                  style={{
+                    height: "440px",
+                  }}
+                >
+                  {/* Image Cover */}
+                  <div className="relative h-44 sm:h-48 w-full bg-card-border/40 shrink-0 border-b border-card-border/60">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 280px, 380px"
+                    />
+                    {isCenter && (
+                      <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-background/80 backdrop-blur-md border border-accent/40 text-[10px] font-mono font-semibold text-accent uppercase tracking-wider">
+                        Em foco
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between text-left">
+                    <div>
+                      <h3 className="font-bold text-base sm:text-lg text-foreground mb-1 group-hover:text-accent transition-colors line-clamp-1">
+                        {project.title}
+                      </h3>
+                      <p className="text-accent/90 text-xs sm:text-sm font-medium line-clamp-2 leading-snug mb-2">
+                        {copy.highlight}
+                      </p>
+                      <p className="text-muted text-xs sm:text-sm line-clamp-2 leading-relaxed">
+                        {copy.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-3 pt-3 border-t border-card-border/50 flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {project.tags.slice(0, 3).map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-accent/10 text-accent"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {isCenter && (
+                        <span className="text-xs font-mono text-accent font-semibold flex items-center gap-1">
+                          <span>Ver case</span>
+                          <span>→</span>
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </button>
-            );
-          })}
+              );
+            })}
+          </div>
+
+          {/* Right Arrow Button (Beside the Cards) */}
+          <button
+            type="button"
+            onClick={nextProject}
+            className="absolute right-0 sm:right-1 md:right-3 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-card-border bg-card/90 backdrop-blur-md text-foreground hover:text-accent hover:border-accent flex items-center justify-center transition-all duration-200 shadow-xl cursor-pointer select-none active:scale-95 group"
+            aria-label="Próximo projeto"
+          >
+            <svg
+              className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Counter Below Deck */}
+        <div className="flex items-center justify-center gap-2 mt-4 text-center">
+          <span className="font-mono text-xs text-muted tracking-widest">
+            {String(currentIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+          </span>
         </div>
       </div>
 
+      {/* Case Details Modal */}
       {openProject && modalItem && (
         <div
           className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-3 sm:p-6 pt-[max(0.75rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))]"
@@ -149,7 +316,7 @@ export function Projects() {
         >
           <button
             type="button"
-            className="absolute inset-0 bg-background/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-background/85 backdrop-blur-sm"
             aria-label={t.projects.closeModal}
             onClick={() => setOpenProject(null)}
           />
@@ -157,12 +324,12 @@ export function Projects() {
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="relative z-10 w-full max-w-lg max-h-[min(85dvh,720px)] sm:max-h-[min(90vh,720px)] overflow-y-auto overscroll-contain rounded-xl border border-card-border bg-card shadow-xl shadow-black/40"
+            className="relative z-10 w-full max-w-lg max-h-[min(85dvh,720px)] sm:max-h-[min(90vh,720px)] overflow-y-auto overscroll-contain rounded-2xl border border-card-border bg-card shadow-2xl shadow-black/50"
           >
-            <div className="relative h-44 sm:h-52 md:h-56 shrink-0 border-b border-card-border bg-card-border/30">
+            <div className="relative h-44 sm:h-52 shrink-0 border-b border-card-border bg-card-border/30">
               <Image
                 src={openProject.image}
-                alt=""
+                alt={openProject.title}
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, 32rem"
@@ -174,14 +341,12 @@ export function Projects() {
                 className="absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-lg border border-card-border bg-card/90 text-foreground hover:border-accent hover:text-accent transition-colors"
                 aria-label={t.projects.closeModal}
               >
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                ✕
               </button>
             </div>
-            <div className="p-4 sm:p-6 space-y-5">
+            <div className="p-5 sm:p-6 space-y-5">
               <div>
-                <h3 id={titleId} className="text-lg sm:text-xl font-semibold mb-2 pr-10 break-words">
+                <h3 id={titleId} className="text-xl font-bold mb-1.5 break-words">
                   {openProject.title}
                 </h3>
                 <p className="text-accent text-sm font-medium leading-snug">{modalItem.highlight}</p>
@@ -191,30 +356,33 @@ export function Projects() {
               <CaseBlock label={t.projects.labels.problem} text={modalItem.problem} />
               <CaseBlock label={t.projects.labels.result} text={modalItem.result} />
               <CaseBlock label={t.projects.labels.role} text={modalItem.role} />
+              
               <div>
-                <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1.5">
+                <p className="text-xs font-mono font-semibold text-accent uppercase tracking-wider mb-1.5">
                   {t.projects.labels.stack}
                 </p>
                 <p className="text-muted text-sm leading-relaxed">{modalItem.stackSummary}</p>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="flex flex-wrap gap-1.5 pt-1">
                 {openProject.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-1 rounded text-xs bg-accent/10 text-accent"
+                    className="px-2 py-0.5 rounded text-xs font-mono bg-accent/10 text-accent"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
+
               <Link
                 href={openProject.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center px-8 py-3 rounded-lg bg-accent text-background font-semibold hover:bg-accent-muted transition-colors touch-manipulation"
+                className="inline-flex w-full sm:w-auto min-h-[46px] items-center justify-center px-6 py-2.5 rounded-xl bg-accent text-background text-sm font-semibold hover:bg-cyan-300 transition-colors"
               >
                 {t.projects.visit}
+                <span className="ml-1.5 font-mono text-xs">↗</span>
               </Link>
             </div>
           </div>
@@ -227,7 +395,9 @@ export function Projects() {
 function CaseBlock({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1.5">{label}</p>
+      <p className="text-xs font-mono font-semibold text-accent uppercase tracking-wider mb-1">
+        {label}
+      </p>
       <p className="text-muted text-sm leading-relaxed">{text}</p>
     </div>
   );

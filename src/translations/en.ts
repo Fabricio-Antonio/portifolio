@@ -3,10 +3,13 @@ export const en = {
     home: "Home",
     about: "About",
     services: "Services",
+    methodology: "Methodology",
+    whyMe: "Why Us",
     results: "Results",
     skills: "Stack",
-    projects: "Projects",
+    projects: "Cases",
     experience: "Experience",
+    faq: "FAQ",
     contact: "Contact",
   },
   cta: {
@@ -18,96 +21,95 @@ export const en = {
   },
   hero: {
     greeting: "Hi, I'm",
-    title: "Full-Stack Developer",
+    title: "Full-Stack Developer & AI Researcher",
     valueLine:
-      "I help companies and public institutions turn real problems into scalable digital products — focused on outcomes, not just code.",
+      "I build web systems, mobile apps, and custom integrations with a focus on stability, performance, and clean code. Currently at UFAL (AI in health) and co-founder of Rotas4Me.",
     description:
-      "Health Tech, applied AI, and Computer Vision, plus end-to-end web and mobile systems. Over",
-    years: "2 years",
-    description2:
-      "shipping production software — from research to startup.",
+      "Over 2 years shipping production software — from rapid prototypes to critical systems in government environments.",
+    years: "2+ years",
+    description2: "shipping professional software across web and mobile.",
     description3:
-      "Co-founder of Rotas4Me, open-source contributor (Slynx), and experience in government delivery. Core stack: React, Next.js, NestJS, and React Native.",
-    viewProjects: "View cases",
-    contact: "WhatsApp",
+      "Core stack: React, Next.js, TypeScript, NestJS, Python, and React Native.",
+    viewProjects: "View projects",
+    contact: "Chat on WhatsApp",
     blog: "Blog",
-    available: "available for projects and consulting",
+    available: "Available for projects and consulting",
   },
   services: {
-    title: "How I can",
-    highlight: "help",
+    title: "What I can",
+    highlight: "build",
     subtitle:
-      "Services for teams that need solid engineering with a business lens.",
+      "Services focused on solving real problems with solid software engineering.",
     items: {
       webAndSystems: {
-        title: "Websites & Systems Development",
+        title: "Web Systems & Platforms",
         description:
-          "Corporate sites, landing pages, and custom web systems — front to back, with performance and maintainability in mind.",
+          "Admin panels, dashboards, portals, and custom web tools built with Next.js and TypeScript.",
         whatsappMessage:
-          "Hi, Fabrício! I saw on your site the Websites & Systems Development service and would like to schedule a meeting to discuss it.",
+          "Hi, Fabrício! I'd like to discuss developing a web system / platform.",
       },
       mobileApps: {
-        title: "Mobile App Development",
+        title: "Mobile Apps (iOS & Android)",
         description:
-          "Android and iOS apps with solid UX, API integration, and a foundation built to scale.",
+          "React Native development: responsive interfaces, API integrations, offline mode, and cross-platform support.",
         whatsappMessage:
-          "Hi, Fabrício! I saw on your site the Mobile App Development service and would like to schedule a meeting to discuss it.",
+          "Hi, Fabrício! I'd like to discuss creating a mobile app.",
       },
       saasAndPlatforms: {
-        title: "SaaS & Platforms",
+        title: "Digital Products & SaaS",
         description:
-          "Digital products with authentication, dashboards, roles, and a technical base that grows safely.",
+          "From concept to MVP: auth, database schemas, management dashboards, roles, and scalable infrastructure.",
         whatsappMessage:
-          "Hi, Fabrício! I saw on your site the SaaS & Platforms service and would like to schedule a meeting to discuss it.",
+          "Hi, Fabrício! I'd like to discuss building a SaaS / digital product.",
       },
       consultingArchitecture: {
-        title: "IT Consulting & Architecture",
+        title: "Consulting & Software Architecture",
         description:
-          "Technical assessment, stack choices, architecture design, and support for technology decisions.",
+          "Evaluating existing codebases, stack choices, data modeling, and planning architecture to avoid technical debt.",
         whatsappMessage:
-          "Hi, Fabrício! I saw on your site the IT Consulting & Architecture service and would like to schedule a meeting to discuss it.",
+          "Hi, Fabrício! I'd like technical consulting / architecture guidance.",
       },
       uxUiWebDesign: {
-        title: "UX/UI & Web Design",
+        title: "UI/UX & Front-End Engineering",
         description:
-          "Flows, wireframes, and clear interfaces to improve conversion and reduce friction.",
+          "Figma prototyping and front-end development focused on simplicity, usability, and speed.",
         whatsappMessage:
-          "Hi, Fabrício! I saw on your site the UX/UI & Web Design service and would like to schedule a meeting to discuss it.",
+          "Hi, Fabrício! I'd like to discuss UI design and front-end development.",
       },
       automation: {
-        title: "Automation",
+        title: "APIs, Automations & Integrations",
         description:
-          "Integrations, routines, and workflows that cut manual work and speed up repetitive delivery.",
+          "Connecting services, webhooks, background jobs, and automations to remove repetitive manual tasks.",
         whatsappMessage:
-          "Hi, Fabrício! I saw on your site the Automation service and would like to schedule a meeting to discuss it.",
+          "Hi, Fabrício! I'd like to discuss integrations and automations.",
       },
     },
   },
   results: {
-    title: "Results &",
-    highlight: "traction",
+    title: "Track record &",
+    highlight: "delivery",
     stats: {
       projects: {
         value: "+11",
-        label: "projects delivered across web, mobile, and systems",
+        label: "projects built and delivered",
       },
-      public: { value: "1", label: "system for a public institution" },
-      years: { value: "2+", label: "years shipping professional software" },
+      public: { value: "1", label: "system in production for public sector" },
+      years: { value: "2+", label: "years building software professionally" },
     },
     bullets: {
-      b1: "End-to-end experience: requirements, development, deployment, and documentation.",
-      b2: "Projects with social impact (urban safety) and health (AI + computer vision).",
-      b3: "Open-source and community work (e.g. Slynx language ecosystem).",
+      b1: "End-to-end execution: requirements, development, testing, and deployment.",
+      b2: "Projects in healthcare (AI/computer vision at UFAL) and urban safety (Rotas4Me).",
+      b3: "Clean, documented code with repository 100% transferred to you.",
     },
   },
   leadMagnet: {
-    title: "Want a free",
-    highlight: "technical review?",
+    title: "Need a second",
+    highlight: "technical opinion?",
     subtitle:
-      "I can share initial feedback on your site, architecture, or product idea — no strings attached. Great to align next steps before scoping.",
-    cta: "Request a free review on WhatsApp",
+      "Whether you have a product idea, want to evaluate an existing codebase, or need guidance on architecture, we can have a free, no-obligation 30-minute chat.",
+    cta: "Chat on WhatsApp",
     whatsappMessage:
-      "Hi, Fabrício! I saw on your site that you offer a free technical review. Could you help evaluate my project or website?",
+      "Hi, Fabrício! I saw your portfolio and would like to have an initial technical chat about my project.",
   },
   about: {
     title: "About",
@@ -156,6 +158,18 @@ export const en = {
       stack: "Core stack",
     },
     items: {
+      nordon: {
+        highlight:
+          "Corporate website and digital platform for a solar energy company focused on lead generation.",
+        description:
+          "High-performance modern digital presence with responsive design, solar farm portfolio showcase, and commercial conversion.",
+        problem:
+          "Company needed an authoritative institutional web presence to close medium and large-scale solar energy projects.",
+        result:
+          "Fast, modern, SEO-optimized platform, increasing visitor conversion rates into qualified commercial meetings.",
+        role: "Full-stack development, performance optimization, and SEO.",
+        stackSummary: "Next.js, TypeScript, Tailwind CSS, Vercel.",
+      },
       rotas4me: {
         highlight:
           "Mobile platform validated in an innovation challenge focused on urban safety and social impact.",
@@ -291,7 +305,174 @@ export const en = {
     whatsappQuoteMessage:
       "Hi, Fabrício! I'd like to request a quote / discuss a project. Are you available?",
   },
+  marquee: [
+    "Custom Web Systems",
+    "iOS & Android Mobile Apps",
+    "Artificial Intelligence & Computer Vision",
+    "Cloud Architecture & DevOps",
+    "High-Performance REST & GraphQL APIs",
+    "Next.js & React",
+    "NestJS & Node.js",
+    "Python & PyTorch",
+    "High-Converting UX/UI",
+    "SQL & NoSQL Databases",
+    "Scalable SaaS & Corporate Dashboards",
+  ],
+  painPoints: {
+    badge: "Bottleneck Assessment",
+    title: "Have you ever invested in tech and hit these",
+    highlight: "roadblocks?",
+    subtitle:
+      "Slow systems, recurrent bugs, and blown deadlines don't happen by chance. They stem from fragile architecture and a lack of disciplined software engineering.",
+    pains: [
+      {
+        title: "Slow systems crashing during traffic spikes",
+        desc: "Applications lacking database indexing, caching layers, and falling down right when user demand is highest.",
+      },
+      {
+        title: "Unstable mobile apps that drive users away",
+        desc: "Constant crashes, unintuitive UX, and poor cross-device compatibility that hurt your brand reputation.",
+      },
+      {
+        title: "Spaghetti code that nobody can maintain",
+        desc: "Codebase without tests or documentation, where adding one feature breaks three others and doubles costs.",
+      },
+      {
+        title: "Blown deadlines and complete lack of visibility",
+        desc: "Weeks of silence from developers, broken promises, and increasing costs with no tangible deliverables.",
+      },
+    ],
+    solutionBadge: "My Delivery Standard",
+    solutionTitle: "How I eliminate these risks in your project:",
+    solutionSubtitle:
+      "I follow structured engineering processes ensuring total predictability and peace of mind:",
+    solutions: [
+      {
+        title: "Scalable Architecture & Clean Code",
+        desc: "Systems built with strict TypeScript, SOLID principles, and continuous testing designed to grow seamlessly.",
+      },
+      {
+        title: "Weekly Visibility & Transparent Sprints",
+        desc: "Functional demos at every milestone so you can validate each step before the final release.",
+      },
+      {
+        title: "Total IP Ownership & Complete Documentation",
+        desc: "100% your code, cleanly structured Git repos, API docs, and configured cloud environments.",
+      },
+      {
+        title: "Direct Access to the Lead Engineer",
+        desc: "No middlemen or account managers playing telephone. Fast, agile technical communication aligned with your business.",
+      },
+    ],
+    cta: "Request a free technical review",
+  },
+  methodology: {
+    badge: "Transparent Process",
+    title: "How we work",
+    highlight: "together",
+    subtitle:
+      "From initial discovery to launch and scale: each phase is designed to minimize risk, guarantee predictability, and speed up delivery.",
+    steps: [
+      {
+        number: "01",
+        title: "Discovery & Architecture",
+        period: "Week 1",
+        desc: "In-depth mapping of business requirements, technical scope, and optimal architecture design. Zero guesswork.",
+      },
+      {
+        number: "02",
+        title: "Agile Sprints & Development",
+        period: "Weeks 2 to 4+",
+        desc: "Iterative builds with clean code, continuous testing, and weekly functional demos for full visibility.",
+      },
+      {
+        number: "03",
+        title: "Deploy, Warranty & Scale",
+        period: "Launch & Support",
+        desc: "Production release on high-availability cloud (AWS/Vercel), live monitoring, and dedicated warranty support.",
+      },
+    ],
+    cta: "Start my project discovery",
+  },
+  whyMe: {
+    badge: "Why Choose Me",
+    title: "Software engineering with",
+    highlight: "business impact",
+    subtitle:
+      "I don't just ship pretty screens — I engineer robust digital systems that automate operations, lower costs, and generate revenue.",
+    cards: [
+      {
+        tag: "Agile Communication",
+        title: "You talk directly with who builds",
+        desc: "No account managers slowing things down. Direct, sharp technical and business decisions made quickly.",
+      },
+      {
+        tag: "Engineering Standard",
+        title: "Real Software Engineering",
+        desc: "Strict typing, automated tests, CI/CD, and security first. Software engineered to support scale without breaking.",
+      },
+      {
+        tag: "Proven Track Record",
+        title: "Experience in Public Sector, Health & Startups",
+        desc: "From official government legislative systems with 95% approval to applied AI/Computer Vision research at UFAL.",
+      },
+      {
+        tag: "Modern Stack",
+        title: "Cutting-Edge Tech Without Technical Debt",
+        desc: "Next.js 14/15, React Native, NestJS, Python, and AWS Cloud. Future-proof technological choices for years to come.",
+      },
+    ],
+  },
+  faq: {
+    badge: "Common Questions",
+    title: "Frequently Asked",
+    highlight: "Questions",
+    subtitle:
+      "Everything you need to know before we begin developing your system or digital product.",
+    items: [
+      {
+        question: "How does contracting and payment work?",
+        answer:
+          "We operate with a formal service contract outlining scope, milestones, and deliverables. Payments are typically split across milestones (e.g. upfront deposit + intermediate demos + final deploy) or monthly retainer for continuous development.",
+      },
+      {
+        question: "What is the average timeline for project delivery?",
+        answer:
+          "Landing pages and corporate sites take 7 to 15 days. Complex web apps, SaaS platforms, and mobile apps typically range between 3 to 8 weeks depending on business logic complexity. You receive a detailed timeline during the initial discovery.",
+      },
+      {
+        question: "Will the source code and IP belong 100% to me?",
+        answer:
+          "Yes, absolutely. Once final payments are settled, all intellectual property rights, source code repositories, cloud credentials, and documentation are fully transferred to you or your company.",
+      },
+      {
+        question: "How does support and maintenance work post-launch?",
+        answer:
+          "Every project comes with a 30-day post-launch warranty covering any adjustments or bug fixes at no extra cost. We also offer ongoing evolution and cloud monitoring plans on demand.",
+      },
+      {
+        question: "Do you work with clients outside your city or internationally?",
+        answer:
+          "Yes! I work with clients across Brazil and internationally. Everything is managed via Google Meet video calls, WhatsApp/Slack, and transparent sprint boards.",
+      },
+      {
+        question: "How can I request a quote or ask questions?",
+        answer:
+          "Simply click the WhatsApp button or reach out through the contact form. I reply within a few hours and we can schedule a free 30-minute discovery call.",
+      },
+    ],
+  },
+  githubActivity: {
+    badge: "GitHub Activity",
+    title: "Open Source & Technical Consistency",
+    subtitle:
+      "Documented dedication to clean code, architectural best practices, and active community contributions.",
+  },
   footer: {
     rights: "All rights reserved.",
+    tagline: "Software Engineering & High-Performance Digital Products.",
+    availability: "Available for new projects and technical consulting.",
+    quickLinks: "Navigation",
+    legal: "Built with Next.js, TypeScript, and Tailwind CSS.",
   },
 } as const;
