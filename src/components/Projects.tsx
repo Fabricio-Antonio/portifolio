@@ -136,9 +136,6 @@ export function Projects() {
       ? t.projects.items[openProject.id as keyof typeof t.projects.items]
       : null;
 
-  // Deck of exactly 3 cards: Left (-1), Center (0), Right (1)
-  const visiblePositions = [-1, 0, 1] as const;
-
   return (
     <section
       id="projetos"
@@ -154,7 +151,7 @@ export function Projects() {
           </p>
         </div>
 
-        {/* Card Deck Area - with Left and Right Navigation Arrows */}
+        {/* Card Deck Area - with Fluid Hand-Held Transition */}
         <div className="relative flex items-center justify-center">
           
           {/* Left Arrow Button (Beside the Cards) */}
@@ -175,33 +172,68 @@ export function Projects() {
             </svg>
           </button>
 
-          {/* Cards Container */}
+          {/* Cards Deck Container with 3D Perspective */}
           <div
             ref={containerRef}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
             className="relative w-full h-[480px] sm:h-[520px] flex items-center justify-center select-none"
-            style={{ perspective: "1200px" }}
+            style={{ perspective: "1400px" }}
           >
-            {visiblePositions.map((pos) => {
-              const projectIndex = (currentIndex + pos + total) % total;
-              const project = projects[projectIndex];
+            {projects.map((project, index) => {
               const copy = t.projects.items[project.id as keyof typeof t.projects.items];
-              const isCenter = pos === 0;
-              const isLeft = pos === -1;
-              const isRight = pos === 1;
 
-              let cardStyles = "";
+              // Relative circular distance to currentIndex:
+              let diff = index - currentIndex;
+              if (diff > total / 2) diff -= total;
+              if (diff < -total / 2) diff += total;
+
+              const isCenter = diff === 0;
+              const isLeft = diff === -1;
+              const isRight = diff === 1;
+
+              // Compute fluid physical transform and depth
+              let transform = "";
+              let zIndex = 0;
+              let opacity = 0;
+              let pointerEvents: "auto" | "none" = "none";
+              let borderColor = "rgba(255, 255, 255, 0.08)";
+              let boxShadow = "none";
+
               if (isCenter) {
-                cardStyles =
-                  "translate-x-0 -translate-y-4 rotate-0 scale-100 z-30 opacity-100 border-accent/60 shadow-2xl shadow-accent/15 cursor-pointer";
+                transform = "translate3d(0, -16px, 40px) rotate(0deg) scale(1)";
+                zIndex = 30;
+                opacity = 1;
+                pointerEvents = "auto";
+                borderColor = "rgba(34, 211, 238, 0.65)";
+                boxShadow = "0 24px 48px -12px rgba(0, 0, 0, 0.7), 0 0 25px -4px rgba(34, 211, 238, 0.18)";
               } else if (isLeft) {
-                cardStyles =
-                  "-translate-x-[42%] sm:-translate-x-[58%] md:-translate-x-[68%] translate-y-4 -rotate-6 sm:-rotate-7 scale-90 sm:scale-95 z-10 opacity-55 hover:opacity-85 border-card-border cursor-pointer";
+                transform = "translate3d(calc(-50% - clamp(14px, 13vw, 85px)), 14px, -15px) rotate(-7.5deg) scale(0.92)";
+                zIndex = 15;
+                opacity = 0.55;
+                pointerEvents = "auto";
+                borderColor = "rgba(255, 255, 255, 0.08)";
+                boxShadow = "0 14px 28px -10px rgba(0, 0, 0, 0.5)";
               } else if (isRight) {
-                cardStyles =
-                  "translate-x-[42%] sm:translate-x-[58%] md:translate-x-[68%] translate-y-4 rotate-6 sm:rotate-7 scale-90 sm:scale-95 z-10 opacity-55 hover:opacity-85 border-card-border cursor-pointer";
+                transform = "translate3d(calc(50% + clamp(14px, 13vw, 85px)), 14px, -15px) rotate(7.5deg) scale(0.92)";
+                zIndex = 15;
+                opacity = 0.55;
+                pointerEvents = "auto";
+                borderColor = "rgba(255, 255, 255, 0.08)";
+                boxShadow = "0 14px 28px -10px rgba(0, 0, 0, 0.5)";
+              } else if (diff < -1) {
+                // Stacked smoothly behind to the left
+                transform = "translate3d(-110%, 30px, -60px) rotate(-14deg) scale(0.82)";
+                zIndex = 0;
+                opacity = 0;
+                pointerEvents = "none";
+              } else {
+                // Stacked smoothly behind to the right
+                transform = "translate3d(110%, 30px, -60px) rotate(14deg) scale(0.82)";
+                zIndex = 0;
+                opacity = 0;
+                pointerEvents = "none";
               }
 
               const handleClick = () => {
@@ -216,15 +248,23 @@ export function Projects() {
 
               return (
                 <div
-                  key={`${project.id}-${pos}`}
+                  key={project.id}
                   onClick={handleClick}
-                  className={[
-                    "absolute top-4 w-[280px] sm:w-[340px] md:w-[380px] rounded-2xl bg-[#12141c] border overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] origin-bottom flex flex-col justify-between",
-                    cardStyles,
-                  ].join(" ")}
                   style={{
+                    transform,
+                    zIndex,
+                    opacity,
+                    pointerEvents,
+                    borderColor,
+                    boxShadow,
                     height: "440px",
+                    transition:
+                      "transform 550ms cubic-bezier(0.2, 0.9, 0.2, 1), opacity 450ms ease, border-color 300ms ease, box-shadow 450ms ease",
+                    transformOrigin: "bottom center",
+                    backfaceVisibility: "hidden",
+                    willChange: "transform, opacity",
                   }}
+                  className="absolute top-4 w-[280px] sm:w-[340px] md:w-[380px] rounded-2xl bg-[#12141c] border overflow-hidden flex flex-col justify-between cursor-pointer"
                 >
                   {/* Image Cover */}
                   <div className="relative h-44 sm:h-48 w-full bg-card-border/40 shrink-0 border-b border-card-border/60">
