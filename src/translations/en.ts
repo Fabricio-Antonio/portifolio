@@ -256,34 +256,86 @@ hero: {
       "My professional journey and the challenges I've faced along the way.",
     cvButton: "CV",
     cvAriaLabel: "Download resume PDF",
+    techStack: "Technologies used",
+    roleDetails: "Role details",
+    coverTitle: "Professional Experience",
+    coverSubtitle: "My journey in software development, research, and entrepreneurship",
+    coverHint: "Drag corners or use arrows to navigate",
+    backTitle: "End",
+    backSubtitle: "Thank you for exploring my journey",
+    backAvailability: "Available for new projects",
+    details: {
+      ufal: [
+        "Applied research in digital health technologies",
+        "Technical leadership of multidisciplinary team",
+        "Architecture and development of full-stack mobile application",
+        "Wound segmentation and extraction of metrics such as area, perimeter, and diameter",
+        "Solution validation in real hospital environment",
+      ],
+      rotas4me: [
+        "Co-founding and technology leadership",
+        "Full-stack product architecture and development",
+        "Web, mobile, and back-end application development",
+        "API integration, authentication, and data modeling",
+        "Conception and validation of urban safety features",
+      ],
+      nordon: [
+        "Web application development for various segments",
+        "Creation of landing pages, portfolios, e-commerces, and internal systems",
+        "Requirements gathering and solution prototyping",
+        "Responsive interface development and REST API integration",
+        "Deployment, maintenance, and continuous evolution of applications",
+      ],
+      camara: [
+        "Full-stack institutional system development",
+        "Real-time legislative information updates implementation",
+        "Integration of votes, agendas, and institutional communications",
+        "Deployment and validation in government environment",
+        "85% user approval in solution evaluation",
+      ],
+      freelancer: [
+        "Design System creation and Figma prototypes",
+        "Interface development with React.js and Vite",
+        "Component standardization and interface consistency",
+        "Internal API integration",
+        "Interface integration",
+      ],
+    },
     items: {
-      ufal: {
+ufal: {
         period: "Aug/2025 - Present",
-        role: "AI Software Developer",
+        role: "Computer Vision Software Engineer",
         company: "Federal University of Alagoas (UFAL)",
         description:
-          "Researcher and main responsible for the software development area in a research project aimed at creating a mobile app to support the identification, classification, and clinical monitoring of vascular and diabetic wounds. Definition of technical stack, system architecture, and technical team coordination. Development and integration of Computer Vision and AI solutions applied to clinical image analysis, including creation and training of AI models and automatic wound segmentation.",
+          "Research and development of an mHealth solution for assessment and monitoring of lower limb ulcers, involving analysis of existing solutions, scientific review, requirements gathering, and interface prototyping, integrating software engineering and digital health technologies.",
       },
       rotas4me: {
         period: "Jun/2025 - Present",
         role: "Co-founder and Full-Stack Developer",
         company: "Rotas4Me",
         description:
-          "Co-founder and main responsible for the technical development of Rotas4Me, a mobile platform for identifying, evaluating, and sharing safer routes in urban environments. Definition of technological stack and architecture, Full-Stack development (web, mobile, and backend), authentication implementation, API integration, and database structuring. Solution validated in an innovation challenge, allowing users to report incidents, rate routes, and share information in real time.",
+          "Co-founder and responsible for the technology area of a mobile platform focused on urban safety. Worked on architecture, full-stack development, API integrations, and product evolution, from conception to feature validation.",
       },
       camara: {
         period: "Jan/2024 - Jan/2025",
-        role: "Full-Stack Developer",
+        role: "Internal Software Engineer",
         company: "City Council of Chã de Alegria - PE",
         description:
-          "Development of an institutional electronic panel system for displaying legislative information in real time, including voting results, daily agendas, and internal communication, used in official City Council sessions. End-to-end work with requirements gathering, interface definition, development and REST API integration, testing, and technical documentation. Solution adopted in a government environment with 95% user approval.",
+          "Full-stack development of an institutional system for tracking votes, agendas, and legislative information in real time. Responsible for requirements gathering, prototyping, implementation, and deployment of the solution, which achieved 85% user approval.",
+      },
+      nordon: {
+        period: "Nov/2023 - Oct/2025",
+        role: "Full-Stack Software Engineer",
+        company: "NordOn",
+        description:
+          "End-to-end development of digital solutions for various segments, including landing pages, portfolios, e-commerces, and internal systems. Worked on requirements gathering, prototyping, full-stack development, integrations, deployment, and application maintenance.",
       },
       freelancer: {
-        period: "Nov/2023 - Jan/2024",
-        role: "Front-End Developer",
-        company: "Freelancer",
+        period: "Sep/2025 - Jan/2026",
+        role: "React Front-end Developer",
+        company: "Group Monnik",
         description:
-          "Worked on web interface development projects as a freelancer. Responsible for creating responsive and accessible interfaces, implementing layouts from prototypes, and integrating with APIs for data consumption. Focus on user experience, performance, and code best practices.",
+          "Development of interfaces for an AI-integrated platform, including Design System creation and Figma prototypes, implementation with React.js and Vite, and integration with APIs and AI models, focusing on usability, visual consistency, and performance.",
       },
     },
   },
