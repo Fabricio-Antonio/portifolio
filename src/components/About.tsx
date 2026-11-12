@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MarkerText, Mark } from "@/components/MarkerText";
@@ -10,6 +10,8 @@ export function About() {
   const { t, locale } = useLanguage();
   const [round, setRound] = useState(0);
   const [done, setDone] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const replay = () => {
     setDone(false);
@@ -18,9 +20,35 @@ export function About() {
 
   const isPt = locale === "pt";
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return undefined;
+
+    // Se a seção já está visível no carregamento, inicia imediatamente
+    const rect = section.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    if (rect.top < viewportHeight * 0.8 && rect.bottom > viewportHeight * 0.2) {
+      setVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5, rootMargin: "0px 0px -25% 0px" }
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="sobre"
+      ref={sectionRef}
       className="scroll-mt-24 py-16 sm:py-20 border-b border-card-border/80"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
@@ -48,7 +76,7 @@ export function About() {
         <MarkerText
           key={round}
           onDrawn={() => setDone(true)}
-          show={round === 0 ? undefined : true}
+          show={visible || round > 0}
           className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start"
         >
           {/* Main Story & Philosophy */}
@@ -60,11 +88,17 @@ export function About() {
               <p className="text-foreground/95 text-base sm:text-lg leading-relaxed">
                 {isPt ? (
                   <>
-                    Gosto de transformar ideias em soluções que fazem a diferença. Uno tecnologia, criatividade e visão de negócio para criar produtos digitais com propósito e resultados reais.
+                    <Mark type="highlight" color="#22d3ee">
+                      Gosto de transformar ideias em soluções que fazem a diferença
+                    </Mark>
+                    . Uno tecnologia, criatividade e visão de negócio para criar produtos digitais com propósito e resultados reais.
                   </>
                 ) : (
                   <>
-                    I enjoy transforming ideas into solutions that make a difference. I bring together technology, creativity, and business vision to create purposeful digital products with real results.
+                    <Mark type="highlight" color="#22d3ee">
+                      I enjoy transforming ideas into solutions that make a difference
+                    </Mark>
+                    . I bring together technology, creativity, and business vision to create purposeful digital products with real results.
                   </>
                 )}
               </p>
@@ -93,11 +127,27 @@ export function About() {
               <p>
                 {isPt ? (
                   <>
-                    Além de desenvolver, gosto de compartilhar conhecimento, ideias e experiências sobre tecnologia e carreira no Instagram. Acredito que evoluir também significa aprender, experimentar e dividir o que sabemos.
+                    Além de desenvolver, gosto de{" "}
+                    <Mark type="circle" color="#22d3ee">
+                      compartilhar
+                    </Mark>{" "}
+                    conhecimento, ideias e experiências{" "}
+                    <Mark type="underline" color="#38bdf8">
+                      sobre tecnologia e carreira no Instagram
+                    </Mark>
+                    . Acredito que evoluir também significa aprender, experimentar e dividir o que sabemos.
                   </>
                 ) : (
                   <>
-                    Besides developing, I enjoy sharing knowledge, ideas, and experiences about technology and career on Instagram. I believe that evolving also means learning, experimenting, and sharing what we know.
+                    Besides developing, I enjoy{" "}
+                    <Mark type="circle" color="#22d3ee">
+                      sharing
+                    </Mark>{" "}
+                    knowledge, ideas, and experiences{" "}
+                    <Mark type="underline" color="#38bdf8">
+                      about technology and career on Instagram
+                    </Mark>
+                    . I believe that evolving also means learning, experimenting, and sharing what we know.
                   </>
                 )}
               </p>

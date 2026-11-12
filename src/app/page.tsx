@@ -30,9 +30,7 @@ export default function Home() {
       </RevealOnScroll>
 
       {/* Sobre mim */}
-      <RevealOnScroll>
-        <About />
-      </RevealOnScroll>
+      <About />
 
       {/* Cases de projetos */}
       <RevealOnScroll>

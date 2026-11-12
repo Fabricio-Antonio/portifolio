@@ -25,8 +25,8 @@ export const pt = {
     valueLine:
       "Construo sistemas web, aplicativos e integrações com foco em estabilidade, performance e código limpo. Atualmente na UFAL (IA em saúde) e cofundador da Rotas4Me.",
     description:
-      "Mais de 2 anos entregando software profissional — de protótipos rápidos a sistemas críticos em produção para o setor público.",
-    years: "2+ anos",
+      "Mais de 3 anos entregando software profissional — de protótipos rápidos a sistemas críticos em produção para o setor público.",
+    years: "3+ anos",
     description2: "de experiência no desenvolvimento de aplicações web e mobile.",
     description3:
       "Stack principal: React, Next.js, TypeScript, NestJS, Python e React Native.",
@@ -90,16 +90,18 @@ export const pt = {
     highlight: "entregas",
     stats: {
       projects: {
-        value: "+11",
+        value: "+20",
         label: "projetos desenvolvidos e entregues",
       },
       public: { value: "1", label: "sistema em uso no setor público" },
-      years: { value: "2+", label: "anos construindo software profissionalmente" },
+      years: { value: "3+", label: "anos construindo software profissionalmente" },
     },
     bullets: {
-      b1: "Atuação ponta a ponta: requisitos, desenvolvimento, testes e deploy.",
-      b2: "Projetos em saúde (IA e visão computacional na UFAL) e segurança urbana (Rotas4Me).",
-      b3: "Código limpo, documentado e com repositório transferido 100% para você.",
+      b1: "Acompanhamento de ponta a ponta",
+      b2: "Escopo e prazos transparentes",
+      b3: "Comunicação direta",
+      b4: "Qualidade e segurança",
+      b5: "Entrega documentada",
     },
   },
   leadMagnet: {
