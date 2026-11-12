@@ -116,16 +116,14 @@ export const en = {
     highlight: "me",
     diffTitle: "What sets me apart",
     diffText:
-      "I combine product thinking with full-stack execution: I've led stack and team in research (UFAL), delivered a critical system in a public environment, and I'm building a startup.",
+      "I enjoy transforming ideas into solutions that make a difference. I bring together technology, creativity, and business vision to create purposeful digital products with real results.",
     paragraph1:
-      "Full-stack developer with strong work in Health Tech, Computer Vision, and applied AI. With more than",
-    experience: "2 years of experience",
+      "I am a software developer, researcher, and entrepreneur with",
+    experience: "+3 years of experience",
     paragraph1b:
-      "delivering web and mobile applications and systems for public agencies.",
+      "building applications, participating in AI research projects, and creating products from scratch.",
     paragraph2:
-      "Deep expertise in JavaScript/TypeScript (React, Next.js, NestJS) and mobile with React Native. Bachelor's in Systems Analysis and Development.",
-    paragraph3:
-      "Self-taught, clear communication with stakeholders, and focus on measurable delivery.",
+      "Besides developing, I enjoy sharing knowledge, ideas, and experiences about technology and career on Instagram. I believe that evolving also means learning, experimenting, and sharing what we know.",
     education: "Education",
     educationDetail: "Bachelor's degree in Systems Analysis and Development — 2024",
     educationSchool: "Maurício de Nassau University Center (UNINASSAU)",

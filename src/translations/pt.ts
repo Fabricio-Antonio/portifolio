@@ -116,16 +116,14 @@ export const pt = {
     highlight: "mim",
     diffTitle: "O que me diferencia",
     diffText:
-      "Combino visão de produto com execução full-stack: já liderei stack e time em pesquisa (UFAL), entreguei sistema crítico em ambiente público e estou construindo startup. Não sou só mais um dev na lista.",
+      "Gosto de transformar ideias em soluções que fazem a diferença. Uno tecnologia, criatividade e visão de negócio para criar produtos digitais com propósito e resultados reais.",
     paragraph1:
-      "Desenvolvedor full-stack com forte atuação em Health Tech, Computer Vision e IA aplicada. Com mais de",
-    experience: "2 anos de experiência",
+      "Sou desenvolvedor de software, pesquisador e empreendedor. Tenho",
+    experience: "+3 anos de experiência",
     paragraph1b:
-      "entregando aplicações web e mobile e sistemas para órgãos públicos.",
+      "criando aplicações, participando de projetos de pesquisa em IA e construindo produtos do zero.",
     paragraph2:
-      "Domínio profundo em JavaScript/TypeScript (React, Next.js, NestJS) e mobile com React Native. Graduação em Análise e Desenvolvimento de Sistemas.",
-    paragraph3:
-      "Autodidata, comunicação clara com stakeholders e foco em entregas mensuráveis.",
+      "Além de desenvolver, gosto de compartilhar conhecimento, ideias e experiências sobre tecnologia e carreira no Instagram. Acredito que evoluir também significa aprender, experimentar e dividir o que sabemos.",
     education: "Formação",
     educationDetail: "Graduação em Análise e Desenvolvimento de Sistemas — 2024",
     educationSchool: "Centro Universitário Maurício de Nassau (UNINASSAU)",
