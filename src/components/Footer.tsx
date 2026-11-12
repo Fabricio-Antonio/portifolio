@@ -11,19 +11,16 @@ export function Footer() {
 
   const navLinks = [
     { href: "#inicio", label: t.nav.home },
-    { href: "#stack", label: t.nav.skills },
     { href: "#servicos", label: t.nav.services },
-    { href: "#resultados", label: t.nav.results },
     { href: "#sobre", label: t.nav.about },
-    { href: "#projetos", label: t.nav.projects },
-    { href: "#experiencia", label: t.nav.experience },
+    { href: "#projetos", label: t.nav.experience },
     { href: "#contato", label: t.nav.contact },
   ];
 
   const socialLinks = [
     { href: "https://www.linkedin.com/in/fabricio-ss/", label: "LinkedIn" },
     { href: "https://github.com/Fabricio-Antonio", label: "GitHub" },
-    { href: "https://x.com/Fabricio_ss_", label: "X (Twitter)" },
+    { href: "http://lattes.cnpq.br/1340990776697899", label: "Lattes" },
     { href: whatsappHref, label: "WhatsApp" },
     { href: "https://www.meus10centavos.com.br", label: "Blog de Tecnologia" },
     { href: "https://www.instagram.com/fabriciosantos.dev/", label: "Instagram" },
@@ -44,14 +41,13 @@ export function Footer() {
               href="#inicio"
               className="inline-flex items-center gap-2.5 text-xl font-bold tracking-tight text-foreground hover:text-accent transition-colors"
             >
-              <span className="w-2.5 h-2.5 rounded-full bg-accent" />
               <span>
-                Fabrício<span className="text-accent font-extrabold">.dev</span>
+                Fabrício Santos
               </span>
             </Link>
 
             <p className="text-muted text-sm leading-relaxed max-w-sm">
-              Desenvolvedor Full-Stack focado em aplicações web, mobile e inteligência artificial aplicada à saúde.
+              Desenvolvedor Full-Stack • Web & Mobile
             </p>
           </div>
 
@@ -107,7 +103,7 @@ export function Footer() {
         {/* Bottom Credits */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
           <p>© {currentYear} Fabrício Santos. Todos os direitos reservados.</p>
-          <p className="font-mono">Desenvolvido com Next.js, TypeScript & Tailwind CSS</p>
+          <p className="font-mono">Desenvolvido com muitos tokens, amor & café</p>
         </div>
       </div>
     </footer>

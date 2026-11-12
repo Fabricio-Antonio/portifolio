@@ -25,12 +25,12 @@ const contactLinks = [
     ),
   },
   {
-    href: "https://x.com/Fabricio_ss_",
-    label: "X (Twitter)",
-    detail: "@Fabricio_ss_",
+    href: "http://lattes.cnpq.br/1340990776697899",
+    label: "Lattes",
+    detail: "lattes.cnpq.br",
     icon: (
       <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
       </svg>
     ),
   },
