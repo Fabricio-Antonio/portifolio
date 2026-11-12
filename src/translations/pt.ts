@@ -463,8 +463,7 @@ export const pt = {
   },
   footer: {
     rights: "Todos os direitos reservados.",
-    tagline: "Engenharia de Software e Produtos Digitais de Alta Performance.",
     quickLinks: "Navegação",
-    legal: "Desenvolvido com Next.js, TypeScript e Tailwind CSS.",
+    legal: "Desenvolvido com muitos tokens, amor & café.",
   },
 } as const;
