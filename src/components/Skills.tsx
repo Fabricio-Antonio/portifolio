@@ -103,9 +103,8 @@ export function Skills() {
     return (
       <div className="overflow-hidden py-1.5 flex select-none">
         <div
-          className={`flex items-center gap-3 sm:gap-4 shrink-0 ${
-            reverse ? "animate-marquee-reverse" : "animate-marquee"
-          } hover:[animation-play-state:paused]`}
+          className={`flex items-center gap-3 sm:gap-4 shrink-0 ${reverse ? "animate-marquee-reverse" : "animate-marquee"
+            } hover:[animation-play-state:paused]`}
         >
           {loopItems.map((tech, idx) => {
             const svg = getIconSvg(tech);

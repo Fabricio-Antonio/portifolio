@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
+import TypewriterTitle from "@/components/TypewriterTitle";
 
 const CV_PDF_HREF = encodeURI("/Fabrício Santos - Desenvolvedor Full-Stack.pdf");
 
@@ -26,9 +27,17 @@ export function Hero() {
               <span>{t.hero.available}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.15] mb-3">
-              Fabrício<span className="text-accent"> Santos</span>{" "}
-              <span aria-hidden="true" className="text-2xl sm:text-3xl inline-block align-middle">🦆</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.15] mb-3 flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1">
+              <TypewriterTitle
+                as="span"
+                sequences={[{ text: "Fabrício Santos", deleteAfter: false }]}
+                typingSpeed={75}
+                startDelay={350}
+                autoLoop={false}
+                naturalVariance={true}
+                textClassName="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground"
+              />
+              <span aria-hidden="true" className="text-2xl sm:text-3xl inline-block align-middle select-none"></span>
             </h1>
 
             <p className="text-lg sm:text-xl font-medium text-foreground/80 mb-5 font-mono">
