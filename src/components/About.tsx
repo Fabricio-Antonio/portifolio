@@ -60,27 +60,11 @@ export function About() {
               <p className="text-foreground/95 text-base sm:text-lg leading-relaxed">
                 {isPt ? (
                   <>
-                    Combino{" "}
-                    <Mark type="highlight" color="#22d3ee">
-                      visão de produto com execução full-stack
-                    </Mark>
-                    : já liderei stack e time em pesquisa (UFAL), entreguei sistema crítico em ambiente público e estou construindo startup.{" "}
-                    <Mark type="strike" color="#f43f5e">
-                      Não sou só mais um dev na lista
-                    </Mark>
-                    .
+                    Gosto de transformar ideias em soluções que fazem a diferença. Uno tecnologia, criatividade e visão de negócio para criar produtos digitais com propósito e resultados reais.
                   </>
                 ) : (
                   <>
-                    I combine{" "}
-                    <Mark type="highlight" color="#22d3ee">
-                      product thinking with full-stack execution
-                    </Mark>
-                    : I&apos;ve led stack and team in research (UFAL), delivered a critical system in a public environment, and I&apos;m building a startup.{" "}
-                    <Mark type="strike" color="#f43f5e">
-                      Not just another dev on the list
-                    </Mark>
-                    .
+                    I enjoy transforming ideas into solutions that make a difference. I bring together technology, creativity, and business vision to create purposeful digital products with real results.
                   </>
                 )}
               </p>
@@ -90,50 +74,33 @@ export function About() {
               <p>
                 {isPt ? (
                   <>
-                    Desenvolvedor full-stack com forte atuação em{" "}
-                    <Mark type="underline" color="#38bdf8">
-                      Health Tech, Computer Vision e IA aplicada
-                    </Mark>
-                    . Com mais de{" "}
+                    Sou desenvolvedor de software, pesquisador e empreendedor. Tenho{" "}
                     <Mark type="box" color="#34d399">
-                      2 anos de experiência
+                      +3 anos de experiência
                     </Mark>{" "}
-                    entregando aplicações web e mobile e sistemas para órgãos públicos.
+                    criando aplicações, participando de projetos de pesquisa em IA e construindo produtos do zero.
                   </>
                 ) : (
                   <>
-                    Full-stack developer with strong work in{" "}
-                    <Mark type="underline" color="#38bdf8">
-                      Health Tech, Computer Vision, and applied AI
-                    </Mark>
-                    . With more than{" "}
+                    I am a software developer, researcher, and entrepreneur with{" "}
                     <Mark type="box" color="#34d399">
-                      2 years of experience
+                      +3 years of experience
                     </Mark>{" "}
-                    delivering web and mobile applications and systems for public agencies.
+                    building applications, participating in AI research projects, and creating products from scratch.
                   </>
                 )}
               </p>
               <p>
                 {isPt ? (
                   <>
-                    Domínio profundo em JavaScript/TypeScript (React, Next.js, NestJS) e mobile com{" "}
-                    <Mark type="circle" color="#22d3ee">
-                      React Native
-                    </Mark>
-                    . Graduação em Análise e Desenvolvimento de Sistemas.
+                    Além de desenvolver, gosto de compartilhar conhecimento, ideias e experiências sobre tecnologia e carreira no Instagram. Acredito que evoluir também significa aprender, experimentar e dividir o que sabemos.
                   </>
                 ) : (
                   <>
-                    Deep expertise in JavaScript/TypeScript (React, Next.js, NestJS) and mobile with{" "}
-                    <Mark type="circle" color="#22d3ee">
-                      React Native
-                    </Mark>
-                    . Bachelor&apos;s in Systems Analysis and Development.
+                    Besides developing, I enjoy sharing knowledge, ideas, and experiences about technology and career on Instagram. I believe that evolving also means learning, experimenting, and sharing what we know.
                   </>
                 )}
               </p>
-              <p>{t.about.paragraph3}</p>
             </div>
           </div>
 
