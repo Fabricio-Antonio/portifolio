@@ -19,17 +19,11 @@ export const en = {
     floatingWhatsappAria: "Open WhatsApp to request a quote",
     headerQuote: "Quote",
   },
-  hero: {
+hero: {
     greeting: "Hi, I'm",
-    title: "Full-Stack Developer & AI Researcher",
-    valueLine:
-      "I build web systems, mobile apps, and custom integrations with a focus on stability, performance, and clean code. Currently at UFAL (AI in health) and co-founder of Rotas4Me.",
+    title: "Full-Stack Developer • Web & Mobile",
     description:
-      "Over 3 years shipping production software — from rapid prototypes to critical systems in government environments.",
-    years: "3+ years",
-    description2: "shipping professional software across web and mobile.",
-    description3:
-      "Core stack: React, Next.js, TypeScript, NestJS, Python, and React Native.",
+      "For +3 years building digital solutions, from high-conversion landing pages to internal systems for public agencies.",
     viewProjects: "View projects",
     contact: "Chat on WhatsApp",
     blog: "Blog",

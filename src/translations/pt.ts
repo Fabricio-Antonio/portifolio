@@ -21,15 +21,9 @@ export const pt = {
   },
   hero: {
     greeting: "Olá, eu sou",
-    title: "Desenvolvedor Full-Stack & Pesquisador em IA",
-    valueLine:
-      "Construo sistemas web, aplicativos e integrações com foco em estabilidade, performance e código limpo. Atualmente na UFAL (IA em saúde) e cofundador da Rotas4Me.",
+    title: "Desenvolvedor Full-Stack • Web & Mobile",
     description:
-      "Mais de 3 anos entregando software profissional — de protótipos rápidos a sistemas críticos em produção para o setor público.",
-    years: "3+ anos",
-    description2: "de experiência no desenvolvimento de aplicações web e mobile.",
-    description3:
-      "Stack principal: React, Next.js, TypeScript, NestJS, Python e React Native.",
+      "Há +3 anos desenvolvendo soluções digitais, desde landing pages de alta conversão até sistemas internos para órgãos públicos.",
     viewProjects: "Ver projetos",
     contact: "Conversar no WhatsApp",
     blog: "Blog",
