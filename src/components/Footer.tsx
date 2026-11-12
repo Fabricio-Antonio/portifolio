@@ -53,11 +53,6 @@ export function Footer() {
             <p className="text-muted text-sm leading-relaxed max-w-sm">
               Desenvolvedor Full-Stack focado em aplicações web, mobile e inteligência artificial aplicada à saúde.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card border border-card-border text-xs font-mono text-emerald-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Disponível para novos projetos</span>
-            </div>
           </div>
 
           {/* Nav Links */}

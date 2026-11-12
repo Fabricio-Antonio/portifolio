@@ -27,7 +27,6 @@ hero: {
     viewProjects: "View projects",
     contact: "Chat on WhatsApp",
     blog: "Blog",
-    available: "Available for projects and consulting",
   },
   services: {
     title: "What I can",
