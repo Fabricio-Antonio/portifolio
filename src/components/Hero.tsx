@@ -45,7 +45,7 @@ export function Hero() {
             </p>
 
             <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
-              {t.hero.valueLine}
+              {t.hero.description}
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4">
