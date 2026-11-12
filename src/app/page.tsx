@@ -3,6 +3,7 @@ import { Skills } from "@/components/Skills";
 import { Services } from "@/components/Services";
 import { Results } from "@/components/Results";
 import { About } from "@/components/About";
+import { AWSCertifications } from "@/components/AWSCertifications";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
 import { LeadMagnet } from "@/components/LeadMagnet";
@@ -31,6 +32,9 @@ export default function Home() {
 
       {/* Sobre mim */}
       <About />
+
+      {/* AWS Certifications */}
+      <AWSCertifications />
 
       {/* Cases de projetos */}
       <RevealOnScroll>
