@@ -3,7 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const statKeys = ["projects", "public", "years"] as const;
-const bulletKeys = ["b1", "b2", "b3"] as const;
+const bulletKeys = ["b1", "b2", "b3", "b4", "b5"] as const;
 
 export function Results() {
   const { t } = useLanguage();
@@ -39,15 +39,12 @@ export function Results() {
 
         {/* Grounded delivery points */}
         <div className="pt-8">
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ul className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {bulletKeys.map((key) => (
-              <li key={key} className="space-y-1.5">
+              <li key={key}>
                 <span className="text-xs font-mono font-semibold text-accent/80 uppercase tracking-wider block">
-                  ✦ Garantia de entrega
-                </span>
-                <p className="text-muted text-sm leading-relaxed">
                   {t.results.bullets[key]}
-                </p>
+                </span>
               </li>
             ))}
           </ul>

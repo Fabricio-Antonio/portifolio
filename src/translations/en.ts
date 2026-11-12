@@ -25,8 +25,8 @@ export const en = {
     valueLine:
       "I build web systems, mobile apps, and custom integrations with a focus on stability, performance, and clean code. Currently at UFAL (AI in health) and co-founder of Rotas4Me.",
     description:
-      "Over 2 years shipping production software — from rapid prototypes to critical systems in government environments.",
-    years: "2+ years",
+      "Over 3 years shipping production software — from rapid prototypes to critical systems in government environments.",
+    years: "3+ years",
     description2: "shipping professional software across web and mobile.",
     description3:
       "Core stack: React, Next.js, TypeScript, NestJS, Python, and React Native.",
@@ -90,16 +90,18 @@ export const en = {
     highlight: "delivery",
     stats: {
       projects: {
-        value: "+11",
+        value: "+20",
         label: "projects built and delivered",
       },
       public: { value: "1", label: "system in production for public sector" },
-      years: { value: "2+", label: "years building software professionally" },
+      years: { value: "3+", label: "years building software professionally" },
     },
     bullets: {
-      b1: "End-to-end execution: requirements, development, testing, and deployment.",
-      b2: "Projects in healthcare (AI/computer vision at UFAL) and urban safety (Rotas4Me).",
-      b3: "Clean, documented code with repository 100% transferred to you.",
+      b1: "End-to-end execution",
+      b2: "Transparent scope & timeline",
+      b3: "Direct communication",
+      b4: "Quality & security",
+      b5: "Documented delivery",
     },
   },
   leadMagnet: {
