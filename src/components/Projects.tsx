@@ -172,15 +172,36 @@ export function Projects() {
             </svg>
           </button>
 
-          {/* Cards Deck Container with 3D Perspective */}
-          <div
-            ref={containerRef}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-            className="relative w-full h-[480px] sm:h-[520px] flex items-center justify-center select-none"
-            style={{ perspective: "1400px" }}
-          >
+{/* Cards Deck Container with 3D Perspective */}
+           <div
+             ref={containerRef}
+             onTouchStart={handleTouchStart}
+             onTouchMove={handleTouchMove}
+             onTouchEnd={handleTouchEnd}
+             className="relative w-full h-[480px] sm:h-[520px] flex items-center justify-center select-none"
+             style={{ perspective: "1400px" }}
+           >
+{/* Ambient blue glow behind cards */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  filter: "blur(80px)",
+                  transform: "scale(1.3)",
+                  opacity: 0.6,
+                  background: "radial-gradient(ellipse at center, rgba(34, 211, 238, 0.35) 0%, transparent 65%)",
+                }}
+                aria-hidden="true"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  filter: "blur(120px)",
+                  transform: "scale(1.6)",
+                  opacity: 0.35,
+                  background: "radial-gradient(ellipse at center, rgba(34, 211, 238, 0.25) 0%, transparent 65%)",
+                }}
+                aria-hidden="true"
+              />
             {projects.map((project, index) => {
               const copy = t.projects.items[project.id as keyof typeof t.projects.items];
 
@@ -340,11 +361,23 @@ export function Projects() {
           </button>
         </div>
 
-        {/* Counter Below Deck */}
-        <div className="flex items-center justify-center gap-2 mt-4 text-center">
-          <span className="font-mono text-xs text-muted tracking-widest">
-            {String(currentIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
-          </span>
+        {/* Dot indicators Below Deck */}
+        <div className="flex items-center justify-center gap-2 mt-4" role="tablist" aria-label="Projetos">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              role="tab"
+              aria-selected={index === currentIndex}
+              aria-label={`Ir para o projeto ${index + 1}`}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "bg-accent scale-125"
+                  : "bg-zinc-600/40 hover:bg-zinc-600/70"
+              }`}
+            />
+          ))}
         </div>
       </div>
 

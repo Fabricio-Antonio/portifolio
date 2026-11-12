@@ -130,7 +130,7 @@ export const pt = {
     title: "Stack",
     highlight: "principal",
     subtitle:
-      "O essencial que uso para entregar rápido e com qualidade. O resto entra sob demanda do projeto.",
+      "As principais tecnologias que utilizo no desenvolvimento de produtos e soluções digitais.",
     categories: {
       frontend: "Frontend & experiência",
       backend: "Backend & dados",
@@ -141,7 +141,7 @@ export const pt = {
     title: "Cases de",
     highlight: "projetos",
     subtitle:
-      "Cada item abaixo é um problema de negócio (ou de produto) traduzido em software — com contexto, resultado e meu papel.",
+      "Produtos, sistemas e experiências digitais que tirei do papel e levei para o mundo real.",
     visit: "Visitar projeto",
     closeModal: "Fechar",
     labels: {
@@ -343,7 +343,7 @@ export const pt = {
     title: "Entre em",
     highlight: "contato",
     subtitle:
-      "Prefere redes ou WhatsApp? Escolha o canal — respondo o quanto antes para alinharmos escopo, prazo e investimento.",
+      "Tem um projeto em mente ou precisa de uma solução digital? Escolha seu canal preferido e vamos conversar sobre como posso ajudar.",
     whatsappLabel: "WhatsApp",
     whatsappMessage:
       "Olá, Fabrício! Vi seu site e tenho interesse em desenvolver um projeto. Você está disponível para conversar sobre orçamento e prazos?",
