@@ -8,31 +8,32 @@ import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 
 const NAV_SECTION_IDS = [
   "inicio",
-  "stack",
   "servicos",
-  "resultados",
   "sobre",
   "projetos",
-  "experiencia",
   "contato",
 ] as const;
 type NavSectionId = (typeof NAV_SECTION_IDS)[number];
 
 function getActiveNavSection(): NavSectionId {
   if (typeof document === "undefined") return "inicio";
-  const offset =
-    typeof window !== "undefined" && window.matchMedia("(min-width: 1024px)").matches
-      ? 140
-      : 96;
-  const trigger = window.scrollY + offset;
-  for (let i = NAV_SECTION_IDS.length - 1; i >= 0; i--) {
-    const id = NAV_SECTION_IDS[i];
+  const viewportHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+  let active: NavSectionId = "inicio";
+
+  for (const id of NAV_SECTION_IDS) {
     const el = document.getElementById(id);
     if (!el) continue;
-    const top = el.getBoundingClientRect().top + window.scrollY;
-    if (trigger >= top - 2) return id;
+    const rect = el.getBoundingClientRect();
+    const top = rect.top + scrollY;
+    const bottom = top + rect.height;
+    // A seção é considerada ativa se sua metade superior já passou do topo
+    // da viewport (com pequena tolerância) e o usuário ainda está nela.
+    if (top <= scrollY + viewportHeight * 0.35 && bottom >= scrollY + viewportHeight * 0.15) {
+      active = id;
+    }
   }
-  return "inicio";
+  return active;
 }
 
 export function Header() {
@@ -44,16 +45,21 @@ export function Header() {
 
   const navLinks: { id: NavSectionId; href: string; label: string }[] = [
     { id: "inicio", href: "#inicio", label: t.nav.home },
-    { id: "stack", href: "#stack", label: t.nav.skills },
     { id: "servicos", href: "#servicos", label: t.nav.services },
-    { id: "resultados", href: "#resultados", label: t.nav.results },
     { id: "sobre", href: "#sobre", label: t.nav.about },
-    { id: "projetos", href: "#projetos", label: t.nav.projects },
-    { id: "experiencia", href: "#experiencia", label: t.nav.experience },
+    { id: "projetos", href: "#projetos", label: t.nav.experience },
     { id: "contato", href: "#contato", label: t.nav.contact },
   ];
 
+  const handleNavClick = (id: NavSectionId) => {
+    setActiveSection(id);
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
+    let raf = 0;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+
     const sync = () => {
       setIsScrolled((prev) => {
         const next = window.scrollY > 20;
@@ -62,13 +68,23 @@ export function Header() {
       const nextSection = getActiveNavSection();
       setActiveSection((prev) => (prev === nextSection ? prev : nextSection));
     };
+
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(timer);
+      raf = requestAnimationFrame(() => {
+        timer = setTimeout(sync, 40);
+      });
+    };
+
     sync();
-    requestAnimationFrame(sync);
-    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", sync);
     window.addEventListener("hashchange", sync);
     return () => {
-      window.removeEventListener("scroll", sync);
+      cancelAnimationFrame(raf);
+      clearTimeout(timer);
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", sync);
       window.removeEventListener("hashchange", sync);
     };
@@ -90,9 +106,8 @@ export function Header() {
           href="#inicio"
           className="min-w-0 shrink flex items-center gap-2.5 text-base sm:text-lg font-bold tracking-tight text-foreground hover:text-accent transition-colors"
         >
-          <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse shrink-0" />
           <span>
-            Fabrício<span className="text-accent font-extrabold">.dev</span>
+            Fabrício Santos
           </span>
         </Link>
 
@@ -104,6 +119,7 @@ export function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={() => handleNavClick(link.id)}
                     aria-current={isActive ? "true" : undefined}
                     className={[
                       "text-xs xl:text-sm font-medium transition-colors whitespace-nowrap",
@@ -171,7 +187,7 @@ export function Header() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => handleNavClick(link.id)}
                       aria-current={isActive ? "true" : undefined}
                       className={[
                         "flex items-center min-h-[44px] py-3 text-base transition-colors",
