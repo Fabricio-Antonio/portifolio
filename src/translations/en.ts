@@ -130,7 +130,7 @@ hero: {
     title: "Core",
     highlight: "stack",
     subtitle:
-      "What I use most to ship fast with quality. Everything else is added when the project needs it.",
+      "The main technologies I use for building digital products and solutions.",
     categories: {
       frontend: "Frontend & UX",
       backend: "Backend & data",
@@ -141,7 +141,7 @@ hero: {
     title: "Project",
     highlight: "cases",
     subtitle:
-      "Each item is a business or product problem turned into software — with context, outcome, and my role.",
+      "Products, systems, and digital experiences I took from concept to reality.",
     visit: "Visit project",
     closeModal: "Close",
     labels: {
@@ -343,7 +343,7 @@ ufal: {
     title: "Get in",
     highlight: "touch",
     subtitle:
-      "Prefer socials or WhatsApp? Pick a channel — I'll reply soon so we can align scope, timeline, and budget.",
+      "Have a project in mind or need a digital solution? Pick your preferred channel and let's talk about how I can help.",
     whatsappLabel: "WhatsApp",
     whatsappMessage:
       "Hi, Fabrício! I saw your website and I'm interested in developing a project. Are you available to discuss budget and timelines?",
