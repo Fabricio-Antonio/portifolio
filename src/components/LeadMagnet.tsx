@@ -1,12 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
+import { SlideToConfirm } from "@/components/ui/SlideToConfirm";
 
 export function LeadMagnet() {
   const { t } = useLanguage();
   const href = getWhatsAppChatUrl(t.leadMagnet.whatsappMessage);
+
+  const handleConfirm = async () => {
+    window.open(href, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <section className="py-16 sm:py-20 border-b border-card-border bg-card/20">
@@ -21,15 +25,14 @@ export function LeadMagnet() {
             </p>
           </div>
 
-          <Link
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-accent text-background font-semibold text-sm hover:bg-cyan-300 transition-colors shrink-0 w-full md:w-auto text-center"
-          >
-            {t.leadMagnet.cta}
-            <span className="ml-1.5">→</span>
-          </Link>
+          <SlideToConfirm
+            label={t.leadMagnet.cta}
+            confirmingLabel="Abrindo WhatsApp..."
+            doneLabel="Aberto"
+            onConfirm={handleConfirm}
+            resetAfter={3000}
+            className="w-full md:w-72 shrink-0"
+          />
         </div>
       </div>
     </section>
