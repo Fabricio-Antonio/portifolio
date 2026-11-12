@@ -22,11 +22,6 @@ export function Hero() {
           
           {/* Main Info */}
           <div className="flex-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card/60 border border-card-border text-xs font-mono text-muted mb-6">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>{t.hero.available}</span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.15] mb-3 flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1">
               <TypewriterTitle
                 as="span"

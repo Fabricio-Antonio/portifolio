@@ -27,7 +27,6 @@ export const pt = {
     viewProjects: "Ver projetos",
     contact: "Conversar no WhatsApp",
     blog: "Blog",
-    available: "Disponível para projetos e consultoria",
   },
   services: {
     title: "O que posso",
@@ -465,7 +464,6 @@ export const pt = {
   footer: {
     rights: "Todos os direitos reservados.",
     tagline: "Engenharia de Software e Produtos Digitais de Alta Performance.",
-    availability: "Disponível para novos projetos e consultorias.",
     quickLinks: "Navegação",
     legal: "Desenvolvido com Next.js, TypeScript e Tailwind CSS.",
   },
