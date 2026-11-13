@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { siteConfig } from "@/lib/seo";
 
 const outfit = Outfit({
@@ -87,6 +88,7 @@ export default function RootLayout({
         <LanguageProvider>
           <JsonLd />
           <Header />
+          <ScrollProgressBar />
           <main className="min-w-0">{children}</main>
           <Footer />
           <FloatingWhatsApp />
