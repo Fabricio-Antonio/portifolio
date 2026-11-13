@@ -5,12 +5,33 @@ import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 import TypewriterTitle from "@/components/TypewriterTitle";
+import { SocialPreviewDock } from "@/components/ui/SocialPreviewDock";
 
 const CV_PDF_HREF = encodeURI("/Fabrício Santos - Desenvolvedor Full-Stack.pdf");
 
 export function Hero() {
   const { t } = useLanguage();
   const whatsappHref = getWhatsAppChatUrl(t.contact.whatsappMessage);
+
+  // Social profile for the preview dock
+  const profile = {
+    username: "Fabricio-Antonio",
+    xHandle: "Fabricio_ss_",
+    instagramHandle: "fabriciosantos.dev",
+    name: "Fabrício Santos",
+    avatar: "https://github.com/Fabricio-Antonio.png",
+    bio: "Software Engineer | TypeScript | React | React Native | Node 🦆",
+    instagramBio: "Fabrício Santos | Programador Freelancer • Web & Mobile",
+    headline: "Engenheiro de Software e Pesquisador",
+    location: "Recife, PE • Brasil",
+    contributions: 0,
+    links: {
+      github: "https://github.com/Fabricio-Antonio",
+      linkedin: "https://www.linkedin.com/in/fabricio-ss/",
+      x: "https://x.com/Fabricio_ss_",
+      instagram: "https://www.instagram.com/fabriciosantos.dev/",
+    },
+  };
 
   return (
     <section
@@ -77,6 +98,14 @@ export function Hero() {
                 </svg>
                 <span>Currículo</span>
               </a>
+            </div>
+
+            {/* Social Preview Dock */}
+            <div className="mt-8 flex justify-center md:justify-start">
+              <SocialPreviewDock
+                profile={profile}
+                live={true}
+              />
             </div>
           </div>
 
