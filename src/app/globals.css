@@ -9,6 +9,22 @@
   --card: #18181b;
   --card-border: #27272a;
   --paper: #fef7e8;
+  /* Social Preview Dock banner colors - Blue with black gradient */
+  --banner-linkedin-1: #0ea5e9;
+  --banner-linkedin-2: #0369a1;
+  --banner-linkedin-3: #0c0c0f;
+  --banner-x-1: #22d3ee;
+  --banner-x-2: #0891b2;
+  --banner-x-3: #0c0c0f;
+  --banner-instagram-1: #3b82f6;
+  --banner-instagram-2: #1e40af;
+  --banner-instagram-3: #0c0c0f;
+  /* GitHub Heatmap colors - Blue theme */
+  --heatmap-0: #27272a;
+  --heatmap-1: #38bdf8;
+  --heatmap-2: #0ea5e9;
+  --heatmap-3: #0284c7;
+  --heatmap-4: #0369a1;
 }
 
 @theme inline {
@@ -16,6 +32,7 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-muted: var(--accent-muted);
+  --color-accent-hover: #0891b2;
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-card-border: var(--card-border);
@@ -176,5 +193,64 @@ body {
 
 .ticker-track:hover {
   animation-play-state: paused;
+}
+
+/* Safe area utilities */
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Header mobile menu animation */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 300ms ease-out forwards;
 }
 
