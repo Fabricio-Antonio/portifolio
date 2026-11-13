@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
+import { SocialPreviewDock } from "./ui/SocialPreviewDock";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -17,24 +18,35 @@ export function Footer() {
     { href: "#contato", label: t.nav.contact },
   ];
 
-  const socialLinks = [
-    { href: "https://www.linkedin.com/in/fabricio-ss/", label: "LinkedIn" },
-    { href: "https://github.com/Fabricio-Antonio", label: "GitHub" },
-    { href: "http://lattes.cnpq.br/1340990776697899", label: "Lattes" },
-    { href: whatsappHref, label: "WhatsApp" },
-    { href: "https://www.meus10centavos.com.br", label: "Blog de Tecnologia" },
-    { href: "https://www.instagram.com/fabriciosantos.dev/", label: "Instagram" },
-  ];
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Social profile for the preview dock
+  const profile = {
+    username: "Fabricio-Antonio",
+    xHandle: "Fabricio_ss_",
+    instagramHandle: "fabriciosantos.dev",
+    name: "Fabrício Santos",
+    avatar: "https://github.com/Fabricio-Antonio.png",
+    bio: "Software Engineer | TypeScript | React | React Native | Node 🦆",
+    instagramBio: "Fabrício Santos | Programador Freelancer • Web & Mobile",
+    headline: "Engenheiro de Software • Full-Stack & Computer Vision",
+    location: "Recife, PE • Brasil",
+    contributions: 0,
+    links: {
+      github: "https://github.com/Fabricio-Antonio",
+      linkedin: "https://www.linkedin.com/in/fabricio-ss/",
+      x: "https://x.com/Fabricio_ss_",
+      instagram: "https://www.instagram.com/fabriciosantos.dev/",
+    },
   };
 
   return (
     <footer className="border-t border-card-border bg-[#0a0a0d] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12 sm:py-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-card-border/60">
-          
+
           {/* Brand Col */}
           <div className="md:col-span-5 space-y-4">
             <Link
@@ -70,29 +82,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Socials & Connect */}
+          {/* Social Preview Dock */}
           <div className="md:col-span-4">
             <span className="block text-xs font-mono font-bold uppercase tracking-wider text-accent mb-4">
-              Canais & Redes
+              Conecte-se
             </span>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {socialLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3 py-1.5 rounded-lg bg-card border border-card-border text-xs text-muted hover:text-accent hover:border-accent/40 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-
+            <SocialPreviewDock
+              profile={profile}
+              live={true}
+              email="fabricio.santos.dev@email.com"
+            />
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-muted hover:text-accent transition-colors cursor-pointer"
+              className="mt-6 inline-flex items-center gap-2 text-xs font-mono font-semibold text-muted hover:text-accent transition-colors cursor-pointer"
             >
               <span>↑ Voltar ao topo</span>
             </button>
