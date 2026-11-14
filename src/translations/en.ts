@@ -21,9 +21,9 @@ export const en = {
   },
 hero: {
     greeting: "Hi, I'm",
-    title: "Full-Stack Developer • Web & Mobile",
+    title: "You bring the idea, I help build the path.",
     description:
-      "For +3 years building digital solutions, from high-conversion landing pages to internal systems for public agencies.",
+      "I work with companies and people who need to turn ideas into functional websites, apps, and systems.",
     viewProjects: "View projects",
     contact: "Chat on WhatsApp",
     blog: "Blog",
