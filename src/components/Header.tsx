@@ -76,17 +76,19 @@ export function Header() {
 
   return (
     <>
-      {/* Morphic Navbar - Desktop */}
-      <MorphicNavbar
-        compact
-        className={cn(
-          "fixed z-50 top-5 left-1/2 -translate-x-1/2 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-          isScrolled
-            ? "bg-background/90 backdrop-blur-xl border border-card-border/50 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.6),0_0_0_1px_rgba(34,211,238,0.1),0_0_40px_-12px_rgba(34,211,238,0.08)]"
-            : "bg-background/70 backdrop-blur-xl border border-card-border/30 shadow-[0_4px_24px_-6px_rgba(0,0,0,0.4)]",
-          "rounded-2xl px-4"
-        )}
-      />
+      {/* Morphic Navbar - Desktop only */}
+      <div className="hidden lg:block">
+        <MorphicNavbar
+          compact
+          className={cn(
+            "fixed z-50 top-5 left-1/2 -translate-x-1/2 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+            isScrolled
+              ? "bg-background/90 backdrop-blur-xl border border-card-border/50 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.6),0_0_0_1px_rgba(34,211,238,0.1),0_0_40px_-12px_rgba(34,211,238,0.08)]"
+              : "bg-background/70 backdrop-blur-xl border border-card-border/30 shadow-[0_4px_24px_-6px_rgba(0,0,0,0.4)]",
+            "rounded-2xl px-4"
+          )}
+        />
+      </div>
 
       {/* Mobile: Bottom Navigation Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 safe-area-pb transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">

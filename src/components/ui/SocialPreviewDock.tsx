@@ -878,10 +878,16 @@ export function SocialPreviewDock({
     id: string;
   } | null>(null);
   const [box, setBox] = React.useState({ x: 0, width: 0, height: 0 });
+  const [isTouchDevice, setIsTouchDevice] = React.useState(false);
   /* First open jumps into place. Springing from the previous card's box would
      otherwise fly the panel in from wherever it last was. */
   const openRef = React.useRef(false);
   const appearing = !openRef.current;
+
+  React.useEffect(() => {
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsTouchDevice(hasTouch);
+  }, []);
 
   /* Measure before paint, so the panel never shows a frame at the wrong size.
      The card is absolutely positioned inside an overflow-hidden panel, so its
@@ -918,6 +924,20 @@ export function SocialPreviewDock({
     openRef.current = false;
     setActive(null);
   }, []);
+
+  const handleItemClick = (index: number, id: string, href: string) => {
+    if (isTouchDevice) {
+      if (active?.id === id) {
+        // Already active, allow navigation
+        return;
+      }
+      // First tap: show card, prevent navigation
+      setActive({ index, id });
+    } else {
+      // On desktop, hover/focus handles showing the card
+      setActive({ index, id });
+    }
+  };
 
   const visible = active !== null && box.width > 0;
 
@@ -994,8 +1014,14 @@ export function SocialPreviewDock({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={item.label}
-            onMouseEnter={() => setActive({ index: i, id: item.id })}
+            onMouseEnter={() => !isTouchDevice && setActive({ index: i, id: item.id })}
             onFocus={() => setActive({ index: i, id: item.id })}
+            onClick={(e) => {
+              if (isTouchDevice && active?.id !== item.id) {
+                e.preventDefault();
+                handleItemClick(i, item.id, item.href);
+              }
+            }}
             className="rounded-md p-2 text-muted-foreground outline-none transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:ring-2 focus-visible:ring-ring [&>svg]:size-6"
           >
             {item.icon}

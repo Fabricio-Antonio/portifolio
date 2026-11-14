@@ -252,7 +252,7 @@ function Segment({
       <NavLink
         aria-current={current ? "page" : undefined}
         className={cn(
-          "relative flex h-9 items-center rounded-xl px-4 font-medium text-sm transition-colors duration-150",
+          "relative flex min-h-[44px] items-center rounded-xl px-4 font-medium text-sm transition-colors duration-150",
           FOCUS_RING,
           highlighted
             ? "bg-white/10 text-accent"
@@ -676,7 +676,7 @@ export function MorphicNavbar({
             aria-hidden={!folded}
             aria-label="Show all links"
             className={cn(
-              "absolute top-0 left-0 flex size-9 items-center justify-center rounded-xl text-muted transition-colors duration-150 hover:text-foreground hover:bg-white/5",
+              "absolute top-0 left-0 flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-muted transition-colors duration-150 hover:text-foreground hover:bg-white/5",
               FOCUS_RING,
               folded ? "z-30" : "pointer-events-none z-0"
             )}

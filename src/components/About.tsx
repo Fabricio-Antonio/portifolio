@@ -61,14 +61,14 @@ export function About() {
 
           <button
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-mono font-medium text-muted border border-card-border bg-card/40 transition-all duration-200 hover:text-foreground hover:border-accent/40 hover:bg-card",
+              "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-mono font-medium text-muted border border-card-border bg-card/40 transition-all duration-200 hover:text-foreground hover:border-accent/40 hover:bg-card min-h-[44px]",
               done ? "opacity-100" : "opacity-70 hover:opacity-100"
             )}
             onClick={replay}
             type="button"
             title="Repetir animação de anotações"
           >
-            <RotateCcw className="w-3.5 h-3.5 text-accent" />
+            <RotateCcw className="w-4 h-4 text-accent flex-shrink-0" />
             <span>Replay</span>
           </button>
         </div>

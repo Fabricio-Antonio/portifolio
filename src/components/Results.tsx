@@ -91,10 +91,10 @@ export function Results() {
 
         {/* Grounded delivery points */}
         <div className="pt-8">
-          <ul className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
             {bulletKeys.map((key) => (
               <li key={key}>
-                <span className="text-xs font-mono font-semibold text-accent/80 uppercase tracking-wider block">
+                <span className="text-xs sm:text-sm font-mono font-semibold text-accent/80 uppercase tracking-wider block">
                   {t.results.bullets[key]}
                 </span>
               </li>
