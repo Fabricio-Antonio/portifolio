@@ -349,8 +349,15 @@ function GithubCard({
       ? "Contributions in the last year"
       : `${total.toLocaleString()} contributions in the last year`;
 
+  const href = profile.links?.github;
+
+  const CardRoot = href ? "a" : "div";
+  const cardProps = href
+    ? { href, target: "_blank", rel: "noopener noreferrer", className: cn(CARD, "w-[420px] p-4 block") }
+    : { className: cn(CARD, "w-[420px] p-4") };
+
   return (
-    <div className={cn(CARD, "w-[420px] p-4")}>
+    <CardRoot {...cardProps}>
       <div className="flex items-center gap-3">
         {profile.avatar || live.avatar ? (
           /* eslint-disable-next-line @next/next/no-img-element */
@@ -366,7 +373,7 @@ function GithubCard({
         </div>
       </div>
       <ContributionHeatmap days={days} label={caption} />
-    </div>
+    </CardRoot>
   );
 }
 
@@ -619,8 +626,15 @@ function LinkedinCard({
   live: GithubLive;
   colors: string[];
 }) {
+  const href = profile.links?.linkedin;
+
+  const CardRoot = href ? "a" : "div";
+  const cardProps = href
+    ? { href, target: "_blank", rel: "noopener noreferrer", className: cn(CARD, "w-[300px] block") }
+    : { className: cn(CARD, "w-[300px]") };
+
   return (
-    <div className={cn(CARD, "w-[300px]")}>
+    <CardRoot {...cardProps}>
       <Banner colors={colors} className="h-14" />
       <div className="px-4 pb-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -636,20 +650,14 @@ function LinkedinCard({
             {profile.headline && profile.location && <br />}
             {profile.location}
           </p>
-          {profile.links?.linkedin && (
-            <a
-              href={profile.links.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={-1}
-              className="shrink-0 rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90"
-            >
+          {href && (
+            <span className="shrink-0 rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground opacity-70 hover:opacity-100 transition-opacity">
               Connect
-            </a>
+            </span>
           )}
         </div>
       </div>
-    </div>
+    </CardRoot>
   );
 }
 
@@ -662,8 +670,15 @@ function XCard({
   live: GithubLive;
   colors: string[];
 }) {
+  const href = profile.links?.x;
+
+  const CardRoot = href ? "a" : "div";
+  const cardProps = href
+    ? { href, target: "_blank", rel: "noopener noreferrer", className: cn(CARD, "w-[300px] block") }
+    : { className: cn(CARD, "w-[300px]") };
+
   return (
-    <div className={cn(CARD, "w-[300px]")}>
+    <CardRoot {...cardProps}>
       {profile.cover ? (
         <div
           className="h-20 bg-cover bg-center"
@@ -680,16 +695,10 @@ function XCard({
             alt=""
             className={OVERLAP_AVATAR}
           />
-          {profile.links?.x && (
-            <a
-              href={profile.links.x}
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={-1}
-              className="mt-2 shrink-0 rounded-full bg-foreground px-4 py-1.5 text-xs font-medium text-background transition-opacity hover:opacity-90"
-            >
+          {href && (
+            <span className="mt-2 shrink-0 rounded-full bg-foreground px-4 py-1.5 text-xs font-medium text-background opacity-70 hover:opacity-100 transition-opacity">
               Follow
-            </a>
+            </span>
           )}
         </div>
         {profile.xHandle && (
@@ -697,7 +706,7 @@ function XCard({
         )}
         <p className="text-xs text-muted-foreground">{profile.bio}</p>
       </div>
-    </div>
+    </CardRoot>
   );
 }
 
@@ -710,8 +719,15 @@ function InstagramCard({
   live: GithubLive;
   colors: string[];
 }) {
+  const href = profile.links?.instagram;
+
+  const CardRoot = href ? "a" : "div";
+  const cardProps = href
+    ? { href, target: "_blank", rel: "noopener noreferrer", className: cn(CARD, "w-[300px] block") }
+    : { className: cn(CARD, "w-[300px]") };
+
   return (
-    <div className={cn(CARD, "w-[300px]")}>
+    <CardRoot {...cardProps}>
       <Banner colors={colors} className="h-20" />
       <div className="px-4 pb-4">
         <div className="flex items-start justify-between gap-3">
@@ -721,16 +737,10 @@ function InstagramCard({
             alt=""
             className={OVERLAP_AVATAR}
           />
-          {profile.links?.instagram && (
-            <a
-              href={profile.links.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={-1}
-              className="mt-2 shrink-0 rounded-full bg-foreground px-4 py-1.5 text-xs font-medium text-background transition-opacity hover:opacity-90"
-            >
+          {href && (
+            <span className="mt-2 shrink-0 rounded-full bg-foreground px-4 py-1.5 text-xs font-medium text-background opacity-70 hover:opacity-100 transition-opacity">
               Follow
-            </a>
+            </span>
           )}
         </div>
         {profile.instagramHandle && (
@@ -738,7 +748,7 @@ function InstagramCard({
         )}
         <p className="text-xs text-muted-foreground">{profile.instagramBio ?? profile.bio}</p>
       </div>
-    </div>
+    </CardRoot>
   );
 }
 
