@@ -6,6 +6,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
 import MultiLineTypewriter from "@/components/MultiLineTypewriter";
 import { SocialPreviewDock } from "@/components/ui/SocialPreviewDock";
+import {
+  CursorProvider,
+  CursorFollow,
+} from "@/components/animate-ui/components/animate/cursor";
 
 const CV_PDF_HREF = encodeURI("/Fabrício Santos - Desenvolvedor Full-Stack.pdf");
 
@@ -114,16 +118,34 @@ export function Hero() {
 
           {/* Minimalist Profile Photo */}
           <div className="shrink-0">
-            <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border border-card-border bg-card">
-              <Image
-                src="/eu.jpeg"
-                alt="Foto de perfil de Fabrício Santos"
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
-                priority
-              />
-            </div>
+            <CursorProvider>
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl">
+                <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                  <Image
+                    src="/eu.jpeg"
+                    alt="Foto de perfil de Fabrício Santos"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
+                    priority
+                  />
+                </div>
+                <CursorFollow
+                  asChild
+                  side="bottom"
+                  sideOffset={12}
+                  align="center"
+                  alignOffset={0}
+                >
+                  <div className="bg-black/95 rounded-xl px-4 py-2.5 text-white text-sm font-medium leading-snug whitespace-nowrap shadow-lg pointer-events-none">
+                    Fabrício Santos<br />
+                    <span className="text-xs font-normal opacity-80">
+                      Programador <span className="text-accent">Web</span> & <span className="text-accent">Mobile</span>
+                    </span>
+                  </div>
+                </CursorFollow>
+              </div>
+            </CursorProvider>
           </div>
 
         </div>
