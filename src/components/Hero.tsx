@@ -119,14 +119,14 @@ export function Hero() {
           {/* Minimalist Profile Photo */}
           <div className="shrink-0">
             <CursorProvider>
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-2xl">
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
                   <Image
                     src="/eu.jpeg"
                     alt="Foto de perfil de Fabrício Santos"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
+                    sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 288px, 320px"
                     priority
                   />
                 </div>
