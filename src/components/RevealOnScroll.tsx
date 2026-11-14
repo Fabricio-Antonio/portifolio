@@ -81,7 +81,7 @@ export function RevealOnScroll({
           stagger: STAGGER,
           scrollTrigger: {
             trigger: triggerEl,
-            start: "top bottom+=35%",
+            start: "top center",
             once: true,
           },
         });
@@ -94,7 +94,7 @@ export function RevealOnScroll({
           ease: EASE,
           scrollTrigger: {
             trigger: el,
-            start: "top bottom+=35%",
+            start: "top center",
             once: true,
           },
         });
