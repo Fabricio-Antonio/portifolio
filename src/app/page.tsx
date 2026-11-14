@@ -20,12 +20,17 @@ export default function Home() {
       {/* Stack Principal — Carrossel de ponta a ponta da página */}
       <Skills />
 
-      {/* Os serviços que ofereço */}
+      {/* Como posso ajudar */}
       <RevealOnScroll>
         <Services />
       </RevealOnScroll>
 
-      {/* Resultados */}
+      {/* Cases de projetos */}
+      <RevealOnScroll>
+        <Projects />
+      </RevealOnScroll>
+
+      {/* Histórico e entregas */}
       <RevealOnScroll>
         <Results />
       </RevealOnScroll>
@@ -36,17 +41,12 @@ export default function Home() {
       {/* AWS Certifications */}
       <AWSCertifications />
 
-      {/* Cases de projetos */}
-      <RevealOnScroll>
-        <Projects />
-      </RevealOnScroll>
-
       {/* Experiência profissional */}
       <RevealOnScroll>
         <Experience />
       </RevealOnScroll>
 
-      {/* Olhar técnico gratuito */}
+      {/* Quer uma opinião técnica */}
       <RevealOnScroll>
         <LeadMagnet />
       </RevealOnScroll>
