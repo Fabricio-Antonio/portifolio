@@ -344,8 +344,8 @@ export function MorphicNavbar({
     const baseItems: Record<string, NavItem> = {
       "#inicio": { name: t.nav.home },
       "#servicos": { name: t.nav.services },
-      "#sobre": { name: t.nav.about },
       "#projetos": { name: t.nav.experience },
+      "#sobre": { name: t.nav.about },
       "#contato": { name: t.nav.contact },
       "#idioma": { name: "Idioma" },
     };
