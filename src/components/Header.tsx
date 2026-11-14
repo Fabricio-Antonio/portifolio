@@ -117,9 +117,6 @@ export function Header() {
                 >
                   <span className="relative" aria-hidden="true">
                     {link.icon}
-                    {isActive && (
-                      <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-accent animate-pulse" />
-                    )}
                   </span>
                   <span className="text-[10px] font-medium">{link.label}</span>
                 </a>
