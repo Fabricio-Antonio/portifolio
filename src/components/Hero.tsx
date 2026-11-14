@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppChatUrl } from "@/lib/whatsapp";
-import TypewriterTitle from "@/components/TypewriterTitle";
+import MultiLineTypewriter from "@/components/MultiLineTypewriter";
 import { SocialPreviewDock } from "@/components/ui/SocialPreviewDock";
 
 const CV_PDF_HREF = encodeURI("/Fabrício Santos - Desenvolvedor Full-Stack.pdf");
@@ -18,10 +18,10 @@ export function Hero() {
     username: "Fabricio-Antonio",
     xHandle: "Fabricio_ss_",
     instagramHandle: "fabriciosantos.dev",
-    name: "Fabrício Santos",
+    name: "Você traz a ideia, eu ajudo a construir o caminho.",
     avatar: "https://github.com/Fabricio-Antonio.png",
     bio: "Software Engineer | TypeScript | React | React Native | Node 🦆",
-    instagramBio: "Fabrício Santos | Programador Freelancer • Web & Mobile",
+    instagramBio: "Transformo ideias em sites, aplicativos e sistemas funcionais.",
     headline: "Engenheiro de Software e Pesquisador",
     location: "Recife, PE • Brasil",
     contributions: 0,
@@ -43,22 +43,25 @@ export function Hero() {
           
           {/* Main Info */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.15] mb-3 flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1">
-              <TypewriterTitle
-                as="span"
-                sequences={[{ text: "Fabrício Santos", deleteAfter: false }]}
-                typingSpeed={75}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.15] mb-3 flex flex-col items-center md:items-start justify-center md:justify-start gap-x-3 gap-y-1">
+              <MultiLineTypewriter
+                lines={[
+                  { 
+                    text: "Você traz a ideia, ", 
+                    className: "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground",
+                    delayAfter: 200
+                  },
+                  { 
+                    text: "eu ajudo a construir o caminho.", 
+                    className: "text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-foreground/80",
+                  },
+                ]}
+                typingSpeed={50}
                 startDelay={350}
-                autoLoop={false}
                 naturalVariance={true}
-                textClassName="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground"
+                playOnce={false}
               />
-              <span aria-hidden="true" className="text-2xl sm:text-3xl inline-block align-middle select-none"></span>
             </h1>
-
-            <p className="text-lg sm:text-xl font-medium text-foreground/80 mb-5 font-mono">
-              {t.hero.title}
-            </p>
 
             <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
               {t.hero.description}
@@ -111,13 +114,13 @@ export function Hero() {
 
           {/* Minimalist Profile Photo */}
           <div className="shrink-0">
-            <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-2xl overflow-hidden border border-card-border bg-card">
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border border-card-border bg-card">
               <Image
                 src="/eu.jpeg"
                 alt="Foto de perfil de Fabrício Santos"
                 fill
                 className="object-cover"
-                sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 208px"
+                sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
                 priority
               />
             </div>

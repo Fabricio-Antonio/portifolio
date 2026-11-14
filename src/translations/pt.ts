@@ -21,9 +21,9 @@ export const pt = {
   },
   hero: {
     greeting: "Olá, eu sou",
-    title: "Desenvolvedor Full-Stack • Web & Mobile",
+    title: "Você traz a ideia, eu ajudo a construir o caminho.",
     description:
-      "Há +3 anos desenvolvendo soluções digitais, desde landing pages de alta conversão até sistemas internos para órgãos públicos.",
+      "Trabalho com empresas e pessoas que precisam transformar ideias em sites, aplicativos e sistemas funcionais.",
     viewProjects: "Ver projetos",
     contact: "Conversar no WhatsApp",
     blog: "Blog",
