@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useReducedMotion } from "motion/react";
 
 const certifications = [
   {
@@ -19,8 +20,11 @@ const certifications = [
 
 export function AWSCertifications() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
+    if (reduceMotion) return;
+    
     const container = containerRef.current;
     if (!container) return;
 
@@ -78,7 +82,7 @@ export function AWSCertifications() {
     return () => {
       gsap.killTweensOf(badges);
     };
-  }, []);
+  }, [reduceMotion]);
 
   return (
     <section
@@ -110,22 +114,22 @@ export function AWSCertifications() {
                   className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg"
                   aria-label={`Verificar ${cert.name} no Credly`}
                 >
-                  <img
-                    src={cert.image}
-                    alt={cert.alt}
-                    className="w-32 sm:w-40 h-auto object-contain transition-transform duration-500 hover:scale-110 drop-shadow-lg"
-                    loading="lazy"
-                  />
+<img
+                      src={cert.image}
+                      alt={cert.alt}
+                      className="w-full max-w-[128px] sm:max-w-[160px] h-auto object-contain transition-transform duration-500 hover:scale-110 drop-shadow-lg"
+                      loading="lazy"
+                    />
                 </a>
               ) : (
                 <img
                   src={cert.image}
                   alt={cert.alt}
-                  className="w-32 sm:w-40 h-auto object-contain drop-shadow-lg"
+                  className="w-full max-w-[128px] sm:max-w-[160px] h-auto object-contain drop-shadow-lg"
                   loading="lazy"
                 />
               )}
-              <p className="mt-3 text-xs font-mono text-accent/80 uppercase tracking-wider text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="mt-3 text-xs font-mono text-accent/80 uppercase tracking-wider text-center sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                 {cert.name}
               </p>
             </div>

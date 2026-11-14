@@ -540,6 +540,7 @@ export function PageFlip({
           label="Previous page"
           onClick={() => go(-1)}
           onKeyDown={onKeyDown}
+          className="min-h-[44px] min-w-[44px]"
         >
           <path d="M10 4 6 8l4 4" />
         </NavButton>
@@ -551,6 +552,7 @@ export function PageFlip({
           label="Next page"
           onClick={() => go(1)}
           onKeyDown={onKeyDown}
+          className="min-h-[44px] min-w-[44px]"
         >
           <path d="m6 4 4 4-4 4" />
         </NavButton>
@@ -603,20 +605,24 @@ function NavButton({
   disabled,
   onClick,
   onKeyDown,
+  className,
 }: {
   children: ReactNode;
   label: string;
   disabled: boolean;
   onClick: () => void;
   onKeyDown: (event: KeyboardEvent<HTMLButtonElement>) => void;
+  className?: string;
 }) {
   return (
     <button
-      // aria-disabled, not disabled: the last press keeps focus on the button,
-      // so the arrow keys keep working.
       aria-disabled={disabled || undefined}
       aria-label={label}
-      className="flex size-8 items-center justify-center rounded-full text-zinc-600 ring-1 ring-black/10 transition-colors duration-150 ease-out hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-700/50 aria-disabled:cursor-default aria-disabled:text-zinc-300 aria-disabled:hover:bg-transparent aria-disabled:hover:text-zinc-300 dark:text-zinc-300 dark:ring-white/15 dark:aria-disabled:text-zinc-600 dark:hover:bg-white/10 dark:hover:text-white dark:aria-disabled:hover:bg-transparent dark:aria-disabled:hover:text-zinc-600"
+      className={cn(
+        "flex items-center justify-center rounded-full text-zinc-600 ring-1 ring-black/10 transition-colors duration-150 ease-out hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-700/50 aria-disabled:cursor-default aria-disabled:text-zinc-300 aria-disabled:hover:bg-transparent aria-disabled:hover:text-zinc-300 dark:text-zinc-300 dark:ring-white/15 dark:aria-disabled:text-zinc-600 dark:hover:bg-white/10 dark:hover:text-white dark:aria-disabled:hover:bg-transparent dark:aria-disabled:hover:text-zinc-600",
+        "min-h-[44px] min-w-[44px]",
+        className
+      )}
       onClick={disabled ? undefined : onClick}
       onKeyDown={onKeyDown}
       type="button"

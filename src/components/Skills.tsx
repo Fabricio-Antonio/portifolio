@@ -152,8 +152,8 @@ export function Skills() {
       {/* Edge-to-edge (Full-bleed) Carousel */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
         {/* Edge Gradient Fade Masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-36 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-36 bg-gradient-to-l from-background via-background/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-16 md:w-36 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-16 md:w-36 bg-gradient-to-l from-background via-background/80 to-transparent z-10" />
 
         <div className="flex flex-col gap-2">
           {renderRow(row1Technologies, false)}

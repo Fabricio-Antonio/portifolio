@@ -95,7 +95,7 @@ export function Footer() {
             <button
               type="button"
               onClick={scrollToTop}
-              className="mt-6 inline-flex items-center gap-2 text-xs font-mono font-semibold text-muted hover:text-accent transition-colors cursor-pointer"
+              className="mt-6 inline-flex items-center gap-2 px-3 py-2 text-xs font-mono font-semibold text-muted hover:text-accent transition-colors cursor-pointer rounded-lg hover:bg-card border border-card-border min-h-[44px]"
             >
               <span>↑ Voltar ao topo</span>
             </button>
